@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "CoreTemplate.Application.WorkerService": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

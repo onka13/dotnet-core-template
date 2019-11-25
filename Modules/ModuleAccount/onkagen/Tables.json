@@ -1,0 +1,155 @@
+[
+  {
+    "Detail": {
+      "Name": "User",
+      "Description": null,
+      "ConnectionType": 0,
+      "ConnectionStringName": null,
+      "Schema": null,
+      "Ignored": false,
+      "CustomNamespace": null,
+      "CustomInterface": null,
+      "TitleColumn": "Name",
+      "BaseEntityModelFullName": null
+    },
+    "Columns": [
+      {
+        "Name": "Id",
+        "DataType": 2,
+        "Required": true,
+        "IsAutoIncrement": true,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 10,
+        "Scale": 2,
+        "Length": 50,
+        "Title": null,
+        "Tick": 637091899551416339
+      },
+      {
+        "Name": "Name",
+        "DataType": 10,
+        "Required": true,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 10,
+        "Scale": 2,
+        "Length": 150,
+        "Title": null,
+        "Tick": 637091899592123870
+      },
+      {
+        "Name": "Email",
+        "DataType": 10,
+        "Required": false,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 10,
+        "Scale": 2,
+        "Length": 200,
+        "Title": null,
+        "Tick": 637091899615830438
+      },
+      {
+        "Name": "PasswordHash",
+        "DataType": 10,
+        "Required": true,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 10,
+        "Scale": 2,
+        "Length": 200,
+        "Title": null,
+        "Tick": 637091899631503637
+      },
+      {
+        "Name": "EmailConfirmed",
+        "DataType": 4,
+        "Required": true,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 10,
+        "Scale": 2,
+        "Length": 50,
+        "Title": null,
+        "Tick": 637091899678139184
+      },
+      {
+        "Name": "LockoutEndDateUtc",
+        "DataType": 7,
+        "Required": false,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 10,
+        "Scale": 2,
+        "Length": 50,
+        "Title": null,
+        "Tick": 637091900269428742
+      },
+      {
+        "Name": "AccessFailedCount",
+        "DataType": 2,
+        "Required": true,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 10,
+        "Scale": 2,
+        "Length": 50,
+        "Title": null,
+        "Tick": 637091900357630116
+      },
+      {
+        "Name": "Status",
+        "DataType": 0,
+        "Required": true,
+        "IsAutoIncrement": false,
+        "EnumName": "Status",
+        "DefaultValue": null,
+        "Precision": 10,
+        "Scale": 2,
+        "Length": 50,
+        "Title": null,
+        "Tick": 637091900372932814
+      }
+    ],
+    "Indices": [
+      {
+        "Name": "PK_User_Id",
+        "IsPrimaryKey": true,
+        "IsUnique": false,
+        "Columns": [
+          {
+            "ColumnName": "Id",
+            "Sort": 0,
+            "Tick": 637091899551416339
+          }
+        ],
+        "Tick": 637091899551416339
+      },
+      {
+        "Name": "Index_637091901918189663",
+        "IsPrimaryKey": false,
+        "IsUnique": true,
+        "Columns": [
+          {
+            "ColumnName": "Email",
+            "Sort": 0,
+            "Tick": 637091901918189663
+          }
+        ],
+        "Tick": 637091901918189663
+      }
+    ],
+    "Relations": [],
+    "Search": {
+      "Items": []
+    },
+    "Tick": 637091899551396346
+  }
+]

@@ -1,0 +1,36 @@
+﻿
+> cd C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools
+> sn.exe -p "C:\projects\git\DotNetCoreTemplate\_Extensions\CoreTemplateExtensionLibrary\key.snk" outfile.key
+> sn.exe -t outfile.key
+
+// https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/ide/how-to-create-multi-project-templates.md
+
+<TemplateData>
+        ...
+    <Hidden>true</Hidden>
+</TemplateData>
+
+
+1 - Replace
+
+<TemplateData>
+
+With;
+RootWizard
+<WizardExtension><Assembly>CoreTemplateExtensionLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=18f917571ec8cc5b</Assembly><FullClassName>CoreTemplateExtensionLibrary.Wizards.RootWizard</FullClassName></WizardExtension><TemplateData>
+
+ChildWizard
+<WizardExtension><Assembly>CoreTemplateExtensionLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=18f917571ec8cc5b</Assembly><FullClassName>CoreTemplateExtensionLibrary.Wizards.ChildWizard</FullClassName></WizardExtension><TemplateData>
+
+
+2- Replace;
+
+CoreTemplate
+
+Filter;
+
+*.cs
+
+With;
+
+$saferootprojectname$

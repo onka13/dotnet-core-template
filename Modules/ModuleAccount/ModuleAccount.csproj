@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\dotnet-core-common\CoreCommon.Business.Service\CoreCommon.Business.Service.csproj" />
+    <ProjectReference Include="..\..\..\dotnet-core-common\CoreCommon.Data.Domain\CoreCommon.Data.Domain.csproj" />
+    <ProjectReference Include="..\..\..\dotnet-core-common\CoreCommon.Data.ElasticSearch\CoreCommon.Data.ElasticSearch.csproj" />
+    <ProjectReference Include="..\..\..\dotnet-core-common\CoreCommon.Data.EntityFrameworkBase\CoreCommon.Data.EntityFrameworkBase.csproj" />
+    <ProjectReference Include="..\..\..\dotnet-core-common\CoreCommon.Infra\CoreCommon.Infra.csproj" />
+    <ProjectReference Include="..\ModuleCommon\ModuleCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Custom\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,30 @@
+{
+  "EnumList": [
+    {
+      "Name": "ProviderEnum",
+      "EnumType": 0,
+      "Items": [
+        {
+          "Name": "None",
+          "Description": null,
+          "Value": 1,
+          "Tick": 637091905729470755
+        },
+        {
+          "Name": "Facebook",
+          "Description": null,
+          "Value": 2,
+          "Tick": 637091905729470755
+        },
+        {
+          "Name": "Google",
+          "Description": null,
+          "Value": 3,
+          "Tick": 637091905909971612
+        }
+      ],
+      "Tick": 637091905729470755
+    }
+  ],
+  "Tick": 637091905696866641
+}

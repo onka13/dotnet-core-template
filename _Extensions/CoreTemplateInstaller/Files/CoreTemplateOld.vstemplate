@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>ONKA Core Template Project</Name>
+    <Description>Generate project structure...</Description>
+    <ProjectType>CSharp</ProjectType>
+    <LanguageTag>csharp</LanguageTag>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>MyProject</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>icon.png</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectCollection>
+      <SolutionFolder Name="ApiModules">
+        <ProjectTemplateLink ProjectName="ApiModuleAccount" CopyParameters="true">ApiModuleAccount\MyTemplate.vstemplate</ProjectTemplateLink>
+        <ProjectTemplateLink ProjectName="ApiModuleCommon" CopyParameters="true">ApiModuleCommon\MyTemplate.vstemplate</ProjectTemplateLink>
+      </SolutionFolder>
+      <SolutionFolder Name="Application">
+        <ProjectTemplateLink ProjectName="$safeprojectname$.Application.API" CopyParameters="true">CoreTemplate.Application.API\MyTemplate.vstemplate</ProjectTemplateLink>
+        <ProjectTemplateLink ProjectName="$safeprojectname$.Application.WorkerService" CopyParameters="true">CoreTemplate.Application.WorkerService\MyTemplate.vstemplate</ProjectTemplateLink>
+      </SolutionFolder>
+      <SolutionFolder Name="Business">
+        <ProjectTemplateLink ProjectName="$safeprojectname$.Business.Service" CopyParameters="true">CoreTemplate.Business.Service\MyTemplate.vstemplate</ProjectTemplateLink>
+      </SolutionFolder>
+      <SolutionFolder Name="Data"></SolutionFolder>
+      <SolutionFolder Name="Infrastructure"></SolutionFolder>
+      <SolutionFolder Name="Modules">
+        <ProjectTemplateLink ProjectName="ModuleAccount" CopyParameters="true">ModuleAccount\MyTemplate.vstemplate</ProjectTemplateLink>
+        <ProjectTemplateLink ProjectName="ModuleCommon" CopyParameters="true">ModuleCommon\MyTemplate.vstemplate</ProjectTemplateLink>
+      </SolutionFolder>
+      <SolutionFolder Name="Tests">
+        <ProjectTemplateLink ProjectName="$safeprojectname$.Tests.General" CopyParameters="true">CoreTemplate.Tests.General\MyTemplate.vstemplate</ProjectTemplateLink>
+      </SolutionFolder>
+    </ProjectCollection>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>CoreTemplateExtensionLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=18f917571ec8cc5b</Assembly>
+    <FullClassName>CoreTemplateExtensionLibrary.Wizards.RootWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <Settings>
+      <StaticProject framework="true" template="false" folder="Business" name="CoreCommon.Business.Service" path="CoreCommon.Business.Service\CoreCommon.Business.Service.csproj" />
+      <StaticProject framework="true" template="false" folder="Data" name="CoreCommon.Data.Domain" path="CoreCommon.Data.Domain\CoreCommon.Data.Domain.csproj" />
+      <StaticProject framework="true" template="false" folder="Data" name="CoreCommon.Data.ElasticSearch" path="CoreCommon.Data.ElasticSearch\CoreCommon.Data.ElasticSearch.csproj" />
+      <StaticProject framework="true" template="false" folder="Data" name="CoreCommon.Data.EntityFrameworkBase" path="CoreCommon.Data.EntityFrameworkBase\CoreCommon.Data.EntityFrameworkBase.csproj" />
+      <StaticProject framework="true" template="false" folder="Infrastructure" name="CoreCommon.Infra" path="CoreCommon.Infra\CoreCommon.Infra.csproj" />
+    </Settings>
+  </WizardData>
+</VSTemplate>
