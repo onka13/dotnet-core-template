@@ -11,6 +11,8 @@ Contains user modules basicly for now.
 - Create a new project.
 - Select 'Onka Core Template Project'
 - Clone [dotnet-common-project](https://github.com/onka13/dotnet-core-common) to parent directory.
+- Create project
+- Run `dotnet restore` 
 
 ***
 
