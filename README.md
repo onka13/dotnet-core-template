@@ -7,7 +7,7 @@ Contains user modules basicly for now.
 
 ## Installation
 
-- Install Visual Studio Extension
+- [Install Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=onka13.CoreTemplate)
 - Create a new project.
 - Select 'Onka Core Template Project'
 - Clone [dotnet-common-project](https://github.com/onka13/dotnet-core-common) to parent directory.
