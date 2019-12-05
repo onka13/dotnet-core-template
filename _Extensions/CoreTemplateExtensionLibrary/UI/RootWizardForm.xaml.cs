@@ -60,7 +60,7 @@ namespace CoreTemplateExtensionLibrary.UI
             var dataProjectPath = System.IO.Path.Combine(xCommonProject.Text, "CoreCommon.Data.Domain");
             if (!Directory.Exists(dataProjectPath))
             {
-                WF.MessageBox.Show("Common project not found");
+                WF.MessageBox.Show("Common Project not found");
                 return;
             }
             _window.Close();
@@ -68,11 +68,13 @@ namespace CoreTemplateExtensionLibrary.UI
 
         private void CommonProjectDialog_Click(object sender, RoutedEventArgs e)
         {
-            var dialog = new WF.FolderBrowserDialog();
-            //dialog.RootFolder = Environment.SpecialFolder.Desktop;
-            dialog.SelectedPath = xCommonProject.Text;
-            if (dialog.ShowDialog() != WF.DialogResult.OK) return;
-            xCommonProject.Text = dialog.SelectedPath;
+            WF.MessageBox.Show("Changing Common Project path disabled for now!");
+            
+            //var dialog = new WF.FolderBrowserDialog();
+            ////dialog.RootFolder = Environment.SpecialFolder.Desktop;
+            //dialog.SelectedPath = xCommonProject.Text;
+            //if (dialog.ShowDialog() != WF.DialogResult.OK) return;
+            //xCommonProject.Text = dialog.SelectedPath;
         }
 
         public string GetCommonProjectPath()

@@ -1,0 +1,20 @@
+{
+  "Connections": [],
+  "SettingsKey": "Development",
+  "Schema": "dbo",
+  "ConnectionType": 1,
+  "ConnectionName": "MainConnection",
+  "DotNetCoreProject": {
+    "EntityNamespaces": "using CoreCommon.Data.Domain.Entitites;\r\nusing CoreCommon.Data.Domain.Enums;",
+    "ElasticEntityBase": "IElasticSearchEntity",
+    "EntityBase": "IEntityBase",
+    "DbContextNamespaces": "CoreCommon.Data.EntityFrameworkBase.Base",
+    "ElasticRepoBase": "ElasticSearchRepositoryBase",
+    "EntityRepoBase": "EntityFrameworkBaseRepository",
+    "RepositoryNamespaces": "using CoreCommon.Data.Domain.Entitites;\r\nusing CoreCommon.Data.Domain.Enums;\r\nusing CoreCommon.Data.EntityFrameworkBase.Base;\r\nusing CoreCommon.Data.ElasticSearch.Base;\r\nusing CoreCommon.Data.Domain.Business;",
+    "EntityRepoInterfaceBase": "IRepositoryBase",
+    "ServiceNamespaces": "using CoreCommon.Business.Service.Base;\r\nusing CoreCommon.Data.Domain.Business;\r\nusing CoreCommon.Data.Domain.Entitites;\r\nusing CoreCommon.Data.Domain.Enums;",
+    "EntityServiceBase": "BusinessLogicBase",
+    "EntityServiceInterfaceBase": "IBusinessLogicBase"
+  }
+}

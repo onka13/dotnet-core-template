@@ -15,9 +15,9 @@ using CoreCommon.Data.Domain.Enums;
 
 namespace ModuleAccount.Services
 {
-    public partial class UserBusinessLogic : BusinessLogicBase<UserEntity>, IUserBusinessLogic
+    public partial class UserBusinessLogic : BusinessLogicBase<UserEntity, IUserRepository>, IUserBusinessLogic
     {
-        public new IUserRepository Repository { get; set; }
+        public override IUserRepository Repository { get; set; }
         
 
         public ServiceResult<int> DeleteById(int id)

@@ -8,9 +8,9 @@ Contains user modules basicly for now.
 ## Installation
 
 - [Install Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=onka13.CoreTemplate)
-- Create a new project.
-- Select 'Onka Core Template Project'
-- Clone [dotnet-common-project](https://github.com/onka13/dotnet-core-common) to parent directory.
+- Open Visual Studio then create a new project.
+- Select 'Onka Project' then type a project name.
+- On next window clone [dotnet-common-project](https://github.com/onka13/dotnet-core-common) if not exists. Or manually run command `git clone https://github.com/onka13/dotnet-core-common.git`
 - Create project
 - Run `dotnet restore` 
 
@@ -38,14 +38,18 @@ Contains user modules basicly for now.
 ### Add Modules
 
 - Add a new project.
-- Select 'Onka Core Module'
+- Select 'ONKA .NET Core Module Template'
 
 ### Add Api Modules
 
 - Add a new project.
-- Select 'Onka Core Api Module'
+- Select 'ONKA .NET Core Api Module Template'
 - Add a reference to `XXX.Application.API`
 - Add a reference to `XXX.Application.WorkerService`
+
+### Code generator
+
+- Please check [NoDb-Core-Generator](https://github.com/onka13/NoDb-Core-Generator)
 
 ## Todo
 

@@ -71,7 +71,7 @@
                             <ColumnDefinition Width="auto" />
                             <ColumnDefinition Width="auto" />
                         </Grid.ColumnDefinitions>
-                        <TextBox x:Name="xCommonProject"/>
+                        <TextBox x:Name="xCommonProject" IsReadOnly="True"/>
                         <Button Grid.Column="1" Content="..." Margin="10,0,0,0" Style="{StaticResource Small}" Click="CommonProjectDialog_Click"/>
                     </Grid>
                     <Button Content="Clone from Github ⇓" Style="{StaticResource Small}" Click="CommonProjectClone_Click" HorizontalAlignment="Center"/>

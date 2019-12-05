@@ -14,6 +14,7 @@ using CoreTemplateExtensionLibrary.Models;
 using CoreTemplateExtensionLibrary.Components;
 using CoreTemplateExtensionLibrary.UI;
 using System.Threading;
+using VSLangProj;
 
 namespace CoreTemplateExtensionLibrary.Wizards
 {
@@ -111,23 +112,27 @@ namespace CoreTemplateExtensionLibrary.Wizards
                 {
                     var solutionFolder = SolutionHelper.GetSolutionFolder(staticProject.SolutionFolder);
 
+                    Project project;
                     if (staticProject.IsTemplate)
                     {
                         staticProject.Name = Replace(staticProject.Name);
                         var projectDestinationFolderPath = Path.Combine(_solutiondirectory, staticProject.Folder, staticProject.Name);
                         
                         if (solutionFolder != null)
-                            solutionFolder.AddFromTemplate(projectFile, projectDestinationFolderPath, staticProject.Name);
+                            project = solutionFolder.AddFromTemplate(projectFile, projectDestinationFolderPath, staticProject.Name);
                         else
-                            _dte.Solution.AddFromTemplate(projectFile, projectDestinationFolderPath, staticProject.Name);
+                            project = _dte.Solution.AddFromTemplate(projectFile, projectDestinationFolderPath, staticProject.Name);
                     }
                     else
                     {
                         if (solutionFolder != null)
-                            solutionFolder.AddFromFile(projectFile);
+                            project = solutionFolder.AddFromFile(projectFile);
                         else
-                            _dte.Solution.AddFromFile(projectFile);
+                            project = _dte.Solution.AddFromFile(projectFile);
                     }
+                    // TODO: fix project references
+                    //VSProject vsProj = (VSProject)project.Object;
+                    //vsProj.References.AddProject()
                     Thread.Sleep(500);
                 }
                 catch (Exception ex)

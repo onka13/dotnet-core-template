@@ -8,23 +8,23 @@
           "Name": "None",
           "Description": null,
           "Value": 1,
-          "Tick": 637091905729470755
+          "Hash": "71146e3d02514d1bbf523429131e401e"
         },
         {
           "Name": "Facebook",
           "Description": null,
           "Value": 2,
-          "Tick": 637091905729470755
+          "Hash": "185b7aed606841789d3ab25208a91b79"
         },
         {
           "Name": "Google",
           "Description": null,
           "Value": 3,
-          "Tick": 637091905909971612
+          "Hash": "434b394de462475b9c9729086112c47e"
         }
       ],
-      "Tick": 637091905729470755
+      "Hash": "c5fba10f37d74ce7a5797b0ec7a7cc73"
     }
   ],
-  "Tick": 637091905696866641
+  "Hash": "ceeeb6b605134b41bca98fdcd4f8a374"
 }
