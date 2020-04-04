@@ -1,6 +1,6 @@
 using ModuleCommon.Application.API;
 
-namespace CoreTemplate.Application.AllAPI
+namespace ModuleTemplate.Application.API
 {
     /// <summary>
     /// Program

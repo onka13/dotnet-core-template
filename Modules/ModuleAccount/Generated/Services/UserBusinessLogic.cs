@@ -8,7 +8,6 @@ using ModuleAccount.Repositories;
 using ModuleAccount.IServices;
 using ModuleAccount.IRepositories;
 
-using CoreCommon.Business.Service.Base;
 using CoreCommon.Data.Domain.Business;
 using CoreCommon.Data.Domain.Entitites;
 using CoreCommon.Data.Domain.Enums;

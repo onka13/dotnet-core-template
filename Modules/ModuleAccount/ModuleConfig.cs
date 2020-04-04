@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ModuleCommon.Business;
 using Autofac;
-using CoreCommon.Business.Service.IoC;
+using CoreCommon.Business.Service.Helpers;
 
 namespace ModuleAccount
 {

@@ -7,7 +7,7 @@ namespace CoreTemplate.Application.API.Controllers
     [Route("[controller]")]
     public class TestController : Controller
     {
-        [HttpGet]
+        [HttpGet("get")]
         public ActionResult Get()
         {
             return Json(new { date = DateTime.UtcNow });

@@ -1,8 +1,9 @@
 ﻿using Autofac;
-using CoreCommon.Business.Service.IoC;
+using CoreCommon.Business.Service.Base;
+using CoreCommon.Business.Service.Helpers;
 using CoreTemplate.Application.WorkerService.Workers;
-using CoreTemplate.Business.Service.IoC;
 using Microsoft.Extensions.DependencyInjection;
+using ModuleCommon.Business;
 
 namespace CoreTemplate.Application.WorkerService
 {

@@ -33,7 +33,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Business\CoreTemplate.Business.Service\CoreTemplate.Business.Service.csproj" />
     <ProjectReference Include="..\..\Modules\ModuleAccount\ModuleAccount.csproj" />
   </ItemGroup>
 

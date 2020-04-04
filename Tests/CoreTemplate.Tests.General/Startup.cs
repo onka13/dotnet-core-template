@@ -1,7 +1,8 @@
 ﻿using Autofac;
-using CoreCommon.Business.Service.IoC;
-using CoreTemplate.Business.Service.IoC;
+using CoreCommon.Business.Service.Base;
+using CoreCommon.Business.Service.Helpers;
 using Microsoft.Extensions.DependencyInjection;
+using ModuleCommon.Business;
 
 namespace CoreTemplate.Tests.General
 {
