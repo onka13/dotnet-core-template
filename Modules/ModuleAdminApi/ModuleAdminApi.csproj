@@ -10,8 +10,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\dotnet-core-common\CoreCommon.Data.Domain\CoreCommon.Data.Domain.csproj" />
+    <ProjectReference Include="..\..\..\dotnet-core-common\CoreCommon.Data.ElasticSearch\CoreCommon.Data.ElasticSearch.csproj" />
+    <ProjectReference Include="..\..\..\dotnet-core-common\CoreCommon.Data.EntityFrameworkBase\CoreCommon.Data.EntityFrameworkBase.csproj" />
     <ProjectReference Include="..\..\..\dotnet-core-common\CoreCommon.ModuleBase\CoreCommon.ModuleBase.csproj" />
-    <ProjectReference Include="..\..\Modules\ModuleAccount\ModuleAccount.csproj" />
+    <ProjectReference Include="..\ModuleAdmin\ModuleAdmin.csproj" />
     <ProjectReference Include="..\ModuleCommonApi\ModuleCommonApi.csproj" />
   </ItemGroup>
 

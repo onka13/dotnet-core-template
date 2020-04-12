@@ -15,6 +15,10 @@
     "EntityRepoInterfaceBase": "IRepositoryBase",
     "ServiceNamespaces": "using CoreCommon.Business.Service.Base;\r\nusing CoreCommon.Data.Domain.Business;\r\nusing CoreCommon.Data.Domain.Entitites;\r\nusing CoreCommon.Data.Domain.Enums;",
     "EntityServiceBase": "BusinessLogicBase",
-    "EntityServiceInterfaceBase": "IBusinessLogicBase"
-  }
+    "EntityServiceInterfaceBase": "IBusinessLogicBase",
+    "SearchRequestBase": "",
+    "SearchControllerNamespaces": "using CoreCommon.Data.Domain.Business;using CoreCommon.Data.Domain.Models;using CoreCommon.Data.Domain.Attributes;"
+  },
+  "JsPanelProjectPath": "C:\\projects\\git\\react-onka-admin",
+  "ExcludeTablePrefixes": null
 }

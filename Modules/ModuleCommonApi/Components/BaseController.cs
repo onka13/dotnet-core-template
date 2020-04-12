@@ -1,4 +1,5 @@
 ﻿using CoreCommon.Data.Domain.Business;
+using CoreCommon.ModuleBase.Components;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -8,23 +9,7 @@ namespace ModuleCommonApi.Components
     /// Base controller for all controllers
     /// </summary>
     [ApiController]
-    [Route("[controller]")]
-    public class BaseController : Controller
+    public abstract class BaseController : CommonBaseController
     {
-        /// <summary>
-        /// Returns invalid models as ServiceResult error.
-        /// </summary>
-        /// <returns></returns>
-        protected ActionResult InvalidModelResult()
-        {
-            var response = ServiceResult<List<string>>.Instance.ErrorResult(ServiceResultCode.InvalidModel);
-            response.Value = new List<string>();
-            foreach (var item in ModelState)
-            {
-                if (item.Value.Errors.Count > 0)
-                    response.Value.Add(item.Key);
-            }
-            return Json(response);
-        }
     }
 }

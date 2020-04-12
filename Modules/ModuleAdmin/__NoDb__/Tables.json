@@ -1,0 +1,782 @@
+[
+  {
+    "Detail": {
+      "Name": "AdminRole",
+      "Description": null,
+      "Ignored": false,
+      "TitleColumn": "Name",
+      "Schema": null,
+      "ConnectionType": 0,
+      "ConnectionName": null,
+      "BaseFullName": null
+    },
+    "Columns": [
+      {
+        "Name": "Id",
+        "Description": null,
+        "DataType": 2,
+        "Required": true,
+        "IsAutoIncrement": true,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 0,
+        "Scale": 0,
+        "Length": 50,
+        "Hash": "d55d12d7f6354a49bf90bec1be85577e"
+      },
+      {
+        "Name": "Name",
+        "Description": null,
+        "DataType": 10,
+        "Required": true,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 0,
+        "Scale": 0,
+        "Length": 200,
+        "Hash": "956e2c716b1b47f982d671cd6161c23e"
+      }
+    ],
+    "Indices": [
+      {
+        "Name": "PK_ErpMainRole_Id",
+        "IsPrimaryKey": true,
+        "IsUnique": false,
+        "Columns": [
+          {
+            "ColumnName": "Id",
+            "Sort": 0,
+            "Hash": "50d972e932894748a3e4decdcd6ce690"
+          }
+        ],
+        "Hash": "ddf4df9d464d4b3b9a75c6d6f1d43c42"
+      }
+    ],
+    "Relations": [],
+    "SearchItems": [
+      {
+        "Description": null,
+        "IsExportable": false,
+        "IsEditable": true,
+        "IsCreateable": true,
+        "IsDeleteable": false,
+        "HasDetail": false,
+        "RepositoryMethod": "Search",
+        "IsCustom": false,
+        "HideMenu": false,
+        "Columns": [
+          {
+            "ColumnName": "Name",
+            "Sign": 1,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": true
+          }
+        ],
+        "DisplayedColumns": [
+          {
+            "ColumnName": "Id",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": true
+          },
+          {
+            "ColumnName": "Name",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false
+          }
+        ],
+        "Menu": null,
+        "MenuOrder": 0
+      }
+    ],
+    "Hash": "8de613f249a54d249d417a1bad3be664"
+  },
+  {
+    "Detail": {
+      "Name": "AdminRoleActionList",
+      "Description": null,
+      "Ignored": false,
+      "TitleColumn": "Id",
+      "Schema": null,
+      "ConnectionType": 0,
+      "ConnectionName": null,
+      "BaseFullName": null
+    },
+    "Columns": [
+      {
+        "Name": "Id",
+        "Description": null,
+        "DataType": 2,
+        "Required": true,
+        "IsAutoIncrement": true,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 0,
+        "Scale": 0,
+        "Length": 50,
+        "Hash": "14e0bbc7720f47c4bac064bda090c466"
+      },
+      {
+        "Name": "ModuleId",
+        "Description": null,
+        "DataType": 2,
+        "Required": true,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 0,
+        "Scale": 0,
+        "Length": 50,
+        "Hash": "f7131304ec1744adb487c46aa4e7f060"
+      },
+      {
+        "Name": "ModuleKey",
+        "Description": null,
+        "DataType": 10,
+        "Required": true,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 0,
+        "Scale": 0,
+        "Length": 200,
+        "Hash": "fb0549765fb7489299b52a23c38b172b"
+      },
+      {
+        "Name": "PageKey",
+        "Description": null,
+        "DataType": 10,
+        "Required": true,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 0,
+        "Scale": 0,
+        "Length": 200,
+        "Hash": "a6ee493c12214a63a9981cc7b3381d44"
+      },
+      {
+        "Name": "ActionKey",
+        "Description": null,
+        "DataType": 10,
+        "Required": true,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 0,
+        "Scale": 0,
+        "Length": 200,
+        "Hash": "26747ce3133549448c0666078b9d8bed"
+      }
+    ],
+    "Indices": [
+      {
+        "Name": "PK_ErpMainRoleActionList_Id",
+        "IsPrimaryKey": true,
+        "IsUnique": false,
+        "Columns": [
+          {
+            "ColumnName": "Id",
+            "Sort": 0,
+            "Hash": "37a029b1f47144108af5119b024ce0cb"
+          }
+        ],
+        "Hash": "2371f02531694c11a3b9aae261bb1afe"
+      },
+      {
+        "Name": "Index_636895648301838450",
+        "IsPrimaryKey": false,
+        "IsUnique": false,
+        "Columns": [
+          {
+            "ColumnName": "ModuleId",
+            "Sort": 0,
+            "Hash": "48dec83b6f5548218ff80ac05fd56826"
+          }
+        ],
+        "Hash": "7691d15c90814819990ffcfbb4d571a8"
+      }
+    ],
+    "Relations": [],
+    "SearchItems": [],
+    "Hash": "9c4da275a9c44613894fb5124a781b63"
+  },
+  {
+    "Detail": {
+      "Name": "AdminRoleDefinition",
+      "Description": null,
+      "Ignored": false,
+      "TitleColumn": "Id",
+      "Schema": null,
+      "ConnectionType": 0,
+      "ConnectionName": null,
+      "BaseFullName": null
+    },
+    "Columns": [
+      {
+        "Name": "Id",
+        "Description": null,
+        "DataType": 2,
+        "Required": true,
+        "IsAutoIncrement": true,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 0,
+        "Scale": 0,
+        "Length": 50,
+        "Hash": "deb0e44564be40c9bd809371f94167da"
+      },
+      {
+        "Name": "RoleId",
+        "Description": null,
+        "DataType": 2,
+        "Required": true,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 0,
+        "Scale": 0,
+        "Length": 50,
+        "Hash": "7adbb2f21a9b4c35bcee2ed66c9fc56d"
+      },
+      {
+        "Name": "ModuleKey",
+        "Description": null,
+        "DataType": 10,
+        "Required": false,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 0,
+        "Scale": 0,
+        "Length": 50,
+        "Hash": "729fe0168585494d952ea65d12acdb98"
+      },
+      {
+        "Name": "PageKey",
+        "Description": null,
+        "DataType": 10,
+        "Required": false,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 0,
+        "Scale": 0,
+        "Length": 50,
+        "Hash": "bc00f2878cdc43e88915af53540570e4"
+      },
+      {
+        "Name": "ActionKey",
+        "Description": null,
+        "DataType": 10,
+        "Required": false,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 0,
+        "Scale": 0,
+        "Length": 50,
+        "Hash": "4a5246368250402986b7c782177c0531"
+      },
+      {
+        "Name": "Action",
+        "Description": null,
+        "DataType": 0,
+        "Required": true,
+        "IsAutoIncrement": false,
+        "EnumName": "ErpMainRoleAction",
+        "DefaultValue": null,
+        "Precision": 0,
+        "Scale": 0,
+        "Length": 50,
+        "Hash": "41ffdd40ebe2467fa978d2d75557b4d3"
+      }
+    ],
+    "Indices": [
+      {
+        "Name": "PK_ErpMainRoleDefinition_Id",
+        "IsPrimaryKey": true,
+        "IsUnique": false,
+        "Columns": [
+          {
+            "ColumnName": "Id",
+            "Sort": 0,
+            "Hash": "129ad9e2f05c4755bd2617801ea2e79c"
+          }
+        ],
+        "Hash": "01c4ac808ade4c2698c3f8700318ac87"
+      }
+    ],
+    "Relations": [],
+    "SearchItems": [
+      {
+        "Description": null,
+        "IsExportable": false,
+        "IsEditable": false,
+        "IsCreateable": false,
+        "IsDeleteable": false,
+        "HasDetail": false,
+        "RepositoryMethod": "Search",
+        "IsCustom": false,
+        "HideMenu": true,
+        "Columns": [
+          {
+            "ColumnName": "RoleId",
+            "Sign": 0,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": false
+          },
+          {
+            "ColumnName": "ModuleKey",
+            "Sign": 1,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": false
+          },
+          {
+            "ColumnName": "PageKey",
+            "Sign": 1,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": false
+          },
+          {
+            "ColumnName": "ActionKey",
+            "Sign": 1,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": false
+          }
+        ],
+        "DisplayedColumns": [
+          {
+            "ColumnName": "Id",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": true
+          },
+          {
+            "ColumnName": "RoleId",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false
+          },
+          {
+            "ColumnName": "ModuleKey",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false
+          },
+          {
+            "ColumnName": "PageKey",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false
+          },
+          {
+            "ColumnName": "ActionKey",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false
+          },
+          {
+            "ColumnName": "Action",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false
+          }
+        ],
+        "Menu": null,
+        "MenuOrder": 0
+      }
+    ],
+    "Hash": "77db51468a5d467581acd4ba34ccdd56"
+  },
+  {
+    "Detail": {
+      "Name": "AdminUser",
+      "Description": null,
+      "Ignored": false,
+      "TitleColumn": "Name",
+      "Schema": null,
+      "ConnectionType": 0,
+      "ConnectionName": null,
+      "BaseFullName": null
+    },
+    "Columns": [
+      {
+        "Name": "Id",
+        "Description": null,
+        "DataType": 2,
+        "Required": true,
+        "IsAutoIncrement": true,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 0,
+        "Scale": 0,
+        "Length": 50,
+        "Hash": "7964d4116de446a9b540ae88d485796a"
+      },
+      {
+        "Name": "Name",
+        "Description": null,
+        "DataType": 10,
+        "Required": true,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 0,
+        "Scale": 0,
+        "Length": 200,
+        "Hash": "60e4dd72bffd481ca3b03f94ef3ebf6b"
+      },
+      {
+        "Name": "Email",
+        "Description": null,
+        "DataType": 10,
+        "Required": true,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 0,
+        "Scale": 0,
+        "Length": 200,
+        "Hash": "2d9ed1dba0984350a5936cca42c65f74"
+      },
+      {
+        "Name": "Pass",
+        "Description": null,
+        "DataType": 10,
+        "Required": true,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 0,
+        "Scale": 0,
+        "Length": 50,
+        "Hash": "d4b99aeec47e4d5293d52c5d787f3d43"
+      },
+      {
+        "Name": "Language",
+        "Description": null,
+        "DataType": 10,
+        "Required": false,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 0,
+        "Scale": 0,
+        "Length": 10,
+        "Hash": "bd9ecf9d7fc6473a9b2abd1ac17b35d3"
+      },
+      {
+        "Name": "AllowIpAddress",
+        "Description": null,
+        "DataType": 10,
+        "Required": false,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 0,
+        "Scale": 0,
+        "Length": 50,
+        "Hash": "df3a4c6394704aa1bd7f2bd90585bd2b"
+      },
+      {
+        "Name": "Status",
+        "Description": null,
+        "DataType": 0,
+        "Required": true,
+        "IsAutoIncrement": false,
+        "EnumName": "Status",
+        "DefaultValue": null,
+        "Precision": 0,
+        "Scale": 0,
+        "Length": 50,
+        "Hash": "6065d63b18134ec884a72c84bc966125"
+      },
+      {
+        "Name": "No",
+        "Description": null,
+        "DataType": 10,
+        "Required": false,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 10,
+        "Scale": 2,
+        "Length": 50,
+        "Hash": "a362b259b6c84717af3a6d6812c289af"
+      },
+      {
+        "Name": "Theme",
+        "Description": null,
+        "DataType": 0,
+        "Required": true,
+        "IsAutoIncrement": false,
+        "EnumName": "AdminUserTheme",
+        "DefaultValue": null,
+        "Precision": 10,
+        "Scale": 2,
+        "Length": 50,
+        "Hash": "07043fd4daba45008e5bf12354f601c3"
+      },
+      {
+        "Name": "IsSuper",
+        "Description": null,
+        "DataType": 4,
+        "Required": true,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 10,
+        "Scale": 2,
+        "Length": 50,
+        "Hash": "f6b6e43acfea45e385c2c280107b00ac"
+      }
+    ],
+    "Indices": [
+      {
+        "Name": "PK_ErpMainUser_Id",
+        "IsPrimaryKey": true,
+        "IsUnique": false,
+        "Columns": [
+          {
+            "ColumnName": "Id",
+            "Sort": 0,
+            "Hash": "6692132574cc4728a9afef40a05e5279"
+          }
+        ],
+        "Hash": "080fd7ff58ea43c5a802bc2193b84686"
+      }
+    ],
+    "Relations": [],
+    "SearchItems": [
+      {
+        "Description": null,
+        "IsExportable": false,
+        "IsEditable": true,
+        "IsCreateable": true,
+        "IsDeleteable": false,
+        "HasDetail": false,
+        "RepositoryMethod": "Search",
+        "IsCustom": false,
+        "HideMenu": false,
+        "Columns": [
+          {
+            "ColumnName": "Name",
+            "Sign": 1,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": true
+          },
+          {
+            "ColumnName": "Email",
+            "Sign": 1,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": true
+          },
+          {
+            "ColumnName": "Status",
+            "Sign": 0,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": true
+          },
+          {
+            "ColumnName": "Id",
+            "Sign": 0,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": false
+          }
+        ],
+        "DisplayedColumns": [
+          {
+            "ColumnName": "Id",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": true
+          },
+          {
+            "ColumnName": "No",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false
+          },
+          {
+            "ColumnName": "Name",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false
+          },
+          {
+            "ColumnName": "Email",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false
+          },
+          {
+            "ColumnName": "Status",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false
+          }
+        ],
+        "Menu": null,
+        "MenuOrder": 0
+      }
+    ],
+    "Hash": "5f35a7d1961d4fd981e93a25122097ca"
+  },
+  {
+    "Detail": {
+      "Name": "AdminUserRoleMap",
+      "Description": null,
+      "Ignored": false,
+      "TitleColumn": "Id",
+      "Schema": null,
+      "ConnectionType": 0,
+      "ConnectionName": null,
+      "BaseFullName": null
+    },
+    "Columns": [
+      {
+        "Name": "Id",
+        "Description": null,
+        "DataType": 2,
+        "Required": true,
+        "IsAutoIncrement": true,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 0,
+        "Scale": 0,
+        "Length": 50,
+        "Hash": "45a9c0e5516548aba22be5d89e700bec"
+      },
+      {
+        "Name": "UserId",
+        "Description": null,
+        "DataType": 2,
+        "Required": true,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 0,
+        "Scale": 0,
+        "Length": 50,
+        "Hash": "6e2525a254504d998070962b9bdc1cb4"
+      },
+      {
+        "Name": "RoleId",
+        "Description": null,
+        "DataType": 2,
+        "Required": true,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 0,
+        "Scale": 0,
+        "Length": 50,
+        "Hash": "85d74ebfd7f24ac1a428665600fe7ccd"
+      }
+    ],
+    "Indices": [
+      {
+        "Name": "PK_ErpMainUserRoleMap_Id",
+        "IsPrimaryKey": true,
+        "IsUnique": false,
+        "Columns": [
+          {
+            "ColumnName": "Id",
+            "Sort": 0,
+            "Hash": "9eee1d6ba2f04dbaa70cc42ffbc87fc0"
+          }
+        ],
+        "Hash": "2d216872d35f4097a4f179566208c256"
+      },
+      {
+        "Name": "Index_636895663028173525",
+        "IsPrimaryKey": false,
+        "IsUnique": false,
+        "Columns": [
+          {
+            "ColumnName": "UserId",
+            "Sort": 0,
+            "Hash": "54ea8e957c0b45118025fb799a746f2c"
+          }
+        ],
+        "Hash": "425f9e3ee6e44fffae34cd9e8cc654fa"
+      }
+    ],
+    "Relations": [],
+    "SearchItems": [
+      {
+        "Description": null,
+        "IsExportable": false,
+        "IsEditable": false,
+        "IsCreateable": true,
+        "IsDeleteable": true,
+        "HasDetail": false,
+        "RepositoryMethod": "Search",
+        "IsCustom": false,
+        "HideMenu": true,
+        "Columns": [
+          {
+            "ColumnName": "UserId",
+            "Sign": 0,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": false
+          },
+          {
+            "ColumnName": "RoleId",
+            "Sign": 0,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": false
+          }
+        ],
+        "DisplayedColumns": [
+          {
+            "ColumnName": "Id",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": true
+          },
+          {
+            "ColumnName": "UserId",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false
+          },
+          {
+            "ColumnName": "RoleId",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false
+          }
+        ],
+        "Menu": null,
+        "MenuOrder": 0
+      }
+    ],
+    "Hash": "d855714375c24f5388773f101c93f580"
+  }
+]
