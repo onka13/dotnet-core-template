@@ -28,7 +28,6 @@ namespace ModuleAccount
         /// <param name="builder"></param>
         public void ConfigureContainer(ContainerBuilder builder)
         {
-            DependencyHelper.RegisterCommonTypes(builder, typeof(ModuleConfig));
         }
     }
 }

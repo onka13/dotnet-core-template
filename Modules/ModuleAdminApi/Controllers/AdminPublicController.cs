@@ -1,6 +1,8 @@
-﻿using CoreCommon.ModuleBase.Components;
+﻿using CoreCommon.Data.Domain.Business;
+using CoreCommon.ModuleBase.Components;
 using Microsoft.AspNetCore.Mvc;
 using ModuleAdmin.IServices;
+using ModuleAdmin.Models;
 using ModuleAdminApi.Models;
 using System;
 using System.Collections.Generic;
@@ -18,7 +20,7 @@ namespace ModuleAdminApi.Controllers
 
         [Route("login")]
         [HttpPost]
-        public IActionResult Login(LoginRequestModel model)
+        public ServiceResult<AdminLoginResponseModel> Login(LoginRequestModel model)
         {
             var response = UserBusinessLogic.Login(model.Email, model.Password);
 
@@ -28,7 +30,7 @@ namespace ModuleAdminApi.Controllers
                 response.Value.Roles = RoleDefinitionBusinessLogic.FindBy(x => userRoles.Contains(x.RoleId)).Value.ToList();
             }
 
-            return Json(response);
+            return response;
         }
 
     }

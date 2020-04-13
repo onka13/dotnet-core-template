@@ -31,8 +31,6 @@ namespace ModuleAdmin
         /// <param name="builder"></param>
         public void ConfigureContainer(ContainerBuilder builder)
         {
-            // Register types in this assembly
-            DependencyHelper.RegisterCommonTypes(builder, typeof(ModuleConfig));
         }
     }
 }

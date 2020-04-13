@@ -3,9 +3,6 @@ using CoreCommon.Business.Service.Helpers;
 using CoreCommon.Data.Domain.Config;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ModuleCommon.Business
 {
@@ -23,7 +20,7 @@ namespace ModuleCommon.Business
         {
             services.Configure<SmtpConfig>(configuration.GetSection("Smtp"));
             services.Configure<AppSettingsConfig>(configuration.GetSection("AppSettings"));
-
+            
             foreach (var moduleConfig in ModuleHelper.GetModules())
             {
                 moduleConfig.ConfigureServices(configuration, services);
@@ -36,7 +33,7 @@ namespace ModuleCommon.Business
         /// <param name="builder"></param>
         public static void ConfigureContainer(ContainerBuilder builder)
         {
-            DependencyHelper.RegisterCommonTypes(builder, typeof(CoreCommon.Data.EntityFrameworkBase.Components.EmptyDbContext));
+            DependencyHelper.RegisterCommonTypes(builder, ModuleHelper.FindAllAssemblies().ToArray());
 
             foreach (var moduleConfig in ModuleHelper.GetModules())
             {

@@ -1,5 +1,11 @@
 {
-  "Connections": [],
+  "Connections": [
+    {
+      "Name": "Test.mdf",
+      "ConnectionString": "Data Source=(localdb)\\MSSQLLocalDB;AttachDbFilename=D:\\deploy\\temp\\CoreTemplate.mdf;Integrated Security=True",
+      "ConnectionType": 1
+    }
+  ],
   "SettingsKey": "Development",
   "Schema": "dbo",
   "ConnectionType": 1,

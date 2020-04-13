@@ -29,7 +29,7 @@ namespace ModuleCommon.Business
                 .Select(type => (IModuleConfig)Activator.CreateInstance(type))
                 .ToList();
         }
-        
+
         /// <summary>
         /// Gets module list
         /// </summary>
@@ -38,6 +38,13 @@ namespace ModuleCommon.Business
         {
             if (Modules == null) FindModules();
             return Modules;
+        }
+
+        public static List<Assembly> FindAllAssemblies()
+        {
+            return Directory.GetFiles(AppContext.BaseDirectory, "Module*.dll")
+                .Select(Assembly.LoadFrom)
+                .ToList();
         }
     }
 }

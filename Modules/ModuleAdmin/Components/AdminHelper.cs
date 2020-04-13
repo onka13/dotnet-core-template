@@ -11,7 +11,7 @@ namespace ModuleAdmin.Components
 {
     public class AdminHelper
     {
-        public static string SecretKey = "ADMN_secret_123";
+        public static string SecretKey = "ADMN_secret_123ADMN_secret_123";
         public static string TokenName = "ADMINTOKEN";
 
         public static string GetTokenFromHeader(HttpRequestMessage request)
