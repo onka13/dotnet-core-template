@@ -57,7 +57,8 @@ namespace ModuleAdmin.Services
 
             var tokenData = new AdminTokenData
             {
-                UserId = userResult.Value.Id
+                UserId = userResult.Value.Id,
+                IsSuper = userResult.Value.IsSuper
             };
 
             string token = AuthHelper.EncryptTicket(userResult.Value.Email, AdminHelper.SecretKey, 60 * 24 * 30, tokenData);

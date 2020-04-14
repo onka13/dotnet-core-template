@@ -8,14 +8,17 @@ using ModuleAdminApi.Generated.RequestEntities;
 using ModuleAdmin.Generated.Entities;
 using ModuleAdmin.IServices;
 using CoreCommon.Data.Domain.Business;using CoreCommon.Data.Domain.Models;using CoreCommon.Data.Domain.Attributes;
+using ModuleAdminApi.Models;
 
 namespace ModuleAdminApi.Generated.Controllers
 {
     [RoleAction("AdminApi","AdminUser", null)]
-    [Route("api/AdminUserSearch")]
+    [Route("admin/AdminUserSearch")]
     [ApiController]
     public partial class AdminUserSearchController
     {
+        public IAdminUserRoleMapBusinessLogic UserRoleMapBusinessLogic { get; set; }
+
         [RoleAction("list")]
         [HttpPost("all")]
         public ActionResult Search(ApiRequestListModel<AdminUserSearchRequest> model)
@@ -47,6 +50,22 @@ namespace ModuleAdminApi.Generated.Controllers
         public ActionResult Update(AdminUserEntityModel model)
         {
             return Update0(model);
+        }
+
+        [RoleAction("get")]
+        [HttpPost("getRoles")]
+        public IActionResult GetRoles(UserRoleAssignRequest model)
+        {
+            var response = UserRoleMapBusinessLogic.ListByUserId(model.UserId);
+            return Json(response);
+        }
+
+        [RoleAction("assignRole")]
+        [HttpPost("assignRole")]
+        public IActionResult AssignRole(UserRoleAssignRequest model)
+        {
+            var response = UserRoleMapBusinessLogic.SaveUserRoles(model.UserId, model.Roles ?? new List<int>());
+            return Json(response);
         }
     }
 }

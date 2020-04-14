@@ -12,7 +12,7 @@ using CoreCommon.Data.Domain.Business;using CoreCommon.Data.Domain.Models;using 
 namespace ModuleAdminApi.Generated.Controllers
 {
     [RoleAction("AdminApi","AdminUserRoleMap", null)]
-    [Route("api/AdminUserRoleMapSearch")]
+    [Route("admin/AdminUserRoleMapSearch")]
     [ApiController]
     public partial class AdminUserRoleMapSearchController
     {

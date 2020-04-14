@@ -1,26 +1,7 @@
 {
   "EnumList": [
     {
-      "Name": "ErpCustomerPurchaseType",
-      "EnumType": 0,
-      "Items": [
-        {
-          "Name": "Consignee",
-          "Description": "Konsinye",
-          "Value": 1,
-          "Hash": "faecb02a997a4d678752b1363faf7fad"
-        },
-        {
-          "Name": "Purchasing",
-          "Description": "Satın Alma",
-          "Value": 2,
-          "Hash": "4e32a096bba441e998db9ba62fce9303"
-        }
-      ],
-      "Hash": "9a30f84ee86e4c8387266c58a5f51578"
-    },
-    {
-      "Name": "ErpMainRoleAction",
+      "Name": "AdminRoleAction",
       "EnumType": 0,
       "Items": [
         {
@@ -37,19 +18,6 @@
         }
       ],
       "Hash": "050c59e413d148c8881ab4d56871e0b1"
-    },
-    {
-      "Name": "FirmParams",
-      "EnumType": 2,
-      "Items": [
-        {
-          "Name": "FinLocalCurrency",
-          "Description": null,
-          "Value": 1,
-          "Hash": "0264ed3d2ea44a6dacd30b575c57f359"
-        }
-      ],
-      "Hash": "780a38007a094b47b0c1c4a823c0ebca"
     },
     {
       "Name": "AdminUserTheme",
@@ -69,79 +37,6 @@
         }
       ],
       "Hash": "8468676d48084698bd3be29bf08831f9"
-    },
-    {
-      "Name": "StatType",
-      "EnumType": 0,
-      "Items": [
-        {
-          "Name": "Line",
-          "Description": null,
-          "Value": 1,
-          "Hash": "a01bbd4b87f54349829ac9855aff45e8"
-        },
-        {
-          "Name": "Buble",
-          "Description": null,
-          "Value": 2,
-          "Hash": "c9fd6770f2bc43fcab040337db3d17c7"
-        },
-        {
-          "Name": "Doughnut",
-          "Description": null,
-          "Value": 3,
-          "Hash": "ec81842d58484e4689b356da6ee100e0"
-        },
-        {
-          "Name": "Bar",
-          "Description": null,
-          "Value": 4,
-          "Hash": "241c87f29cf94cfbadaa41366acc6b8f"
-        },
-        {
-          "Name": "HorizontalBar",
-          "Description": null,
-          "Value": 5,
-          "Hash": "5ecb9511e347478c8e6ae94c0901416d"
-        },
-        {
-          "Name": "Polar",
-          "Description": null,
-          "Value": 6,
-          "Hash": "edea7d5ec665478780d26deeff860df5"
-        },
-        {
-          "Name": "Radar",
-          "Description": null,
-          "Value": 7,
-          "Hash": "787e165618c74e9b904db2e17d403d67"
-        },
-        {
-          "Name": "Scatter",
-          "Description": null,
-          "Value": 8,
-          "Hash": "058ec42069504448b861f3ec32fe1c8d"
-        },
-        {
-          "Name": "Pie",
-          "Description": null,
-          "Value": 9,
-          "Hash": "7ed7723b5bee43a9992418c279b2c9bb"
-        },
-        {
-          "Name": "Box",
-          "Description": null,
-          "Value": 10,
-          "Hash": "0bb07dc615b144ab9ec355762d14d073"
-        },
-        {
-          "Name": "List",
-          "Description": null,
-          "Value": 11,
-          "Hash": "749328d517074e32b73b2d31e48a6f52"
-        }
-      ],
-      "Hash": "880df21674bf4bf9a8023f1d19a360b9"
     }
   ],
   "Hash": "178751c6d678418c83a1878587d7aa92"

@@ -29,7 +29,7 @@ namespace ModuleAdmin.Generated.Entities
         [MaxLength(50)]
         public string ActionKey { get; set; }
 
-        public ErpMainRoleAction Action { get; set; }
+        public AdminRoleAction Action { get; set; }
 
 
         public AdminRoleDefinitionEntity ToEntity()

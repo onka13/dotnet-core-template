@@ -288,7 +288,7 @@
         "DataType": 0,
         "Required": true,
         "IsAutoIncrement": false,
-        "EnumName": "ErpMainRoleAction",
+        "EnumName": "AdminRoleAction",
         "DefaultValue": null,
         "Precision": 0,
         "Scale": 0,
@@ -632,6 +632,12 @@
           },
           {
             "ColumnName": "Status",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false
+          },
+          {
+            "ColumnName": "IsSuper",
             "Title": null,
             "RelationColumnName": null,
             "SkipForJs": false

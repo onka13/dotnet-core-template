@@ -51,7 +51,8 @@ namespace ModuleAdmin.Repositories
 				x.No,
 				x.Name,
 				x.Email,
-				x.Status
+				x.Status,
+				x.IsSuper
             };
             
             if (!string.IsNullOrEmpty(orderBy) && dic.ContainsKey(orderBy))

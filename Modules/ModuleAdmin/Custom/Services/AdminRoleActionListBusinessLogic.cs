@@ -6,20 +6,21 @@ using ModuleAdmin.Components;
 using System.Linq;
 using CoreCommon.Data.Domain.Attributes;
 using ModuleAdmin.Models;
+using System.Reflection;
 
 namespace ModuleAdmin.Services
 {
     public partial class AdminRoleActionListBusinessLogic
     {
-        public ServiceResult<int> UpdateRoleActionList(List<Type> modules, Type baseControllerType)
+        public ServiceResult<int> UpdateRoleActionList(List<Assembly> assemblies, Type baseControllerType)
         {
             var response = ServiceResult<int>.Instance.ErrorResult(ServiceResultCode.Error);
 
             var model = new ModuleRoleJsonModel();
 
-            foreach (var moduleType in modules)
+            foreach (var assembly in assemblies)
             {
-                var controllers = moduleType.Assembly.GetTypes().Where(x => x.IsSubclassOf(baseControllerType)).ToList();
+                var controllers = assembly.GetTypes().Where(x => x.IsSubclassOf(baseControllerType)).ToList();
                 foreach (var controlller in controllers)
                 {
                     var roleAction = AdminHelper.GetControllerRoleAction(controlller);

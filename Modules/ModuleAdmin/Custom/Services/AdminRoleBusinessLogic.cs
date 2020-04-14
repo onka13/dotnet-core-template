@@ -31,7 +31,7 @@ namespace ModuleAdmin.Services
                     ModuleKey = roleArr[1],
                     PageKey = roleArr[2],
                     ActionKey = roleArr[3],
-                    Action = ErpMainRoleAction.Allow
+                    Action = AdminRoleAction.Allow
                 };
                 var exist = currentRoles.FirstOrDefault(x => x.ModuleKey == entity.ModuleKey && x.PageKey == entity.PageKey && x.ActionKey == entity.ActionKey);
                 if (exist == null)

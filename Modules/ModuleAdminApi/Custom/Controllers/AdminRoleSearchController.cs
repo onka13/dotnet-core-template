@@ -12,7 +12,7 @@ using CoreCommon.Data.Domain.Business;using CoreCommon.Data.Domain.Models;using 
 namespace ModuleAdminApi.Generated.Controllers
 {
     [RoleAction("AdminApi","AdminRole", null)]
-    [Route("api/AdminRoleSearch")]
+    [Route("admin/AdminRoleSearch")]
     [ApiController]
     public partial class AdminRoleSearchController
     {
@@ -28,14 +28,13 @@ namespace ModuleAdminApi.Generated.Controllers
         {
             return Get0(id);
         }
-        /*[RoleAction("get")]
+        [RoleAction("get")]
         [HttpPost("gets")]
         public IActionResult Gets(List<int> ids)
         {
             var response = AdminRoleBusinessLogic.FindBy(x => ids.Contains(x.Id));
-            // return SuccessResponse(response.Value.Select(x => new { x.Id, x.Name }));
-            return Json(response);
-        }*/
+            return SuccessResponse(response.Value.Select(x => new { x.Id, x.Name }));
+        }
         [RoleAction("new")]
         [HttpPost("new")]
         public ActionResult Create(AdminRoleEntityModel model)

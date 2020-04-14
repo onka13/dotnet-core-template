@@ -8,7 +8,7 @@ namespace ModuleAdminApi.Controllers
     /// Template controller
     /// </summary>
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("admin/[controller]")]
     public class ModuleAdminApiController : Controller
     {
         /// <summary>

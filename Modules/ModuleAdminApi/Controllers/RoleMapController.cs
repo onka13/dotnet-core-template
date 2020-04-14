@@ -5,13 +5,14 @@ using Microsoft.AspNetCore.Mvc;
 using ModuleAdmin.IServices;
 using ModuleAdminApi.Generated.Controllers;
 using ModuleAdminApi.Models;
+using ModuleCommon.Business;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace ModuleAdminApi.Controllers
 {
     [RoleAction(null, "RoleMap", null)]
-    [Route("api/RoleMap")]
+    [Route("admin/RoleMap")]
     [ApiController]
     public class RoleMapController : AdminApiBaseController
     {
@@ -37,6 +38,14 @@ namespace ModuleAdminApi.Controllers
         {
             var response = RoleBusinessLogic.SaveMap(model.Roles);
             response.Code = ServiceResultCode.Updated;
+            return Json(response);
+        }
+
+        [Route("updateRoleActionList")]
+        [HttpGet]
+        public IActionResult UpdateRoleActionList()
+        {
+            var response = RoleActionListBusinessLogic.UpdateRoleActionList(ModuleHelper.FindAllAssemblies(), typeof(Controller));
             return Json(response);
         }
     }

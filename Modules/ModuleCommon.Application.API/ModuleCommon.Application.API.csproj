@@ -11,6 +11,8 @@
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.3.1" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUi" Version="5.3.1" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.3.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,10 +20,6 @@
     <ProjectReference Include="..\..\..\dotnet-core-common\CoreCommon.Business.Service\CoreCommon.Business.Service.csproj" />
     <ProjectReference Include="..\ModuleCommonApi\ModuleCommonApi.csproj" />
     <ProjectReference Include="..\ModuleCommon\ModuleCommon.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>

@@ -1,7 +1,8 @@
 using Autofac;
 using CoreCommon.Application.API.Base;
 using CoreCommon.Business.Service.Helpers;
- using Microsoft.AspNetCore.Authentication.Cookies;
+using CoreCommon.ModuleBase.Components;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -9,6 +10,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ModuleCommon.Application.API.Components.Middlewares;
 using ModuleCommon.Business;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using System.Linq;
 
 namespace ModuleCommon.Application.API
@@ -41,6 +44,7 @@ namespace ModuleCommon.Application.API
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseCors();
 
             app.UseAuthentication();
             app.UseAuthorization();
@@ -102,6 +106,17 @@ namespace ModuleCommon.Application.API
         public override void ConfigureServices(IServiceCollection services)
         {
             base.ConfigureServices(services);
+
+            services.AddCors(o =>
+            {
+                o.AddDefaultPolicy(builder =>
+                {
+                    builder.WithOrigins("http://localhost:3001")
+                           .AllowAnyMethod()
+                           .AllowAnyHeader();
+                });
+            });
+
             base.AddControllersAndModules(services);
 
             services.AddAuthorization(options =>
@@ -125,6 +140,21 @@ namespace ModuleCommon.Application.API
             {
                 c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "My API", Version = "v1" });
                 c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
+            });
+
+            services.AddMvc(options =>
+            {
+                options.Conventions.Add(new ModelBindingConvention());
+            }).AddNewtonsoftJson(o =>
+            {
+                o.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+                o.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+                o.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
+#if DEBUG
+                o.SerializerSettings.Formatting = Newtonsoft.Json.Formatting.Indented;
+#else
+            o.SerializerSettings.Formatting = Formatting.None;
+#endif
             });
 
             DependencyManager.ConfigureServices(Configuration, services);

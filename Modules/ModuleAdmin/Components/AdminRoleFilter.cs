@@ -24,7 +24,7 @@ namespace ModuleAdmin.Components
             if (userData == null) return;
 
             // super admin
-            if (userData.UserId == 0) return;
+            if (userData.IsSuper) return;
 
             var controllerActionDescriptor = context.ActionDescriptor as ControllerActionDescriptor;
             RoleActionAttribute roleAction = AdminHelper.GetControllerRoleAction(controllerActionDescriptor.ControllerTypeInfo);
