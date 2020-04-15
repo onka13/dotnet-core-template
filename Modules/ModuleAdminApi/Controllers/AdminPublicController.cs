@@ -11,7 +11,7 @@ using System.Text;
 
 namespace ModuleAdminApi.Controllers
 {
-    [Route("admin/public")]
+    [Route("AdminApi/public")]
     public class AdminPublicController : CommonBaseController
     {
         public IAdminUserBusinessLogic UserBusinessLogic { get; set; }

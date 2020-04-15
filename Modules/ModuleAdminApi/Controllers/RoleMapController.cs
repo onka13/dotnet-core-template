@@ -12,7 +12,7 @@ using System.Linq;
 namespace ModuleAdminApi.Controllers
 {
     [RoleAction(null, "RoleMap", null)]
-    [Route("admin/RoleMap")]
+    [Route("AdminApi/RoleMap")]
     [ApiController]
     public class RoleMapController : AdminApiBaseController
     {

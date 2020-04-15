@@ -145,7 +145,95 @@
       }
     ],
     "Relations": [],
-    "SearchItems": [],
+    "SearchItems": [
+      {
+        "Description": null,
+        "IsExportable": true,
+        "IsEditable": true,
+        "IsCreateable": true,
+        "IsDeleteable": false,
+        "HasDetail": true,
+        "RepositoryMethod": "Search",
+        "IsCustom": false,
+        "HideMenu": false,
+        "Columns": [
+          {
+            "ColumnName": "Id",
+            "Sign": 0,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": false
+          },
+          {
+            "ColumnName": "Name",
+            "Sign": 1,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": false
+          },
+          {
+            "ColumnName": "Email",
+            "Sign": 1,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": false
+          },
+          {
+            "ColumnName": "EmailConfirmed",
+            "Sign": 0,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": false
+          },
+          {
+            "ColumnName": "Status",
+            "Sign": 0,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": false
+          }
+        ],
+        "DisplayedColumns": [
+          {
+            "ColumnName": "Id",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false
+          },
+          {
+            "ColumnName": "Name",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false
+          },
+          {
+            "ColumnName": "Email",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false
+          },
+          {
+            "ColumnName": "EmailConfirmed",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false
+          },
+          {
+            "ColumnName": "Status",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false
+          }
+        ],
+        "Menu": null,
+        "MenuOrder": 0
+      }
+    ],
     "Hash": "68e12f1944104f7db710c42adb3dc633"
   }
 ]

@@ -13,7 +13,7 @@ using ModuleAdminApi.Models;
 namespace ModuleAdminApi.Generated.Controllers
 {
     [RoleAction("AdminApi","AdminUser", null)]
-    [Route("admin/AdminUserSearch")]
+    [Route("AdminApi/AdminUserSearch")]
     [ApiController]
     public partial class AdminUserSearchController
     {

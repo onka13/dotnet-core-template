@@ -3,22 +3,22 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using ModuleAdmin.Services;
-using ModuleAdminApi.Generated.RequestEntities;
-using ModuleAdmin.Generated.Entities;
-using ModuleAdmin.IServices;
+using ModuleAccount.Services;
+using ModuleAccountApi.Generated.RequestEntities;
+using ModuleAccount.Generated.Entities;
+using ModuleAccount.IServices;
 using CoreCommon.Data.Domain.Business;using CoreCommon.Data.Domain.Models;using CoreCommon.Data.Domain.Attributes;
 
-namespace ModuleAdminApi.Generated.Controllers
+namespace ModuleAccountApi.Generated.Controllers
 {
-    [RoleAction("AdminApi","AdminRole", null)]
-    [Route("AdminApi/AdminRoleSearch")]
+    [RoleAction("AccountApi","User", null)]
+    [Route("AccountApi/UserSearch")]
     [ApiController]
-    public partial class AdminRoleSearchController
+    public partial class UserSearchController
     {
         [RoleAction("list")]
         [HttpPost("all")]
-        public ActionResult Search(ApiRequestListModel<AdminRoleSearchRequest> model)
+        public ActionResult Search(ApiRequestListModel<UserSearchRequest> model)
         {
             return Search0(model);
         }
@@ -28,22 +28,23 @@ namespace ModuleAdminApi.Generated.Controllers
         {
             return Get0(id);
         }
-        [RoleAction("get")]
+        /*[RoleAction("get")]
         [HttpPost("gets")]
         public IActionResult Gets(List<int> ids)
         {
-            var response = AdminRoleBusinessLogic.FindBy(x => ids.Contains(x.Id));
-            return SuccessResponse(response.Value.Select(x => new { x.Id, x.Name }));
-        }
+            var response = UserBusinessLogic.FindBy(x => ids.Contains(x.Id));
+            // return SuccessResponse(response.Value.Select(x => new { x.Id, x.Name }));
+            return Json(response);
+        }*/
         [RoleAction("new")]
         [HttpPost("new")]
-        public ActionResult Create(AdminRoleEntityModel model)
+        public ActionResult Create(UserEntityModel model)
         {
             return Create0(model);
         }
         [RoleAction("edit")]
         [HttpPost("update")]
-        public ActionResult Update(AdminRoleEntityModel model)
+        public ActionResult Update(UserEntityModel model)
         {
             return Update0(model);
         }

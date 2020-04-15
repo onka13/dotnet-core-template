@@ -8,6 +8,7 @@ using ModuleAccount.Repositories;
 using ModuleAccount.IServices;
 using ModuleAccount.IRepositories;
 
+using CoreCommon.Business.Service.Base;
 using CoreCommon.Data.Domain.Business;
 using CoreCommon.Data.Domain.Entitites;
 using CoreCommon.Data.Domain.Enums;
@@ -56,6 +57,17 @@ namespace ModuleAccount.Services
         {
             var response = ServiceResult<UserEntity>.Instance.ErrorResult(ServiceResultCode.Error);
             response.Value = Repository.GetByEmail(email);
+            if (response.Value != null)
+            {
+                response.SuccessResult(response.Value);
+            }
+            return response;
+        }
+
+        public ServiceResult<List<object>> Search(int? id,string name,string email,bool? emailConfirmed,Status? status, string orderBy, bool asc, int skip, int take, out long _total)
+        {
+            var response = ServiceResult<List<object>>.Instance.ErrorResult(ServiceResultCode.Error); 
+            response.Value = Repository.Search(id,name,email,emailConfirmed,status, orderBy, asc, skip, take, out _total);
             if (response.Value != null)
             {
                 response.SuccessResult(response.Value);

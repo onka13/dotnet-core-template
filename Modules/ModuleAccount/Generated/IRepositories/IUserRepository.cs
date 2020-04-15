@@ -21,5 +21,6 @@ namespace ModuleAccount.IRepositories
         UserEntity GetById(int id);
         int DeleteByEmail(string email);
         UserEntity GetByEmail(string email);
+        List<object> Search(int? id,string name,string email,bool? emailConfirmed,Status? status, string orderBy, bool asc, int skip, int take, out long _total);
 	}
 }    

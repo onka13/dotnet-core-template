@@ -12,7 +12,7 @@ namespace ModuleAccountApi.Controllers
     /// Account controller
     /// </summary>
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("AccountApi/[controller]")]
     public class AccountController : PublicBaseController
     {
         public IUserBusinessLogic UserBusinessLogic { get; set; }

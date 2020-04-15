@@ -8,7 +8,7 @@ using System.Linq;
 namespace ModuleAdminApi.Controllers
 {
     // no role needed
-    [Route("admin/AdminUserUpdate")]
+    [Route("AdminApi/AdminUserUpdate")]
     [ApiController]
     public class AdminUserUpdateController : AdminApiBaseController
     {

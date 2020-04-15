@@ -39,5 +39,39 @@ namespace ModuleAccount.Repositories
         {
             return GetBy(x => x.Email == email);
         }
+
+        public List<object> Search(int? id,string name,string email,bool? emailConfirmed,Status? status, string orderBy, bool asc, int skip, int take, out long _total)
+        {
+            var result = GetDbSet().AsQueryable();
+            if (id.HasValue)
+                result = result.Where(x => x.Id.Equals(id));
+            if (!string.IsNullOrEmpty(name))
+                result = result.Where(x => x.Name.ToLower().Contains(name.ToLower()));
+            if (!string.IsNullOrEmpty(email))
+                result = result.Where(x => x.Email.ToLower().Contains(email.ToLower()));
+            if (emailConfirmed.HasValue)
+                result = result.Where(x => x.EmailConfirmed.Equals(emailConfirmed));
+            if (status.HasValue)
+                result = result.Where(x => x.Status.Equals(status));
+            var dic = new Dictionary<string, Func<UserEntity, object>>
+            {
+                {"id", x => x.Id},{"email", x => x.Email}
+            };
+
+            Func<UserEntity, object> selectFunc = x => new {
+                x.Id,
+				x.Name,
+				x.Email,
+				x.EmailConfirmed,
+				x.Status
+            };
+            
+            if (!string.IsNullOrEmpty(orderBy) && dic.ContainsKey(orderBy))
+            {
+                var result2 = asc ? result.OrderBy(dic[orderBy]) : result.OrderByDescending(dic[orderBy]);
+                return SkipTake(result2.Select(selectFunc), skip, take, out _total);
+            }
+            return SkipTake(result.Select(selectFunc), skip, take, out _total);
+        }
     }
 }
