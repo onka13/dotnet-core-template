@@ -14,6 +14,11 @@ Contains user modules basicly for now.
 - Create project
 - Run `dotnet restore` 
 
+Watch on Youtube [https://youtu.be/hNpzdd9IwVg](https://youtu.be/hNpzdd9IwVg)
+[![Demo Video](http://i3.ytimg.com/vi/hNpzdd9IwVg/maxresdefault.jpg)](https://youtu.be/hNpzdd9IwVg "Demo Video")
+
+
+
 ***
 
 - `/Projects/dotnet-common-project`
