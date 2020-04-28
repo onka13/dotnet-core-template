@@ -26,9 +26,6 @@ Watch on Youtube [https://www.youtube.com/watch?v=hNpzdd9IwVg&list=PL5Eyzh8XRjPe
 
 # Structure of the project
 
-- `/ApiModules` - contains api modules
-    - `ApiModuleAccount` - contains user based api routes
-    - `ApiModuleCommon` - shared api module for api modules
 - `/Application` - api, worker, console, web projects etc.
     - `XXX.Application.AllAPI` - api project, contains all modules
     - `XXX.Application.WorkerService` - background services project
