@@ -14,8 +14,9 @@ Contains user modules basicly for now.
 - Create project
 - Run `dotnet restore` 
 
-Watch on Youtube [https://youtu.be/hNpzdd9IwVg](https://youtu.be/hNpzdd9IwVg)
-[![Demo Video](http://i3.ytimg.com/vi/hNpzdd9IwVg/maxresdefault.jpg)](https://youtu.be/hNpzdd9IwVg "Demo Video")
+Watch on Youtube [https://www.youtube.com/watch?v=hNpzdd9IwVg&list=PL5Eyzh8XRjPeTHVkzRKhcr7NQvzzOaHt5&index=1](https://www.youtube.com/watch?v=hNpzdd9IwVg&list=PL5Eyzh8XRjPeTHVkzRKhcr7NQvzzOaHt5&index=1)
+
+[![Demo Video](http://i3.ytimg.com/vi/hNpzdd9IwVg/maxresdefault.jpg)](https://www.youtube.com/watch?v=hNpzdd9IwVg&list=PL5Eyzh8XRjPeTHVkzRKhcr7NQvzzOaHt5&index=1 "Demo Video")
 
 
 
