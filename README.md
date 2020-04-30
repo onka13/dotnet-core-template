@@ -1,9 +1,8 @@
 ## .NET Core 3.0 Project Templates
 
 Provides a good start for large scale projects.
-Project architecture considers software concepts such as DDD, TDD, Solid etc.
 Aims to provide microservice structure that includes independent modules.
-Contains user modules basicly for now.
+Contains user and admin modules basicly for now.
 
 ## Installation
 
