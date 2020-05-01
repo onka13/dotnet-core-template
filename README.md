@@ -1,4 +1,4 @@
-## .NET Core 3.0 Project Templates
+## .NET Core Project Templates
 
 Provides a good start for large scale projects.
 Aims to provide microservice structure that includes independent modules.
@@ -54,13 +54,6 @@ Watch on Youtube [https://www.youtube.com/watch?v=hNpzdd9IwVg&list=PL5Eyzh8XRjPe
 ### Code generator
 
 - Please check [NoDb-Core-Generator](https://github.com/onka13/NoDb-Core-Generator)
-
-## Todo
-
-- [ ] Create documentation
-- [ ] Add more functionality for user module
-- [x] Add a react js based admin ui panel
-- [x] Code generator for modules
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
