@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="CoreTemplateInstaller.f23331b4-2961-41c3-880f-3e731dcb6389" Version="1.1.2" Language="en-US" Publisher="KAYA" />
+        <Identity Id="CoreTemplateInstaller.f23331b4-2961-41c3-880f-3e731dcb6389" Version="1.1.3" Language="en-US" Publisher="KAYA" />
         <DisplayName>Onka .NET Core Template Project</DisplayName>
         <Description xml:space="preserve">.NET Core Project Templates installer</Description>
     </Metadata>

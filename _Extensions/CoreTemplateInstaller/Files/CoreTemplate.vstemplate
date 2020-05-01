@@ -2,7 +2,7 @@
 <VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
   <TemplateData>
     <Name>ONKA Project</Name>
-    <Description>Generate a project structure with .NET Core - v1.1.2</Description>
+    <Description>Generate a project structure with .NET Core - v1.1.3</Description>
     <ProjectType>CSharp</ProjectType>
     <LanguageTag>csharp</LanguageTag>
     <SortOrder>1000</SortOrder>
