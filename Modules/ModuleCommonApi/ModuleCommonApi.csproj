@@ -12,7 +12,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\dotnet-core-common\CoreCommon.Data.Domain\CoreCommon.Data.Domain.csproj" />
     <ProjectReference Include="..\..\..\dotnet-core-common\CoreCommon.ModuleBase\CoreCommon.ModuleBase.csproj" />
-    <ProjectReference Include="..\Modules\ModuleCommon\ModuleCommon.csproj" />
+    <ProjectReference Include="..\ModuleCommon\ModuleCommon.csproj" />
   </ItemGroup>
   
 </Project>

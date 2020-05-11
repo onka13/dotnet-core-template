@@ -4,6 +4,11 @@
       "Name": "Test.mdf",
       "ConnectionString": "Data Source=(localdb)\\MSSQLLocalDB;AttachDbFilename=D:\\deploy\\temp\\CoreTemplate.mdf;Integrated Security=True",
       "ConnectionType": 1
+    },
+    {
+      "Name": "Docker",
+      "ConnectionString": "Server=192.168.74.1,5433;Database=CoreTemplateDb;User Id=sa;Password=Pass@word",
+      "ConnectionType": 1
     }
   ],
   "SettingsKey": "Development",

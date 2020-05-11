@@ -1,0 +1,33 @@
+version: '3.4'
+
+services:
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    environment:
+      - SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+    ports:
+      - "5433:1433"
+    volumes:
+      - main-sqldata:/var/opt/mssql  
+  coretemplate.application.allapi:
+    image: ${DOCKER_REGISTRY-}coretemplateapplicationallapi
+    build:
+      context: ../..
+      dockerfile: dotnet-core-template/Application/CoreTemplate.Application.API/Dockerfile
+    depends_on:
+      - sqldata
+  moduleadmin.application.api:
+    image: ${DOCKER_REGISTRY-}moduleadminapplicationapi
+    build:
+      context: ../..
+      dockerfile: dotnet-core-template/Modules/ModuleAdmin.Application.API/Dockerfile
+    depends_on:
+      - sqldata
+  moduleaccount.application.api:
+    image: ${DOCKER_REGISTRY-}moduleaccountapplicationapi
+    build:
+      context: ../..
+      dockerfile: dotnet-core-template/Modules/ModuleAccount.Application.API/Dockerfile
+    depends_on:
+      - sqldata

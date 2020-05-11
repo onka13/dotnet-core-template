@@ -1,0 +1,54 @@
+version: '3.4'
+
+services:
+  sqldata:
+    environment:
+      - SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+    ports:
+      - "5433:1433"
+    volumes:
+      - main-sqldata:/var/opt/mssql  
+  coretemplate.application.allapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - ConnectionStrings_MainConnection=${ONKA_DB:-Server=sqldata;Database=CoreTemplateDb;User Id=sa;Password=Pass@word}
+      - AppSettings_MainConnectionProvider=${ONKA_DB_TYPE:-mssql}
+      - GRPC_PORT=81
+      - PORT=80
+    ports:
+      - "5250:80"
+      - "6250:443"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+  moduleaccount.application.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - ConnectionStrings_MainConnection=${ONKA_DB:-Server=sqldata;Database=CoreTemplateDb;User Id=sa;Password=Pass@word}
+      - AppSettings_MainConnectionProvider=${ONKA_DB_TYPE:-mssql}
+      - GRPC_PORT=81
+      - PORT=80
+    ports:
+      - "5251:80"
+      - "6251:443"
+    volumes:
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+  moduleadmin.application.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - ConnectionStrings_MainConnection=${ONKA_DB:-Server=sqldata;Database=CoreTemplateDb;User Id=sa;Password=Pass@word}
+      - AppSettings_MainConnectionProvider=${ONKA_DB_TYPE:-mssql}
+      - GRPC_PORT=81
+      - PORT=80
+    ports:
+      - "5252:80"
+      - "6252:443"
+    volumes:
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+volumes:
+  main-sqldata:
+    external: false

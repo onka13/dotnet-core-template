@@ -1,0 +1,22 @@
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
+WORKDIR /app
+EXPOSE 80
+
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
+WORKDIR /src
+
+#PROJECTS
+
+RUN dotnet restore "#SOLUTION_DIRNAME/#CSPROJ_FULL"
+COPY . /src/.
+WORKDIR "/src/#SOLUTION_DIRNAME/#CSPROJ_DIR"
+RUN dotnet build "#PROJECT_NAME.csproj" -c Release -o /app/build
+#RUN dotnet build -c $Configuration -o /app
+RUN dotnet publish "#PROJECT_NAME.csproj" --no-restore -c Release -o /app
+
+FROM build AS publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app .
+ENTRYPOINT ["dotnet", "#PROJECT_NAME.dll"]

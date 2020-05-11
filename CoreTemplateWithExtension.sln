@@ -71,7 +71,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuleAdminApi", "Modules\M
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreCommon.ModuleBase", "..\dotnet-core-common\CoreCommon.ModuleBase\CoreCommon.ModuleBase.csproj", "{7D48EB5D-325C-4AE8-BDC2-643C2BCAB880}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleAdmin.Application.API", "Modules\ModuleAdmin.Application.API\ModuleAdmin.Application.API.csproj", "{61495670-6053-49D8-802D-6060C23B5AC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuleAdmin.Application.API", "Modules\ModuleAdmin.Application.API\ModuleAdmin.Application.API.csproj", "{61495670-6053-49D8-802D-6060C23B5AC7}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{EB75E999-C784-4D54-8699-6CEAD99170F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -175,6 +177,10 @@ Global
 		{61495670-6053-49D8-802D-6060C23B5AC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61495670-6053-49D8-802D-6060C23B5AC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61495670-6053-49D8-802D-6060C23B5AC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB75E999-C784-4D54-8699-6CEAD99170F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB75E999-C784-4D54-8699-6CEAD99170F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB75E999-C784-4D54-8699-6CEAD99170F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB75E999-C784-4D54-8699-6CEAD99170F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
