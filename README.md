@@ -55,5 +55,10 @@ Watch on Youtube [https://www.youtube.com/watch?v=hNpzdd9IwVg&list=PL5Eyzh8XRjPe
 
 - Please check [NoDb-Core-Generator](https://github.com/onka13/NoDb-Core-Generator)
 
+### Sample Modules
+
+- `ModuleGrpcService` - gRPC server
+- `ModuleGrpcClient` - gRPC client
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
