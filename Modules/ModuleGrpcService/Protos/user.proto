@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option csharp_namespace = "ModuleGrpcService";
+
+package user;
+
+// The user service definition.
+service UserGrpc {
+  // get user
+  rpc GetUser (GetUserRequest) returns (UserResponse);
+}
+
+message GetUserRequest {
+  int32 id = 1;
+}
+
+message UserResponse {
+  string name = 1;
+  string email = 2;
+}
