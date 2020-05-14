@@ -1,5 +1,8 @@
 ## .NET Core Project Templates
 
+[![Build Status](https://onurkaya13.visualstudio.com/dotnet-core-template/_apis/build/status/onka13.dotnet-core-template?branchName=master)](https://onurkaya13.visualstudio.com/dotnet-core-template/_build/latest?definitionId=4&branchName=master)
+![Visual Studio Marketplace Installs - Azure DevOps Extension](https://img.shields.io/visual-studio-marketplace/azure-devops/installs/total/onka13.CoreTemplate?label=vs%20extension%20installs)
+
 Provides a good start for large scale projects.
 Aims to provide microservice structure that includes independent modules.
 Contains user and admin modules basicly for now.
