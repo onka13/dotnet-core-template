@@ -6,9 +6,9 @@
 resources:
   repositories:
   - repository: dotnet_core_common
-    type: git
-    name: dotnet-core-common
-    endpoint: https://github.com/onka13/dotnet-core-common
+    type: github
+    name: onka13/dotnet-core-common
+    endpoint: onka13
 
 pool:
   vmImage: 'windows-latest'
