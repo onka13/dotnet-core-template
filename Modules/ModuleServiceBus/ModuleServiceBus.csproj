@@ -13,9 +13,8 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\dotnet-core-common\CoreCommon.Application.API\CoreCommon.Application.API.csproj" />
     <ProjectReference Include="..\..\..\dotnet-core-common\CoreCommon.Business.Service\CoreCommon.Business.Service.csproj" />
-    <ProjectReference Include="..\..\..\dotnet-core-common\CoreCommon.Data.RabbitMQ\CoreCommon.Data.RabbitMQ.csproj" />
+    <ProjectReference Include="..\..\..\dotnet-core-common\CoreCommon.Data.ServiceBus\CoreCommon.Data.ServiceBus.csproj" />
     <ProjectReference Include="..\ModuleAccount\ModuleAccount.csproj" />
-    <ProjectReference Include="..\ModuleAdmin\ModuleAdmin.csproj" />
     <ProjectReference Include="..\ModuleCommon.Application.API\ModuleCommon.Application.API.csproj" />
   </ItemGroup>
 

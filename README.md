@@ -63,6 +63,7 @@ Watch on Youtube [https://www.youtube.com/watch?v=hNpzdd9IwVg&list=PL5Eyzh8XRjPe
 - `ModuleGrpcService` - gRPC server
 - `ModuleGrpcClient` - gRPC client
 - `ModuleRabbitMQ` - RabbitMQ producer and consumer sample project
+- `ModuleServiceBus` - Azure service bus
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
