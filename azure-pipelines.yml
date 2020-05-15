@@ -30,12 +30,18 @@ steps:
   displayName: Restore
   inputs:
     command: restore
-    projects: '**/dotnet-core-template/*.csproj'
+    projects: |
+      **/*.csproj
+      !**/_Extensions/*.csproj
+      !**/dotnet-core-common/**
 
 - task: DotNetCoreCLI@2
   displayName: Build
   inputs:
-    projects: '**/dotnet-core-template/*.csproj'
+    projects: |
+      **/*.csproj
+      !**/_Extensions/*.csproj
+      !**/dotnet-core-common/**
     arguments: '--configuration $(BuildConfiguration)' 
 
 - task: DotNetCoreCLI@2
