@@ -32,7 +32,7 @@ steps:
     command: restore
     projects: |
       **/*.csproj
-      !**/_Extensions/*.csproj
+      !**/_Extensions/**
       !**/dotnet-core-common/**
 
 - task: DotNetCoreCLI@2
@@ -40,7 +40,7 @@ steps:
   inputs:
     projects: |
       **/*.csproj
-      !**/_Extensions/*.csproj
+      !**/_Extensions/**
       !**/dotnet-core-common/**
     arguments: '--configuration $(BuildConfiguration)' 
 
