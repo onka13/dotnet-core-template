@@ -11,7 +11,7 @@ namespace ModuleGrpcClient
 
         static async Task Main(string[] args)
         {
-            channel = GrpcChannel.ForAddress("https://localhost:5001");
+            channel = GrpcChannel.ForAddress("https://localhost:44330");
 
             await SayHello();
             await GetUser();

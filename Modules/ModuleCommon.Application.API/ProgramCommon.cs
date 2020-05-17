@@ -1,11 +1,19 @@
 using CoreCommon.Application.API.Base;
 using CoreCommon.Application.API.Helpers;
 using CoreCommon.Business.Service.Helpers;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
 namespace ModuleCommon.Application.API
 {
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var startup = new StartupCommon();
+            ProgramCommon.Main(args, startup);
+        }
+    }
+
     /// <summary>
     /// Program
     /// </summary>

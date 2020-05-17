@@ -40,7 +40,7 @@ namespace ModuleCommon.Application.API
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
@@ -129,11 +129,11 @@ namespace ModuleCommon.Application.API
                 options.Cookie.HttpOnly = true;
             });
 
-            services.AddHttpsRedirection(options =>
-            {
-                options.RedirectStatusCode = Environment.IsDevelopment() ? StatusCodes.Status307TemporaryRedirect : StatusCodes.Status308PermanentRedirect;
-                //options.HttpsPort = Environment.IsDevelopment() ? 44308 : 443;
-            });
+            //services.AddHttpsRedirection(options =>
+            //{
+            //    options.RedirectStatusCode = Environment.IsDevelopment() ? StatusCodes.Status307TemporaryRedirect : StatusCodes.Status308PermanentRedirect;
+            //    //options.HttpsPort = Environment.IsDevelopment() ? 44308 : 443;
+            //});
 
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>

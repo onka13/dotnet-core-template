@@ -8,7 +8,21 @@ services:
     ports:
       - "5433:1433"
     volumes:
-      - main-sqldata:/var/opt/mssql  
+      - main-sqldata:/var/opt/mssql
+  coretemplate.application.ocelotapigateway:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - ConnectionStrings_MainConnection=${ONKA_DB:-Server=sqldata;Database=CoreTemplateDb;User Id=sa;Password=Pass@word}
+      - AppSettings_MainConnectionProvider=${ONKA_DB_TYPE:-mssql}
+      - GRPC_PORT=81
+      - PORT=80
+    ports:
+      - "5240:80"
+      - "6240:443"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
   coretemplate.application.allapi:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development

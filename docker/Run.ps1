@@ -5,5 +5,6 @@ Copy-Item "./.env" -Destination "../../.env"
 #Set-Location -Path ./dotnet-core-template/docker
 
 Set-Location -Path ../
-docker-compose -f "docker/docker-compose.yml" -f "docker/docker-compose.override.yml" up #-d --build --force-recreate
+docker-compose -f "docker/docker-compose.yml" -f "docker/docker-compose.override.yml" up # -d --build --force-recreate --remove-orphans
+#docker-compose -f "docker/docker-compose.yml" -f "docker/docker-compose.override.yml" build --no-cache coretemplate.application.ocelotapigateway coretemplate.application.allapi
 Set-Location -Path ./docker

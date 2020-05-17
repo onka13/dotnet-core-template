@@ -1,10 +1,11 @@
 param (
-  [string]$solution = "../CoreTemplateWithExtension.sln"
+  [string]$solution = "../CoreTemplate.sln"
 )
  
 $solutionDirName = (get-item "./GenerateDockerFiles.ps1").Directory.Parent.Name
 
 $projects = @(
+  'Application/CoreTemplate.Application.OcelotApiGateway/CoreTemplate.Application.OcelotApiGateway.csproj',
   'Application/CoreTemplate.Application.API/CoreTemplate.Application.AllAPI.csproj',
   'Modules/ModuleAccount.Application.API/ModuleAccount.Application.API.csproj',
   'Modules/ModuleAdmin.Application.API/ModuleAdmin.Application.API.csproj'

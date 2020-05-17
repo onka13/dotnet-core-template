@@ -10,6 +10,13 @@ services:
       - "5433:1433"
     volumes:
       - main-sqldata:/var/opt/mssql  
+  coretemplate.application.ocelotapigateway:
+    image: ${DOCKER_REGISTRY-}coretemplateapplicationocelotapigateway
+    build:
+      context: ../..
+      dockerfile: dotnet-core-template/Application/CoreTemplate.Application.OcelotApiGateway/Dockerfile
+    depends_on:
+      - sqldata
   coretemplate.application.allapi:
     image: ${DOCKER_REGISTRY-}coretemplateapplicationallapi
     build:

@@ -1,9 +1,9 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <DockerComposeProjectPath>..\..\docker-compose.dcproj</DockerComposeProjectPath>
-    <UserSecretsId>28b98af6-2167-4157-8dd1-5ea51b0a8e55</UserSecretsId>
+    <UserSecretsId>66b98af6-2167-4157-8dd1-5ea51b0a8a00</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..\..</DockerfileContext>
   </PropertyGroup>
@@ -11,15 +11,17 @@
   <ItemGroup>
     <PackageReference Include="Autofac" Version="4.9.4" />
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="5.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.8" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="Ocelot" Version="15.0.6" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\dotnet-core-common\CoreCommon.Application.API\CoreCommon.Application.API.csproj" />
-    <ProjectReference Include="..\..\..\dotnet-core-common\CoreCommon.Business.Service\CoreCommon.Business.Service.csproj" />
-    <ProjectReference Include="..\ModuleAccountApi\ModuleAccountApi.csproj" />
-    <ProjectReference Include="..\ModuleAdminApi\ModuleAdminApi.csproj" />
-    <ProjectReference Include="..\ModuleCommon.Application.API\ModuleCommon.Application.API.csproj" />
+    <ProjectReference Include="..\..\Modules\ModuleAccountApi\ModuleAccountApi.csproj" />
+    <ProjectReference Include="..\..\Modules\ModuleAdminApi\ModuleAdminApi.csproj" />
+    <ProjectReference Include="..\..\Modules\ModuleCommon.Application.API\ModuleCommon.Application.API.csproj" />
+    <ProjectReference Include="..\..\Modules\ModuleCommonApi\ModuleCommonApi.csproj" />
   </ItemGroup>
 
 </Project>

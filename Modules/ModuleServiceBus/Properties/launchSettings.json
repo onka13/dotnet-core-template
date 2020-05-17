@@ -4,7 +4,8 @@
       "commandName": "Project",
       "environmentVariables": {
         "DOTNET_ENVIRONMENT": "Development"
-      }
+      },
+      "applicationUrl": "https://localhost:44334"
     }
   }
 }

@@ -85,9 +85,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreCommon.Data.RabbitMQ", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuleRabbitMQ", "Modules\ModuleRabbitMQ\ModuleRabbitMQ.csproj", "{5C5D47AA-8107-4C30-A388-EF6F495A5DBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleServiceBus", "Modules\ModuleServiceBus\ModuleServiceBus.csproj", "{F67BEDE1-BD02-4209-841E-D513A29DF1FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuleServiceBus", "Modules\ModuleServiceBus\ModuleServiceBus.csproj", "{F67BEDE1-BD02-4209-841E-D513A29DF1FF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreCommon.Data.ServiceBus", "..\dotnet-core-common\CoreCommon.Data.ServiceBus\CoreCommon.Data.ServiceBus.csproj", "{4A8462F1-C803-46CE-A87A-7B3FB32CF7A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreTemplate.Application.OcelotApiGateway", "Application\CoreTemplate.Application.OcelotApiGateway\CoreTemplate.Application.OcelotApiGateway.csproj", "{B122F6AA-C40A-47AA-AEB7-397DB8C95269}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -219,6 +221,10 @@ Global
 		{4A8462F1-C803-46CE-A87A-7B3FB32CF7A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A8462F1-C803-46CE-A87A-7B3FB32CF7A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A8462F1-C803-46CE-A87A-7B3FB32CF7A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B122F6AA-C40A-47AA-AEB7-397DB8C95269}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B122F6AA-C40A-47AA-AEB7-397DB8C95269}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B122F6AA-C40A-47AA-AEB7-397DB8C95269}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B122F6AA-C40A-47AA-AEB7-397DB8C95269}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -259,6 +265,7 @@ Global
 		{5C5D47AA-8107-4C30-A388-EF6F495A5DBC} = {A9A11A3C-0DFB-4E4E-916B-92A11B73F169}
 		{F67BEDE1-BD02-4209-841E-D513A29DF1FF} = {A9A11A3C-0DFB-4E4E-916B-92A11B73F169}
 		{4A8462F1-C803-46CE-A87A-7B3FB32CF7A1} = {40D83391-DE5A-469E-B772-E9415D22FDDF}
+		{B122F6AA-C40A-47AA-AEB7-397DB8C95269} = {7512D411-5A58-4F35-A02F-FF13B3B07B3F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5BF0D71B-7A53-4334-BF4C-D948A07FD9E9}

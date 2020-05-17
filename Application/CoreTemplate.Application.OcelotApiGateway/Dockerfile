@@ -36,16 +36,16 @@ WORKDIR /src
  COPY "dotnet-core-template/Modules/ModuleTemplateApi/ModuleTemplateApi.csproj" "dotnet-core-template/Modules/ModuleTemplateApi/ModuleTemplateApi.csproj"
 
 
-RUN dotnet restore "dotnet-core-template/Application/CoreTemplate.Application.API/CoreTemplate.Application.AllAPI.csproj"
+RUN dotnet restore "dotnet-core-template/Application/CoreTemplate.Application.OcelotApiGateway/CoreTemplate.Application.OcelotApiGateway.csproj"
 COPY . /src/.
-WORKDIR "/src/dotnet-core-template/Application/CoreTemplate.Application.API/"
-RUN dotnet build "CoreTemplate.Application.AllAPI.csproj" -c Release -o /app/build
+WORKDIR "/src/dotnet-core-template/Application/CoreTemplate.Application.OcelotApiGateway/"
+RUN dotnet build "CoreTemplate.Application.OcelotApiGateway.csproj" -c Release -o /app/build
 #RUN dotnet build -c $Configuration -o /app
-RUN dotnet publish "CoreTemplate.Application.AllAPI.csproj" --no-restore -c Release -o /app
+RUN dotnet publish "CoreTemplate.Application.OcelotApiGateway.csproj" --no-restore -c Release -o /app
 
 FROM build AS publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "CoreTemplate.Application.AllAPI.dll"]
+ENTRYPOINT ["dotnet", "CoreTemplate.Application.OcelotApiGateway.dll"]

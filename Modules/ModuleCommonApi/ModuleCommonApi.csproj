@@ -14,5 +14,9 @@
     <ProjectReference Include="..\..\..\dotnet-core-common\CoreCommon.ModuleBase\CoreCommon.ModuleBase.csproj" />
     <ProjectReference Include="..\ModuleCommon\ModuleCommon.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
   
 </Project>
