@@ -17,24 +17,24 @@ services:
       dockerfile: dotnet-core-template/Application/CoreTemplate.Application.OcelotApiGateway/Dockerfile
     depends_on:
       - sqldata
-  coretemplate.application.allapi:
-    image: ${DOCKER_REGISTRY-}coretemplateapplicationallapi
+  coretemplate.application.api:
+    image: ${DOCKER_REGISTRY-}coretemplateapplicationapi
     build:
       context: ../..
       dockerfile: dotnet-core-template/Application/CoreTemplate.Application.API/Dockerfile
     depends_on:
       - sqldata
-  moduleadmin.application.api:
-    image: ${DOCKER_REGISTRY-}moduleadminapplicationapi
+  moduleadmin.api:
+    image: ${DOCKER_REGISTRY-}moduleadminapi
     build:
       context: ../..
-      dockerfile: dotnet-core-template/Modules/ModuleAdmin.Application.API/Dockerfile
+      dockerfile: dotnet-core-template/Modules/ModuleAdmin.API/Dockerfile
     depends_on:
       - sqldata
-  moduleaccount.application.api:
-    image: ${DOCKER_REGISTRY-}moduleaccountapplicationapi
+  moduleaccount.api:
+    image: ${DOCKER_REGISTRY-}moduleaccountapi
     build:
       context: ../..
-      dockerfile: dotnet-core-template/Modules/ModuleAccount.Application.API/Dockerfile
+      dockerfile: dotnet-core-template/Modules/ModuleAccount.API/Dockerfile
     depends_on:
       - sqldata

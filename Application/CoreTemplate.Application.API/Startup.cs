@@ -1,9 +1,9 @@
 using Autofac;
 using CoreCommon.Business.Service.Helpers;
 using Microsoft.Extensions.DependencyInjection;
-using ModuleCommon.Application.API;
+using ModuleCommon.API;
 
-namespace CoreTemplate.Application.AllAPI
+namespace CoreTemplate.Application.API
 {
     /// <summary>
     /// Startup of the project. Register types for IoC, configure host features.

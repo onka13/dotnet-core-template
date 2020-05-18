@@ -29,21 +29,21 @@ Watch on Youtube [https://www.youtube.com/watch?v=hNpzdd9IwVg&list=PL5Eyzh8XRjPe
 # Structure of the project
 
 - `/Application` - api, worker, console, web projects etc.
-    - `XXX.Application.AllAPI` - api project, contains all modules
+    - `XXX.Application.API` - api project, contains all modules and routes
     - `XXX.Application.WorkerService` - background services project
 - `/Modules` - contains modules    
     - `Account` - user module
         - `ModuleAccount` - module library for account module. Contains all models, repos and services
-        - `ModuleAccountApi` - contains user based api routes
-        - `ModuleAccount.Application.API` - api project, only contains ModuleAccountApi
+        - `ModuleAccount.ApiBase` - contains user based api routes
+        - `ModuleAccount.API` - account api project, only contains ModuleAccount.ApiBase
     - `Admin` - admin module
         - `ModuleAdmin`
-        - `ModuleAdminApi`
-        - `ModuleAdmin.Application.API`
+        - `ModuleAdmin.ApiBase`
+        - `ModuleAdmin.API`
     - `Common` - shared module for modules
         - `ModuleCommon` - common module
-        - `ModuleCommonApi`
-        - `ModuleCommon.Application.API` - common based api project    
+        - `ModuleCommon.ApiBase`
+        - `ModuleCommon.API` - common based api project    
 - `/Tests` - test project
     - `XXX.Tests.General` - unit test project
 

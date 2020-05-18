@@ -6,7 +6,7 @@
     <ProjectGuid>eb75e999-c784-4d54-8699-6cead99170f1</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
-    <DockerServiceName>coretemplate.application.allapi</DockerServiceName>
+    <DockerServiceName>coretemplate.application.api</DockerServiceName>
     <DockerComposeBaseFilePath>docker\docker-compose</DockerComposeBaseFilePath>
   </PropertyGroup>
   <ItemGroup>

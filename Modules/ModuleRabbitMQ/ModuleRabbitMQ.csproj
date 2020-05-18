@@ -16,7 +16,7 @@
     <ProjectReference Include="..\..\..\dotnet-core-common\CoreCommon.Data.RabbitMQ\CoreCommon.Data.RabbitMQ.csproj" />
     <ProjectReference Include="..\ModuleAccount\ModuleAccount.csproj" />
     <ProjectReference Include="..\ModuleAdmin\ModuleAdmin.csproj" />
-    <ProjectReference Include="..\ModuleCommon.Application.API\ModuleCommon.Application.API.csproj" />
+    <ProjectReference Include="..\ModuleCommon.API\ModuleCommon.API.csproj" />
   </ItemGroup>
 
 </Project>

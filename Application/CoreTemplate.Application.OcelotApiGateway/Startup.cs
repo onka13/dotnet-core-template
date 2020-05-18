@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using ModuleCommon.Application.API;
+using ModuleCommon.API;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 using System.Net.Http;

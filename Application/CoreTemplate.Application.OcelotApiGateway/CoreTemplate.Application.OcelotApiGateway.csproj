@@ -18,10 +18,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\dotnet-core-common\CoreCommon.Application.API\CoreCommon.Application.API.csproj" />
-    <ProjectReference Include="..\..\Modules\ModuleAccountApi\ModuleAccountApi.csproj" />
-    <ProjectReference Include="..\..\Modules\ModuleAdminApi\ModuleAdminApi.csproj" />
-    <ProjectReference Include="..\..\Modules\ModuleCommon.Application.API\ModuleCommon.Application.API.csproj" />
-    <ProjectReference Include="..\..\Modules\ModuleCommonApi\ModuleCommonApi.csproj" />
+    <ProjectReference Include="..\..\Modules\ModuleAccount.ApiBase\ModuleAccount.ApiBase.csproj" />
+    <ProjectReference Include="..\..\Modules\ModuleAdmin.ApiBase\ModuleAdmin.ApiBase.csproj" />
+    <ProjectReference Include="..\..\Modules\ModuleCommon.API\ModuleCommon.API.csproj" />
+    <ProjectReference Include="..\..\Modules\ModuleCommon.ApiBase\ModuleCommon.ApiBase.csproj" />
   </ItemGroup>
 
 </Project>

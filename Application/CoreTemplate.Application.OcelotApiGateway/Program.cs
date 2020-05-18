@@ -1,4 +1,4 @@
-using ModuleCommon.Application.API;
+using ModuleCommon.API;
 using System.Net;
 
 namespace CoreTemplate.Application.OcelotApiGateway

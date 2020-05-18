@@ -33,11 +33,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuleAccount", "Modules\Mo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreTemplate.Tests.General", "Tests\CoreTemplate.Tests.General\CoreTemplate.Tests.General.csproj", "{9EBEC850-9EEB-4FEC-A612-A9E2E276CEE5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreTemplate.Application.AllAPI", "Application\CoreTemplate.Application.API\CoreTemplate.Application.AllAPI.csproj", "{825254F4-4CBB-4B1F-9E5F-877610CF4612}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreTemplate.Application.API", "Application\CoreTemplate.Application.API\CoreTemplate.Application.API.csproj", "{825254F4-4CBB-4B1F-9E5F-877610CF4612}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuleAccountApi", "Modules\ModuleAccountApi\ModuleAccountApi.csproj", "{DD348B03-71BB-4BC2-A6A1-899325AECB91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuleAccount.ApiBase", "Modules\ModuleAccount.ApiBase\ModuleAccount.ApiBase.csproj", "{DD348B03-71BB-4BC2-A6A1-899325AECB91}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuleCommonApi", "Modules\ModuleCommonApi\ModuleCommonApi.csproj", "{431B25C6-F860-4478-B2F9-F31856C3C2AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuleCommon.ApiBase", "Modules\ModuleCommon.ApiBase\ModuleCommon.ApiBase.csproj", "{431B25C6-F860-4478-B2F9-F31856C3C2AC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Extensions", "_Extensions", "{3B985246-C408-4113-92FC-7FB7B653E9C5}"
 EndProject
@@ -47,7 +47,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreTemplateExtensionLibrar
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuleTemplate", "Modules\ModuleTemplate\ModuleTemplate.csproj", "{0D68BCEF-45A9-4618-9A99-2B8E9954597C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuleTemplateApi", "Modules\ModuleTemplateApi\ModuleTemplateApi.csproj", "{C5B04138-C863-415D-B727-3CAE3EEEB58E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuleTemplate.ApiBase", "Modules\ModuleTemplate.ApiBase\ModuleTemplate.ApiBase.csproj", "{C5B04138-C863-415D-B727-3CAE3EEEB58E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Account", "Account", "{6865F2A8-FCB6-4A0E-9FC4-17DC6FA1CE16}"
 EndProject
@@ -55,23 +55,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{5F5C13
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Template", "Template", "{9ED2B795-C0D2-4257-9939-0CE5001781BF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuleAccount.Application.API", "Modules\ModuleAccount.Application.API\ModuleAccount.Application.API.csproj", "{66A3C6C9-4771-4DC3-B74E-35769343039B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuleAccount.API", "Modules\ModuleAccount.API\ModuleAccount.API.csproj", "{66A3C6C9-4771-4DC3-B74E-35769343039B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreCommon.Application.API", "..\dotnet-core-common\CoreCommon.Application.API\CoreCommon.Application.API.csproj", "{18B5B4E2-3D40-4DEB-9146-8BBD4DF8F585}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuleCommon.Application.API", "Modules\ModuleCommon.Application.API\ModuleCommon.Application.API.csproj", "{F2615685-C541-4D0C-B44D-939677E2EBDC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuleCommon.API", "Modules\ModuleCommon.API\ModuleCommon.API.csproj", "{F2615685-C541-4D0C-B44D-939677E2EBDC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuleTemplate.Application.API", "Modules\ModuleTemplate.Application.API\ModuleTemplate.Application.API.csproj", "{FEA100E0-D1F1-4228-ACE2-052550B7207A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuleTemplate.API", "Modules\ModuleTemplate.API\ModuleTemplate.API.csproj", "{FEA100E0-D1F1-4228-ACE2-052550B7207A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Admin", "Admin", "{B9323313-0353-49F6-B2C6-9FF110CE676B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuleAdmin", "Modules\ModuleAdmin\ModuleAdmin.csproj", "{CA372DD0-7A8F-4E58-BCB8-B600A4F25930}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuleAdminApi", "Modules\ModuleAdminApi\ModuleAdminApi.csproj", "{A9B30F87-7594-4854-A8D2-07877D140FBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuleAdmin.ApiBase", "Modules\ModuleAdmin.ApiBase\ModuleAdmin.ApiBase.csproj", "{A9B30F87-7594-4854-A8D2-07877D140FBA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreCommon.ModuleBase", "..\dotnet-core-common\CoreCommon.ModuleBase\CoreCommon.ModuleBase.csproj", "{7D48EB5D-325C-4AE8-BDC2-643C2BCAB880}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuleAdmin.Application.API", "Modules\ModuleAdmin.Application.API\ModuleAdmin.Application.API.csproj", "{61495670-6053-49D8-802D-6060C23B5AC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuleAdmin.API", "Modules\ModuleAdmin.API\ModuleAdmin.API.csproj", "{61495670-6053-49D8-802D-6060C23B5AC7}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{EB75E999-C784-4D54-8699-6CEAD99170F1}"
 EndProject
@@ -89,7 +89,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuleServiceBus", "Modules
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreCommon.Data.ServiceBus", "..\dotnet-core-common\CoreCommon.Data.ServiceBus\CoreCommon.Data.ServiceBus.csproj", "{4A8462F1-C803-46CE-A87A-7B3FB32CF7A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreTemplate.Application.OcelotApiGateway", "Application\CoreTemplate.Application.OcelotApiGateway\CoreTemplate.Application.OcelotApiGateway.csproj", "{B122F6AA-C40A-47AA-AEB7-397DB8C95269}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreTemplate.Application.OcelotApiGateway", "Application\CoreTemplate.Application.OcelotApiGateway\CoreTemplate.Application.OcelotApiGateway.csproj", "{B122F6AA-C40A-47AA-AEB7-397DB8C95269}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

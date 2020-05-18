@@ -33,19 +33,19 @@
   </WizardExtension>
   <WizardData>
     <Settings>
-      <StaticProject framework="false" template="true" solutionFolder="Admin" folder="Modules" name="ModuleAdmin.Application.API" path="ModuleAdmin.Application.API\MyTemplate.vstemplate" />
-      <StaticProject framework="false" template="true" solutionFolder="Admin" folder="Modules" name="ModuleAdminApi" path="ModuleAdminApi\MyTemplate.vstemplate" />
+      <StaticProject framework="false" template="true" solutionFolder="Admin" folder="Modules" name="ModuleAdmin.API" path="ModuleAdmin.API\MyTemplate.vstemplate" />
+      <StaticProject framework="false" template="true" solutionFolder="Admin" folder="Modules" name="ModuleAdmin.ApiBase" path="ModuleAdmin.ApiBase\MyTemplate.vstemplate" />
       <StaticProject framework="false" template="true" solutionFolder="Admin" folder="Modules" name="ModuleAdmin" path="ModuleAdmin\MyTemplate.vstemplate" />
       
-      <StaticProject framework="false" template="true" solutionFolder="Account" folder="Modules" name="ModuleAccount.Application.API" path="ModuleAccount.Application.API\MyTemplate.vstemplate" />
-      <StaticProject framework="false" template="true" solutionFolder="Account" folder="Modules" name="ModuleAccountApi" path="ModuleAccountApi\MyTemplate.vstemplate" />
+      <StaticProject framework="false" template="true" solutionFolder="Account" folder="Modules" name="ModuleAccount.API" path="ModuleAccount.API\MyTemplate.vstemplate" />
+      <StaticProject framework="false" template="true" solutionFolder="Account" folder="Modules" name="ModuleAccount.ApiBase" path="ModuleAccount.ApiBase\MyTemplate.vstemplate" />
       <StaticProject framework="false" template="true" solutionFolder="Account" folder="Modules" name="ModuleAccount" path="ModuleAccount\MyTemplate.vstemplate" />
       
-      <StaticProject framework="false" template="true" solutionFolder="Common" folder="Modules" name="ModuleCommon.Application.API" path="ModuleCommon.Application.API\MyTemplate.vstemplate" />
-      <StaticProject framework="false" template="true" solutionFolder="Common" folder="Modules" name="ModuleCommonApi" path="ModuleCommonApi\MyTemplate.vstemplate" />
+      <StaticProject framework="false" template="true" solutionFolder="Common" folder="Modules" name="ModuleCommon.API" path="ModuleCommon.API\MyTemplate.vstemplate" />
+      <StaticProject framework="false" template="true" solutionFolder="Common" folder="Modules" name="ModuleCommon.ApiBase" path="ModuleCommon.ApiBase\MyTemplate.vstemplate" />
       <StaticProject framework="false" template="true" solutionFolder="Common" folder="Modules" name="ModuleCommon" path="ModuleCommon\MyTemplate.vstemplate" />
       
-      <StaticProject framework="false" template="true" solutionFolder="Application" folder="Application" name="$safeprojectname$.Application.AllAPI" path="CoreTemplate.Application.AllAPI\MyTemplate.vstemplate" />
+      <StaticProject framework="false" template="true" solutionFolder="Application" folder="Application" name="$safeprojectname$.Application.API" path="CoreTemplate.Application.API\MyTemplate.vstemplate" />
       <StaticProject framework="false" template="true" solutionFolder="Application" folder="Application" name="$safeprojectname$.Application.WorkerService" path="CoreTemplate.Application.WorkerService\MyTemplate.vstemplate" />
       <StaticProject framework="false" template="true" solutionFolder="Tests" folder="Tests" name="$safeprojectname$.Tests.General" path="CoreTemplate.Tests.General\MyTemplate.vstemplate" />
       

@@ -15,7 +15,7 @@
     <ProjectReference Include="..\..\..\dotnet-core-common\CoreCommon.Business.Service\CoreCommon.Business.Service.csproj" />
     <ProjectReference Include="..\..\..\dotnet-core-common\CoreCommon.Data.ServiceBus\CoreCommon.Data.ServiceBus.csproj" />
     <ProjectReference Include="..\ModuleAccount\ModuleAccount.csproj" />
-    <ProjectReference Include="..\ModuleCommon.Application.API\ModuleCommon.Application.API.csproj" />
+    <ProjectReference Include="..\ModuleCommon.API\ModuleCommon.API.csproj" />
   </ItemGroup>
 
 </Project>

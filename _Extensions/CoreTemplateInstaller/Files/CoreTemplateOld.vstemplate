@@ -16,8 +16,8 @@
   <TemplateContent>
     <ProjectCollection>
       <SolutionFolder Name="ApiModules">
-        <ProjectTemplateLink ProjectName="ModuleAccountApi" CopyParameters="true">ModuleAccountApi\MyTemplate.vstemplate</ProjectTemplateLink>
-        <ProjectTemplateLink ProjectName="ModuleCommonApi" CopyParameters="true">ModuleCommonApi\MyTemplate.vstemplate</ProjectTemplateLink>
+        <ProjectTemplateLink ProjectName="ModuleAccount.ApiBase" CopyParameters="true">ModuleAccount.ApiBase\MyTemplate.vstemplate</ProjectTemplateLink>
+        <ProjectTemplateLink ProjectName="ModuleCommon.ApiBase" CopyParameters="true">ModuleCommon.ApiBase\MyTemplate.vstemplate</ProjectTemplateLink>
       </SolutionFolder>
       <SolutionFolder Name="Application">
         <ProjectTemplateLink ProjectName="$safeprojectname$.Application.API" CopyParameters="true">CoreTemplate.Application.API\MyTemplate.vstemplate</ProjectTemplateLink>

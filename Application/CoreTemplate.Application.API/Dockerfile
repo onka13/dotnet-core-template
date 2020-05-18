@@ -15,37 +15,37 @@ WORKDIR /src
  COPY "dotnet-core-common/CoreCommon.Data.ServiceBus/CoreCommon.Data.ServiceBus.csproj" "dotnet-core-common/CoreCommon.Data.ServiceBus/CoreCommon.Data.ServiceBus.csproj"
  COPY "dotnet-core-common/CoreCommon.Infra/CoreCommon.Infra.csproj" "dotnet-core-common/CoreCommon.Infra/CoreCommon.Infra.csproj"
  COPY "dotnet-core-common/CoreCommon.ModuleBase/CoreCommon.ModuleBase.csproj" "dotnet-core-common/CoreCommon.ModuleBase/CoreCommon.ModuleBase.csproj"
- COPY "dotnet-core-template/Application/CoreTemplate.Application.API/CoreTemplate.Application.AllAPI.csproj" "dotnet-core-template/Application/CoreTemplate.Application.API/CoreTemplate.Application.AllAPI.csproj"
+ COPY "dotnet-core-template/Application/CoreTemplate.Application.API/CoreTemplate.Application.API.csproj" "dotnet-core-template/Application/CoreTemplate.Application.API/CoreTemplate.Application.API.csproj"
  COPY "dotnet-core-template/Application/CoreTemplate.Application.OcelotApiGateway/CoreTemplate.Application.OcelotApiGateway.csproj" "dotnet-core-template/Application/CoreTemplate.Application.OcelotApiGateway/CoreTemplate.Application.OcelotApiGateway.csproj"
  COPY "dotnet-core-template/Application/CoreTemplate.Application.WorkerService/CoreTemplate.Application.WorkerService.csproj" "dotnet-core-template/Application/CoreTemplate.Application.WorkerService/CoreTemplate.Application.WorkerService.csproj"
- COPY "dotnet-core-template/Modules/ModuleAccount.Application.API/ModuleAccount.Application.API.csproj" "dotnet-core-template/Modules/ModuleAccount.Application.API/ModuleAccount.Application.API.csproj"
+ COPY "dotnet-core-template/Modules/ModuleAccount.API/ModuleAccount.API.csproj" "dotnet-core-template/Modules/ModuleAccount.API/ModuleAccount.API.csproj"
  COPY "dotnet-core-template/Modules/ModuleAccount/ModuleAccount.csproj" "dotnet-core-template/Modules/ModuleAccount/ModuleAccount.csproj"
- COPY "dotnet-core-template/Modules/ModuleAccountApi/ModuleAccountApi.csproj" "dotnet-core-template/Modules/ModuleAccountApi/ModuleAccountApi.csproj"
- COPY "dotnet-core-template/Modules/ModuleAdmin.Application.API/ModuleAdmin.Application.API.csproj" "dotnet-core-template/Modules/ModuleAdmin.Application.API/ModuleAdmin.Application.API.csproj"
+ COPY "dotnet-core-template/Modules/ModuleAccount.ApiBase/ModuleAccount.ApiBase.csproj" "dotnet-core-template/Modules/ModuleAccount.ApiBase/ModuleAccount.ApiBase.csproj"
+ COPY "dotnet-core-template/Modules/ModuleAdmin.API/ModuleAdmin.API.csproj" "dotnet-core-template/Modules/ModuleAdmin.API/ModuleAdmin.API.csproj"
  COPY "dotnet-core-template/Modules/ModuleAdmin/ModuleAdmin.csproj" "dotnet-core-template/Modules/ModuleAdmin/ModuleAdmin.csproj"
- COPY "dotnet-core-template/Modules/ModuleAdminApi/ModuleAdminApi.csproj" "dotnet-core-template/Modules/ModuleAdminApi/ModuleAdminApi.csproj"
- COPY "dotnet-core-template/Modules/ModuleCommon.Application.API/ModuleCommon.Application.API.csproj" "dotnet-core-template/Modules/ModuleCommon.Application.API/ModuleCommon.Application.API.csproj"
+ COPY "dotnet-core-template/Modules/ModuleAdmin.ApiBase/ModuleAdmin.ApiBase.csproj" "dotnet-core-template/Modules/ModuleAdmin.ApiBase/ModuleAdmin.ApiBase.csproj"
+ COPY "dotnet-core-template/Modules/ModuleCommon.API/ModuleCommon.API.csproj" "dotnet-core-template/Modules/ModuleCommon.API/ModuleCommon.API.csproj"
  COPY "dotnet-core-template/Modules/ModuleCommon/ModuleCommon.csproj" "dotnet-core-template/Modules/ModuleCommon/ModuleCommon.csproj"
- COPY "dotnet-core-template/Modules/ModuleCommonApi/ModuleCommonApi.csproj" "dotnet-core-template/Modules/ModuleCommonApi/ModuleCommonApi.csproj"
+ COPY "dotnet-core-template/Modules/ModuleCommon.ApiBase/ModuleCommon.ApiBase.csproj" "dotnet-core-template/Modules/ModuleCommon.ApiBase/ModuleCommon.ApiBase.csproj"
  COPY "dotnet-core-template/Modules/ModuleGrpcClient/ModuleGrpcClient.csproj" "dotnet-core-template/Modules/ModuleGrpcClient/ModuleGrpcClient.csproj"
  COPY "dotnet-core-template/Modules/ModuleGrpcService/ModuleGrpcService.csproj" "dotnet-core-template/Modules/ModuleGrpcService/ModuleGrpcService.csproj"
  COPY "dotnet-core-template/Modules/ModuleRabbitMQ/ModuleRabbitMQ.csproj" "dotnet-core-template/Modules/ModuleRabbitMQ/ModuleRabbitMQ.csproj"
  COPY "dotnet-core-template/Modules/ModuleServiceBus/ModuleServiceBus.csproj" "dotnet-core-template/Modules/ModuleServiceBus/ModuleServiceBus.csproj"
- COPY "dotnet-core-template/Modules/ModuleTemplate.Application.API/ModuleTemplate.Application.API.csproj" "dotnet-core-template/Modules/ModuleTemplate.Application.API/ModuleTemplate.Application.API.csproj"
+ COPY "dotnet-core-template/Modules/ModuleTemplate.API/ModuleTemplate.API.csproj" "dotnet-core-template/Modules/ModuleTemplate.API/ModuleTemplate.API.csproj"
  COPY "dotnet-core-template/Modules/ModuleTemplate/ModuleTemplate.csproj" "dotnet-core-template/Modules/ModuleTemplate/ModuleTemplate.csproj"
- COPY "dotnet-core-template/Modules/ModuleTemplateApi/ModuleTemplateApi.csproj" "dotnet-core-template/Modules/ModuleTemplateApi/ModuleTemplateApi.csproj"
+ COPY "dotnet-core-template/Modules/ModuleTemplate.ApiBase/ModuleTemplate.ApiBase.csproj" "dotnet-core-template/Modules/ModuleTemplate.ApiBase/ModuleTemplate.ApiBase.csproj"
 
 
-RUN dotnet restore "dotnet-core-template/Application/CoreTemplate.Application.API/CoreTemplate.Application.AllAPI.csproj"
+RUN dotnet restore "dotnet-core-template/Application/CoreTemplate.Application.API/CoreTemplate.Application.API.csproj"
 COPY . /src/.
 WORKDIR "/src/dotnet-core-template/Application/CoreTemplate.Application.API/"
-RUN dotnet build "CoreTemplate.Application.AllAPI.csproj" -c Release -o /app/build
+RUN dotnet build "CoreTemplate.Application.API.csproj" -c Release -o /app/build
 #RUN dotnet build -c $Configuration -o /app
-RUN dotnet publish "CoreTemplate.Application.AllAPI.csproj" --no-restore -c Release -o /app
+RUN dotnet publish "CoreTemplate.Application.API.csproj" --no-restore -c Release -o /app
 
 FROM build AS publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "CoreTemplate.Application.AllAPI.dll"]
+ENTRYPOINT ["dotnet", "CoreTemplate.Application.API.dll"]
