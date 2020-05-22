@@ -12,10 +12,11 @@ using CoreCommon.Business.Service.Base;
 using CoreCommon.Data.Domain.Business;
 using CoreCommon.Data.Domain.Entitites;
 using CoreCommon.Data.Domain.Enums;
+using CoreCommon.Data.EntityFrameworkBase.Base;
 
 namespace ModuleAccount.Services
 {
-    public partial class UserBusinessLogic : BusinessLogicBase<UserEntity, IUserRepository>, IUserBusinessLogic
+    public partial class UserBusinessLogic : EntityFrameworkBaseBusinessLogic<UserEntity, IUserRepository>, IUserBusinessLogic
     {
         public override IUserRepository Repository { get; set; }
         

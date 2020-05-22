@@ -11,7 +11,6 @@ using ModuleAccount.Generated.Enums;
 using CoreCommon.Data.Domain.Entitites;
 using CoreCommon.Data.Domain.Enums;
 using CoreCommon.Data.EntityFrameworkBase.Base;
-using CoreCommon.Data.ElasticSearch.Base;
 using CoreCommon.Data.Domain.Business;
 
 namespace ModuleAccount.Repositories

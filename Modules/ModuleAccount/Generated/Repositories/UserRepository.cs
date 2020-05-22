@@ -12,7 +12,6 @@ using ModuleAccount.Generated.Data;
 using CoreCommon.Data.Domain.Entitites;
 using CoreCommon.Data.Domain.Enums;
 using CoreCommon.Data.EntityFrameworkBase.Base;
-using CoreCommon.Data.ElasticSearch.Base;
 using CoreCommon.Data.Domain.Business;
 
 namespace ModuleAccount.Repositories
@@ -42,7 +41,7 @@ namespace ModuleAccount.Repositories
 
         public List<object> Search(int? id,string name,string email,bool? emailConfirmed,Status? status, string orderBy, bool asc, int skip, int take, out long _total)
         {
-            var result = GetDbSet().AsQueryable();
+            var result = GetQueryable();
             if (id.HasValue)
                 result = result.Where(x => x.Id.Equals(id));
             if (!string.IsNullOrEmpty(name))
@@ -53,12 +52,12 @@ namespace ModuleAccount.Repositories
                 result = result.Where(x => x.EmailConfirmed.Equals(emailConfirmed));
             if (status.HasValue)
                 result = result.Where(x => x.Status.Equals(status));
-            var dic = new Dictionary<string, Func<UserEntity, object>>
+            var dic = new Dictionary<string, Expression<Func<UserEntity, object>>>
             {
                 {"id", x => x.Id},{"email", x => x.Email}
             };
 
-            Func<UserEntity, object> selectFunc = x => new {
+            Expression<Func<UserEntity, object>> selectFunc = x => new {
                 x.Id,
 				x.Name,
 				x.Email,

@@ -14,7 +14,7 @@ using ModuleAdmin.Generated.Enums;
 
 namespace ModuleAdmin.IRepositories
 {
-    public partial interface IAdminRoleActionListRepository : IRepositoryBase<AdminRoleActionListEntity>
+    public partial interface IAdminRoleActionListRepository : IEntityFrameworkBaseRepository<AdminRoleActionListEntity>
     {
         
         int DeleteById(int id);

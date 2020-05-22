@@ -91,6 +91,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreCommon.Data.ServiceBus"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreTemplate.Application.OcelotApiGateway", "Application\CoreTemplate.Application.OcelotApiGateway\CoreTemplate.Application.OcelotApiGateway.csproj", "{B122F6AA-C40A-47AA-AEB7-397DB8C95269}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreCommon.Data.MongoDBBase", "..\dotnet-core-common\CoreCommon.Data.MongoDBBase\CoreCommon.Data.MongoDBBase.csproj", "{2A8A001A-2B45-4B54-BBC9-3A2503C4C127}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MongoDB", "MongoDB", "{CA7C2AEC-22AB-473C-BAC4-7D495506CB16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleMongoDB", "Modules\ModuleMongoDB\ModuleMongoDB.csproj", "{FCD76B66-774E-487E-A2A9-226860141D7A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -225,6 +231,14 @@ Global
 		{B122F6AA-C40A-47AA-AEB7-397DB8C95269}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B122F6AA-C40A-47AA-AEB7-397DB8C95269}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B122F6AA-C40A-47AA-AEB7-397DB8C95269}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A8A001A-2B45-4B54-BBC9-3A2503C4C127}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A8A001A-2B45-4B54-BBC9-3A2503C4C127}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A8A001A-2B45-4B54-BBC9-3A2503C4C127}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A8A001A-2B45-4B54-BBC9-3A2503C4C127}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCD76B66-774E-487E-A2A9-226860141D7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCD76B66-774E-487E-A2A9-226860141D7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCD76B66-774E-487E-A2A9-226860141D7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCD76B66-774E-487E-A2A9-226860141D7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -266,6 +280,9 @@ Global
 		{F67BEDE1-BD02-4209-841E-D513A29DF1FF} = {A9A11A3C-0DFB-4E4E-916B-92A11B73F169}
 		{4A8462F1-C803-46CE-A87A-7B3FB32CF7A1} = {40D83391-DE5A-469E-B772-E9415D22FDDF}
 		{B122F6AA-C40A-47AA-AEB7-397DB8C95269} = {7512D411-5A58-4F35-A02F-FF13B3B07B3F}
+		{2A8A001A-2B45-4B54-BBC9-3A2503C4C127} = {40D83391-DE5A-469E-B772-E9415D22FDDF}
+		{CA7C2AEC-22AB-473C-BAC4-7D495506CB16} = {5F987959-0CCB-4ADA-8A39-3C515DF67C4D}
+		{FCD76B66-774E-487E-A2A9-226860141D7A} = {CA7C2AEC-22AB-473C-BAC4-7D495506CB16}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5BF0D71B-7A53-4334-BF4C-D948A07FD9E9}

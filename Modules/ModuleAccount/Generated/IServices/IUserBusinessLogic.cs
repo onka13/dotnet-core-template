@@ -10,10 +10,11 @@ using CoreCommon.Business.Service.Base;
 using CoreCommon.Data.Domain.Business;
 using CoreCommon.Data.Domain.Entitites;
 using CoreCommon.Data.Domain.Enums;
+using CoreCommon.Data.EntityFrameworkBase.Base;
 
 namespace ModuleAccount.IServices
 {
-    public partial interface IUserBusinessLogic : IBusinessLogicBase<UserEntity>
+    public partial interface IUserBusinessLogic : IEntityFrameworkBaseBusinessLogic<UserEntity>
     {
         
         ServiceResult<int> DeleteById(int id);

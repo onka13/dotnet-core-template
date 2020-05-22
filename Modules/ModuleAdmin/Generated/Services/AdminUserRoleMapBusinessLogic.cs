@@ -12,10 +12,11 @@ using CoreCommon.Business.Service.Base;
 using CoreCommon.Data.Domain.Business;
 using CoreCommon.Data.Domain.Entitites;
 using CoreCommon.Data.Domain.Enums;
+using CoreCommon.Data.EntityFrameworkBase.Base;
 
 namespace ModuleAdmin.Services
 {
-    public partial class AdminUserRoleMapBusinessLogic : BusinessLogicBase<AdminUserRoleMapEntity, IAdminUserRoleMapRepository>, IAdminUserRoleMapBusinessLogic
+    public partial class AdminUserRoleMapBusinessLogic : EntityFrameworkBaseBusinessLogic<AdminUserRoleMapEntity, IAdminUserRoleMapRepository>, IAdminUserRoleMapBusinessLogic
     {
         public override IAdminUserRoleMapRepository Repository { get; set; }
         

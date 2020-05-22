@@ -14,7 +14,7 @@ using ModuleAdmin.Generated.Enums;
 
 namespace ModuleAdmin.IRepositories
 {
-    public partial interface IAdminUserRepository : IRepositoryBase<AdminUserEntity>
+    public partial interface IAdminUserRepository : IEntityFrameworkBaseRepository<AdminUserEntity>
     {
         
         int DeleteById(int id);
