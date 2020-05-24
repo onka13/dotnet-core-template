@@ -20,6 +20,7 @@
     <ProjectReference Include="..\ModuleAccount.ApiBase\ModuleAccount.ApiBase.csproj" />
     <ProjectReference Include="..\ModuleAdmin.ApiBase\ModuleAdmin.ApiBase.csproj" />
     <ProjectReference Include="..\ModuleCommon.API\ModuleCommon.API.csproj" />
+    <ProjectReference Include="..\ModuleTest.ApiBase\ModuleTest.ApiBase.csproj" />
   </ItemGroup>
 
 </Project>

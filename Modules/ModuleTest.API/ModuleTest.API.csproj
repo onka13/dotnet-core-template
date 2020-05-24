@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\dotnet-core-common\CoreCommon.Application.API\CoreCommon.Application.API.csproj" />
+    <ProjectReference Include="..\..\..\dotnet-core-common\CoreCommon.Business.Service\CoreCommon.Business.Service.csproj" />
+    <ProjectReference Include="..\ModuleCommon.API\ModuleCommon.API.csproj" />
+    <ProjectReference Include="..\ModuleTest.ApiBase\ModuleTest.ApiBase.csproj" />
+  </ItemGroup>
+
+</Project>

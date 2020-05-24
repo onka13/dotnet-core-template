@@ -1,8 +1,10 @@
-﻿
+﻿/*
+Auto generated file. Do not edit!
+*/
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using ModuleAccount.Generated.Entities;
 using CoreCommon.Data.EntityFrameworkBase.Base;
+using ModuleAccount.Generated.Entities;
 
 namespace ModuleAccount.Generated.Data
 {

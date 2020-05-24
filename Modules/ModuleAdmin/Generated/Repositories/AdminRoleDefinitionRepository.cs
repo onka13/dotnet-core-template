@@ -1,19 +1,18 @@
-﻿
+﻿/*
+Auto generated file. Do not edit!
+*/
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using Microsoft.EntityFrameworkCore;
+using CoreCommon.Data.Domain.Enums;
+using CoreCommon.Data.Domain.Entitites;
+using CoreCommon.Data.Domain.Business;
 using ModuleAdmin.Generated.Entities;
 using ModuleAdmin.Generated.Enums;
 using ModuleAdmin.IRepositories;
 using ModuleAdmin.Generated.Data;
-
-using CoreCommon.Data.Domain.Entitites;
-using CoreCommon.Data.Domain.Enums;
 using CoreCommon.Data.EntityFrameworkBase.Base;
-using CoreCommon.Data.ElasticSearch.Base;
-using CoreCommon.Data.Domain.Business;
 
 namespace ModuleAdmin.Repositories
 {
@@ -41,12 +40,12 @@ namespace ModuleAdmin.Repositories
                 result = result.Where(x => x.PageKey.ToLower().Contains(pageKey.ToLower()));
             if (!string.IsNullOrEmpty(actionKey))
                 result = result.Where(x => x.ActionKey.ToLower().Contains(actionKey.ToLower()));
-            var dic = new Dictionary<string, Func<AdminRoleDefinitionEntity, object>>
+            var dic = new Dictionary<string, Expression<Func<AdminRoleDefinitionEntity, object>>>
             {
                 {"id", x => x.Id}
             };
 
-            Func<AdminRoleDefinitionEntity, object> selectFunc = x => new {
+            Expression<Func<AdminRoleDefinitionEntity, object>> selectFunc = x => new {
                 x.Id,
 				x.RoleId,
 				x.ModuleKey,

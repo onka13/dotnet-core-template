@@ -7,7 +7,7 @@
     },
     {
       "Name": "Docker",
-      "ConnectionString": "Server=192.168.74.1,5433;Database=CoreTemplateDb;User Id=sa;Password=Pass@word",
+      "ConnectionString": "Server=localhost,5433;Database=CoreTemplateDb;User Id=sa;Password=Pass@word",
       "ConnectionType": 1
     }
   ],
@@ -16,19 +16,7 @@
   "ConnectionType": 1,
   "ConnectionName": "MainConnection",
   "DotNetCoreProject": {
-    "EntityNamespaces": "using CoreCommon.Data.Domain.Entitites;\r\nusing CoreCommon.Data.Domain.Enums;",
-    "ElasticEntityBase": "IElasticSearchEntity",
-    "EntityBase": "IEntityBase",
-    "DbContextNamespaces": "CoreCommon.Data.EntityFrameworkBase.Base",
-    "ElasticRepoBase": "ElasticSearchRepositoryBase",
-    "EntityRepoBase": "EntityFrameworkBaseRepository",
-    "RepositoryNamespaces": "using CoreCommon.Data.Domain.Entitites;\r\nusing CoreCommon.Data.Domain.Enums;\r\nusing CoreCommon.Data.EntityFrameworkBase.Base;\r\nusing CoreCommon.Data.ElasticSearch.Base;\r\nusing CoreCommon.Data.Domain.Business;",
-    "EntityRepoInterfaceBase": "IRepositoryBase",
-    "ServiceNamespaces": "using CoreCommon.Business.Service.Base;\r\nusing CoreCommon.Data.Domain.Business;\r\nusing CoreCommon.Data.Domain.Entitites;\r\nusing CoreCommon.Data.Domain.Enums;",
-    "EntityServiceBase": "BusinessLogicBase",
-    "EntityServiceInterfaceBase": "IBusinessLogicBase",
-    "SearchRequestBase": "",
-    "SearchControllerNamespaces": "using CoreCommon.Data.Domain.Business;using CoreCommon.Data.Domain.Models;using CoreCommon.Data.Domain.Attributes;"
+    "SearchRequestBase": ""
   },
   "JsPanelProjectPath": "C:\\projects\\git\\react-onka-admin",
   "ExcludeTablePrefixes": null

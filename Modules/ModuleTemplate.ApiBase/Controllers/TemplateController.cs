@@ -9,7 +9,7 @@ namespace ModuleTemplate.ApiBase.Controllers
     /// Template controller
     /// </summary>
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class ModuleTemplateApiController : PublicBaseController
     {
         /// <summary>

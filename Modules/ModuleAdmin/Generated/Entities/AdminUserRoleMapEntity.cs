@@ -1,4 +1,6 @@
-﻿
+﻿/*
+Auto generated file. Do not edit!
+*/
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -6,8 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using CoreCommon.Data.Domain.Entitites;
 using CoreCommon.Data.Domain.Enums;
 using ModuleAdmin.Generated.Enums;
-
-
+using CoreCommon.Data.EntityFrameworkBase.Base;
 
 namespace ModuleAdmin.Generated.Entities
 {    
@@ -35,7 +36,7 @@ namespace ModuleAdmin.Generated.Entities
     }
 
     [Table("AdminUserRoleMap", Schema = "dbo")]
-    public class AdminUserRoleMapEntity : AdminUserRoleMapEntityModel 
+    public class AdminUserRoleMapEntity : AdminUserRoleMapEntityModel
     {
         
     }

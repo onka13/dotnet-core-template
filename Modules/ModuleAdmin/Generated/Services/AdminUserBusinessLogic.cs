@@ -1,17 +1,18 @@
-﻿
+﻿/*
+Auto generated file. Do not edit!
+*/
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using CoreCommon.Business.Service.Base;
+using CoreCommon.Data.Domain.Business;
+using CoreCommon.Data.Domain.Entitites;
+using CoreCommon.Data.Domain.Enums;
 using ModuleAdmin.Generated.Entities;
 using ModuleAdmin.Generated.Enums;
 using ModuleAdmin.Repositories;
 using ModuleAdmin.IServices;
 using ModuleAdmin.IRepositories;
-
-using CoreCommon.Business.Service.Base;
-using CoreCommon.Data.Domain.Business;
-using CoreCommon.Data.Domain.Entitites;
-using CoreCommon.Data.Domain.Enums;
 using CoreCommon.Data.EntityFrameworkBase.Base;
 
 namespace ModuleAdmin.Services

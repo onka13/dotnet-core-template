@@ -1,18 +1,18 @@
-﻿
+﻿/*
+Auto generated file. Do not edit!
+*/
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using Microsoft.EntityFrameworkCore;
+using CoreCommon.Data.Domain.Enums;
+using CoreCommon.Data.Domain.Entitites;
+using CoreCommon.Data.Domain.Business;
 using ModuleAccount.Generated.Entities;
 using ModuleAccount.Generated.Enums;
 using ModuleAccount.IRepositories;
 using ModuleAccount.Generated.Data;
-
-using CoreCommon.Data.Domain.Entitites;
-using CoreCommon.Data.Domain.Enums;
 using CoreCommon.Data.EntityFrameworkBase.Base;
-using CoreCommon.Data.Domain.Business;
 
 namespace ModuleAccount.Repositories
 {
@@ -41,7 +41,7 @@ namespace ModuleAccount.Repositories
 
         public List<object> Search(int? id,string name,string email,bool? emailConfirmed,Status? status, string orderBy, bool asc, int skip, int take, out long _total)
         {
-            var result = GetQueryable();
+            var result = GetDbSet().AsQueryable();
             if (id.HasValue)
                 result = result.Where(x => x.Id.Equals(id));
             if (!string.IsNullOrEmpty(name))

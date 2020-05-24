@@ -1,0 +1,584 @@
+[
+  {
+    "Detail": {
+      "Name": "BookEf",
+      "Description": null,
+      "Ignored": false,
+      "TitleColumn": "Name",
+      "Schema": null,
+      "ConnectionType": 1,
+      "ConnectionName": "EntityFrameworkConn",
+      "BaseFullName": null
+    },
+    "Columns": [
+      {
+        "Name": "Id",
+        "Description": null,
+        "DataType": 2,
+        "Required": true,
+        "IsAutoIncrement": true,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 10,
+        "Scale": 2,
+        "Length": 50,
+        "ShortName": null,
+        "Hash": "f7633a7667814068a0d67031496673c3"
+      },
+      {
+        "Name": "Name",
+        "Description": null,
+        "DataType": 10,
+        "Required": false,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 10,
+        "Scale": 2,
+        "Length": 50,
+        "ShortName": null,
+        "Hash": "694d22bfc4c349d7bb61eb3a783c3abd"
+      },
+      {
+        "Name": "Price",
+        "Description": null,
+        "DataType": 6,
+        "Required": false,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 10,
+        "Scale": 2,
+        "Length": 50,
+        "ShortName": null,
+        "Hash": "edb311b58ccd4b4394ed3801869ebb6d"
+      },
+      {
+        "Name": "Category",
+        "Description": null,
+        "DataType": 10,
+        "Required": false,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 10,
+        "Scale": 2,
+        "Length": 50,
+        "ShortName": null,
+        "Hash": "e14630ddac884980a096dd67407df271"
+      },
+      {
+        "Name": "Author",
+        "Description": null,
+        "DataType": 10,
+        "Required": false,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 10,
+        "Scale": 2,
+        "Length": 50,
+        "ShortName": null,
+        "Hash": "e9683b9202df49c29eb847968c6ff929"
+      }
+    ],
+    "Indices": [
+      {
+        "Name": "PK_BookEf_Id",
+        "IsPrimaryKey": true,
+        "IsUnique": false,
+        "Columns": [
+          {
+            "ColumnName": "Id",
+            "Sort": 0,
+            "Hash": "eef21ff16dab41cb99b8687077be3111"
+          }
+        ],
+        "Hash": "27dfbc0b8f1b4f8896f168b7b1802222"
+      }
+    ],
+    "Relations": [],
+    "SearchItems": [
+      {
+        "Description": null,
+        "IsExportable": true,
+        "IsEditable": true,
+        "IsCreateable": true,
+        "IsDeleteable": true,
+        "HasDetail": true,
+        "RepositoryMethod": "Search",
+        "HideMenu": false,
+        "Columns": [
+          {
+            "ColumnName": "Id",
+            "Sign": 0,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": false
+          },
+          {
+            "ColumnName": "Name",
+            "Sign": 1,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": false
+          },
+          {
+            "ColumnName": "Price",
+            "Sign": 0,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": false
+          },
+          {
+            "ColumnName": "Category",
+            "Sign": 1,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": false
+          },
+          {
+            "ColumnName": "Author",
+            "Sign": 1,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": false
+          }
+        ],
+        "DisplayedColumns": [
+          {
+            "ColumnName": "Id",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false,
+            "Component": null
+          },
+          {
+            "ColumnName": "Name",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false,
+            "Component": null
+          },
+          {
+            "ColumnName": "Price",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false,
+            "Component": null
+          },
+          {
+            "ColumnName": "Category",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false,
+            "Component": null
+          },
+          {
+            "ColumnName": "Author",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false,
+            "Component": null
+          }
+        ],
+        "Menu": null,
+        "MenuOrder": 0
+      }
+    ],
+    "Hash": "61297a8a7a7e4ba5ad3285c829553333"
+  },
+  {
+    "Detail": {
+      "Name": "BookElastic",
+      "Description": null,
+      "Ignored": false,
+      "TitleColumn": "Name",
+      "Schema": null,
+      "ConnectionType": 4,
+      "ConnectionName": "ElasticConn",
+      "BaseFullName": null
+    },
+    "Columns": [
+      {
+        "Name": "Id",
+        "Description": null,
+        "DataType": 10,
+        "Required": true,
+        "IsAutoIncrement": true,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 10,
+        "Scale": 2,
+        "Length": 50,
+        "ShortName": null,
+        "Hash": "f7633a7667814068a0d67031496673c3"
+      },
+      {
+        "Name": "Name",
+        "Description": null,
+        "DataType": 10,
+        "Required": false,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 10,
+        "Scale": 2,
+        "Length": 50,
+        "ShortName": null,
+        "Hash": "694d22bfc4c349d7bb61eb3a783c3abd"
+      },
+      {
+        "Name": "Price",
+        "Description": null,
+        "DataType": 6,
+        "Required": false,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 10,
+        "Scale": 2,
+        "Length": 50,
+        "ShortName": null,
+        "Hash": "edb311b58ccd4b4394ed3801869ebb6d"
+      },
+      {
+        "Name": "Category",
+        "Description": null,
+        "DataType": 10,
+        "Required": false,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 10,
+        "Scale": 2,
+        "Length": 50,
+        "ShortName": null,
+        "Hash": "e14630ddac884980a096dd67407df271"
+      },
+      {
+        "Name": "Author",
+        "Description": null,
+        "DataType": 10,
+        "Required": false,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 10,
+        "Scale": 2,
+        "Length": 50,
+        "ShortName": null,
+        "Hash": "e9683b9202df49c29eb847968c6ff929"
+      }
+    ],
+    "Indices": [
+      {
+        "Name": "PK_BookElastic_Id",
+        "IsPrimaryKey": true,
+        "IsUnique": false,
+        "Columns": [
+          {
+            "ColumnName": "Id",
+            "Sort": 0,
+            "Hash": "eef21ff16dab41cb99b8687077be32cz"
+          }
+        ],
+        "Hash": "27dfbc0b8f1b4f8896f168b7b1802711"
+      }
+    ],
+    "Relations": [],
+    "SearchItems": [
+      {
+        "Description": null,
+        "IsExportable": true,
+        "IsEditable": true,
+        "IsCreateable": true,
+        "IsDeleteable": true,
+        "HasDetail": true,
+        "RepositoryMethod": "Search",
+        "HideMenu": false,
+        "Columns": [
+          {
+            "ColumnName": "Id",
+            "Sign": 1,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": false
+          },
+          {
+            "ColumnName": "Name",
+            "Sign": 1,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": false
+          },
+          {
+            "ColumnName": "Price",
+            "Sign": 0,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": false
+          },
+          {
+            "ColumnName": "Category",
+            "Sign": 1,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": false
+          },
+          {
+            "ColumnName": "Author",
+            "Sign": 1,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": false
+          }
+        ],
+        "DisplayedColumns": [
+          {
+            "ColumnName": "Id",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false,
+            "Component": null
+          },
+          {
+            "ColumnName": "Name",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false,
+            "Component": null
+          },
+          {
+            "ColumnName": "Price",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false,
+            "Component": null
+          },
+          {
+            "ColumnName": "Category",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false,
+            "Component": null
+          },
+          {
+            "ColumnName": "Author",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false,
+            "Component": null
+          }
+        ],
+        "Menu": null,
+        "MenuOrder": 0
+      }
+    ],
+    "Hash": "61297a8a7a7e4ba5ad3285c829553500"
+  },
+  {
+    "Detail": {
+      "Name": "BookMongo",
+      "Description": null,
+      "Ignored": false,
+      "TitleColumn": "Name",
+      "Schema": null,
+      "ConnectionType": 5,
+      "ConnectionName": "MongoConn",
+      "BaseFullName": null
+    },
+    "Columns": [
+      {
+        "Name": "Id",
+        "Description": null,
+        "DataType": 10,
+        "Required": true,
+        "IsAutoIncrement": true,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 10,
+        "Scale": 2,
+        "Length": 50,
+        "ShortName": null,
+        "Hash": "f7633a7667814068a0d67031496673c3"
+      },
+      {
+        "Name": "Name",
+        "Description": null,
+        "DataType": 10,
+        "Required": false,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 10,
+        "Scale": 2,
+        "Length": 50,
+        "ShortName": null,
+        "Hash": "694d22bfc4c349d7bb61eb3a783c3abd"
+      },
+      {
+        "Name": "Price",
+        "Description": null,
+        "DataType": 6,
+        "Required": false,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 10,
+        "Scale": 2,
+        "Length": 50,
+        "ShortName": null,
+        "Hash": "edb311b58ccd4b4394ed3801869ebb6d"
+      },
+      {
+        "Name": "Category",
+        "Description": null,
+        "DataType": 10,
+        "Required": false,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 10,
+        "Scale": 2,
+        "Length": 50,
+        "ShortName": null,
+        "Hash": "e14630ddac884980a096dd67407df271"
+      },
+      {
+        "Name": "Author",
+        "Description": null,
+        "DataType": 10,
+        "Required": false,
+        "IsAutoIncrement": false,
+        "EnumName": null,
+        "DefaultValue": null,
+        "Precision": 10,
+        "Scale": 2,
+        "Length": 50,
+        "ShortName": null,
+        "Hash": "e9683b9202df49c29eb847968c6ff929"
+      }
+    ],
+    "Indices": [
+      {
+        "Name": "PK_BookMongo_Id",
+        "IsPrimaryKey": true,
+        "IsUnique": false,
+        "Columns": [
+          {
+            "ColumnName": "Id",
+            "Sort": 0,
+            "Hash": "eef21ff16dab41cb99b8687077be32cb"
+          }
+        ],
+        "Hash": "27dfbc0b8f1b4f8896f168b7b18027a0"
+      }
+    ],
+    "Relations": [],
+    "SearchItems": [
+      {
+        "Description": null,
+        "IsExportable": true,
+        "IsEditable": true,
+        "IsCreateable": true,
+        "IsDeleteable": true,
+        "HasDetail": true,
+        "RepositoryMethod": "Search",
+        "HideMenu": false,
+        "Columns": [
+          {
+            "ColumnName": "Id",
+            "Sign": 1,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": false
+          },
+          {
+            "ColumnName": "Name",
+            "Sign": 1,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": false
+          },
+          {
+            "ColumnName": "Price",
+            "Sign": 0,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": false
+          },
+          {
+            "ColumnName": "Category",
+            "Sign": 1,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": false
+          },
+          {
+            "ColumnName": "Author",
+            "Sign": 1,
+            "Title": null,
+            "Display": 0,
+            "SkipForJs": false,
+            "AlwaysOn": false
+          }
+        ],
+        "DisplayedColumns": [
+          {
+            "ColumnName": "Id",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false,
+            "Component": null
+          },
+          {
+            "ColumnName": "Name",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false,
+            "Component": null
+          },
+          {
+            "ColumnName": "Price",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false,
+            "Component": null
+          },
+          {
+            "ColumnName": "Category",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false,
+            "Component": null
+          },
+          {
+            "ColumnName": "Author",
+            "Title": null,
+            "RelationColumnName": null,
+            "SkipForJs": false,
+            "Component": null
+          }
+        ],
+        "Menu": null,
+        "MenuOrder": 0
+      }
+    ],
+    "Hash": "61297a8a7a7e4ba5ad3285c829553536"
+  }
+]

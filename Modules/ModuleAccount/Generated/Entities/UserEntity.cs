@@ -1,4 +1,6 @@
-﻿
+﻿/*
+Auto generated file. Do not edit!
+*/
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -6,8 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using CoreCommon.Data.Domain.Entitites;
 using CoreCommon.Data.Domain.Enums;
 using ModuleAccount.Generated.Enums;
-
-
+using CoreCommon.Data.EntityFrameworkBase.Base;
 
 namespace ModuleAccount.Generated.Entities
 {    
@@ -55,7 +56,7 @@ namespace ModuleAccount.Generated.Entities
     }
 
     [Table("User", Schema = "dbo")]
-    public class UserEntity : UserEntityModel 
+    public class UserEntity : UserEntityModel
     {
         
     }
