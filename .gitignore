@@ -331,3 +331,5 @@ ASALocalRun/
 Revisions
 *.sln.bak
 
+/docker/mongovolume
+/docker/mssqlvolume

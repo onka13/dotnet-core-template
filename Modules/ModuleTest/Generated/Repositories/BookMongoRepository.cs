@@ -18,7 +18,7 @@ namespace ModuleTest.Repositories
 {
     public partial class BookMongoRepository : MongoDBBaseRepository<BookMongoEntity>, IBookMongoRepository
     {
-        public override string ConnectionName => "MongoConn";
+		public override string ConnectionName => "MongoConn";
 
         public int DeleteById(string id)
         {            

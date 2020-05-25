@@ -1,40 +1,38 @@
 version: '3.4'
 
 services:
-  sqldata:
+  mongo:
+    container_name: mongo
+    image: mongo
+    restart: always  
+  mssql:
+    container_name: mssql
     image: mcr.microsoft.com/mssql/server:2017-latest
-    environment:
-      - SA_PASSWORD=Pass@word
-      - ACCEPT_EULA=Y
-    ports:
-      - "5433:1433"
-    volumes:
-      - main-sqldata:/var/opt/mssql  
   coretemplate.application.ocelotapigateway:
     image: ${DOCKER_REGISTRY-}coretemplateapplicationocelotapigateway
     build:
       context: ../..
       dockerfile: dotnet-core-template/Application/CoreTemplate.Application.OcelotApiGateway/Dockerfile
     depends_on:
-      - sqldata
+      - mssql
   coretemplate.application.api:
     image: ${DOCKER_REGISTRY-}coretemplateapplicationapi
     build:
       context: ../..
       dockerfile: dotnet-core-template/Application/CoreTemplate.Application.API/Dockerfile
     depends_on:
-      - sqldata
+      - mssql
   moduleadmin.api:
     image: ${DOCKER_REGISTRY-}moduleadminapi
     build:
       context: ../..
       dockerfile: dotnet-core-template/Modules/ModuleAdmin.API/Dockerfile
     depends_on:
-      - sqldata
+      - mssql
   moduleaccount.api:
     image: ${DOCKER_REGISTRY-}moduleaccountapi
     build:
       context: ../..
       dockerfile: dotnet-core-template/Modules/ModuleAccount.API/Dockerfile
     depends_on:
-      - sqldata
+      - mssql

@@ -10,13 +10,14 @@ using CoreCommon.Data.Domain.Entitites;
 using CoreCommon.Data.Domain.Enums;
 using ModuleTest.Generated.Enums;
 using CoreCommon.Data.ElasticSearch.Base;
+using Nest;
 
 namespace ModuleTest.Generated.Entities
 {    
     public class BookElasticEntityModel : IElasticSearchBaseEntity<string>
     {
-		[Required]
 		[MaxLength(50)]
+		[Nest.Keyword(Index = true)]
 		public string Id { get; set; }
 
 		[MaxLength(50)]
@@ -44,7 +45,7 @@ namespace ModuleTest.Generated.Entities
         }
     }
 
-    
+    [IndexConfig("bookelastic")]
     public class BookElasticEntity : BookElasticEntityModel
     {
                 

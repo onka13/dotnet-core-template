@@ -1,19 +1,31 @@
 version: '3.4'
 
 services:
-  sqldata:
+  mongo:
+    environment:
+      #- MONGO_INITDB_ROOT_USERNAME=root
+      #- MONGO_INITDB_ROOT_PASSWORD=pass
+      - MONGO_INITDB_DATABASE=CoreTemplateDb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongovolume:/data/db
+      #- ./mongovolume/configdb:/data/configdb
+  mssql:
     environment:
       - SA_PASSWORD=Pass@word
       - ACCEPT_EULA=Y
     ports:
       - "5433:1433"
     volumes:
-      - main-sqldata:/var/opt/mssql
+      - ./mssqlvolume/data:/var/opt/mssql/data
+      - ./mssqlvolume/log:/var/opt/mssql/log
+      - ./mssqlvolume/secrets:/var/opt/mssql/secrets
   coretemplate.application.ocelotapigateway:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
-      - ConnectionStrings_MainConnection=${ONKA_DB:-Server=sqldata;Database=CoreTemplateDb;User Id=sa;Password=Pass@word}
+      - ConnectionStrings_MainConnection=${ONKA_DB:-Server=mssql;Database=CoreTemplateDb;User Id=sa;Password=Pass@word}
       - AppSettings_MainConnectionProvider=${ONKA_DB_TYPE:-mssql}
       - GRPC_PORT=81
       - PORT=80
@@ -27,7 +39,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
-      - ConnectionStrings_MainConnection=${ONKA_DB:-Server=sqldata;Database=CoreTemplateDb;User Id=sa;Password=Pass@word}
+      - ConnectionStrings_MainConnection=${ONKA_DB:-Server=mssql;Database=CoreTemplateDb;User Id=sa;Password=Pass@word}
       - AppSettings_MainConnectionProvider=${ONKA_DB_TYPE:-mssql}
       - GRPC_PORT=81
       - PORT=80
@@ -41,7 +53,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
-      - ConnectionStrings_MainConnection=${ONKA_DB:-Server=sqldata;Database=CoreTemplateDb;User Id=sa;Password=Pass@word}
+      - ConnectionStrings_MainConnection=${ONKA_DB:-Server=mssql;Database=CoreTemplateDb;User Id=sa;Password=Pass@word}
       - AppSettings_MainConnectionProvider=${ONKA_DB_TYPE:-mssql}
       - GRPC_PORT=81
       - PORT=80
@@ -54,7 +66,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
-      - ConnectionStrings_MainConnection=${ONKA_DB:-Server=sqldata;Database=CoreTemplateDb;User Id=sa;Password=Pass@word}
+      - ConnectionStrings_MainConnection=${ONKA_DB:-Server=mssql;Database=CoreTemplateDb;User Id=sa;Password=Pass@word}
       - AppSettings_MainConnectionProvider=${ONKA_DB_TYPE:-mssql}
       - GRPC_PORT=81
       - PORT=80
@@ -64,5 +76,5 @@ services:
     volumes:
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
 volumes:
-  main-sqldata:
-    external: false
+  mssqlvolume:
+  mongovolume:

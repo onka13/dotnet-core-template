@@ -19,8 +19,6 @@ namespace ModuleTest.Generated.Entities
     {
 		[BsonId]
 		[BsonRepresentation(BsonType.ObjectId)]
-		[BsonRequired]
-		[Required]
 		[MaxLength(50)]
 		[BsonElement("Id")]
 		public string Id { get; set; }
@@ -40,7 +38,7 @@ namespace ModuleTest.Generated.Entities
 		[BsonElement("Author")]
 		public string Author { get; set; }
 
-        public Expression<Func<BookMongoEntity, bool>> PrimaryPredicate => x => x.Id == Id;
+        public Expression<Func<BookMongoEntity, bool>> PrimaryPredicate() => x => x.Id == Id;
         public BookMongoEntity ToEntity()
         {
             return new BookMongoEntity
