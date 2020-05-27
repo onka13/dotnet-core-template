@@ -17,4 +17,8 @@
     <ProjectReference Include="..\ModuleCommon\ModuleCommon.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="__NoDb__\Revisions\**" />
+  </ItemGroup>
+
 </Project>

@@ -5,7 +5,7 @@ services:
     environment:
       #- MONGO_INITDB_ROOT_USERNAME=root
       #- MONGO_INITDB_ROOT_PASSWORD=pass
-      - MONGO_INITDB_DATABASE=CoreTemplateDb
+      - MONGO_INITDB_DATABASE=DbName
     ports:
       - "27017:27017"
     volumes:
@@ -18,15 +18,18 @@ services:
     ports:
       - "5433:1433"
     volumes:
-      - ./mssqlvolume/data:/var/opt/mssql/data
-      - ./mssqlvolume/log:/var/opt/mssql/log
-      - ./mssqlvolume/secrets:/var/opt/mssql/secrets
+      - ${APPDATA}/mssqlvolume/data:/var/opt/mssql/data
+      - ${APPDATA}/mssqlvolume/log:/var/opt/mssql/log
+      - ${APPDATA}/mssqlvolume/secrets:/var/opt/mssql/secrets
   coretemplate.application.ocelotapigateway:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
-      - ConnectionStrings_MainConnection=${ONKA_DB:-Server=mssql;Database=CoreTemplateDb;User Id=sa;Password=Pass@word}
-      - AppSettings_MainConnectionProvider=${ONKA_DB_TYPE:-mssql}
+      - MainConnection_ConnectionString=${ONKA_MAINCONNECTION_CS:-Server=mssql;Database=DbName;User Id=sa;Password=Pass@word}
+      - MainConnection_Provider=${ONKA_MAINCONNECTION_PROVIDER:-mssql}
+      - MongoConnection_ConnectionString=${ONKA_MONGOCONNECTION_CS:-mongodb://mongo:27017}
+      - MongoConnection_DatabaseName=${ONKA_MONGOCONNECTION_DATABASENAME:-DbName}
+      - ElasticConnection_Url=${ONKA_ELASTICCONNECTION_URL:-http://elasticsearch:9200}
       - GRPC_PORT=81
       - PORT=80
     ports:
@@ -39,8 +42,11 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
-      - ConnectionStrings_MainConnection=${ONKA_DB:-Server=mssql;Database=CoreTemplateDb;User Id=sa;Password=Pass@word}
-      - AppSettings_MainConnectionProvider=${ONKA_DB_TYPE:-mssql}
+      - MainConnection_ConnectionString=${ONKA_MAINCONNECTION_CS:-Server=mssql;Database=DbName;User Id=sa;Password=Pass@word}
+      - MainConnection_Provider=${ONKA_MAINCONNECTION_PROVIDER:-mssql}
+      - MongoConnection_ConnectionString=${ONKA_MONGOCONNECTION_CS:-mongodb://mongo:27017}
+      - MongoConnection_DatabaseName=${ONKA_MONGOCONNECTION_DATABASENAME:-DbName}
+      - ElasticConnection_Url=${ONKA_ELASTICCONNECTION_URL:-http://elasticsearch:9200}
       - GRPC_PORT=81
       - PORT=80
     ports:
@@ -49,32 +55,58 @@ services:
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
-  moduleaccount.api:
+  coretemplate.moduleaccount.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
-      - ConnectionStrings_MainConnection=${ONKA_DB:-Server=mssql;Database=CoreTemplateDb;User Id=sa;Password=Pass@word}
-      - AppSettings_MainConnectionProvider=${ONKA_DB_TYPE:-mssql}
+      - MainConnection_ConnectionString=${ONKA_MAINCONNECTION_CS:-Server=mssql;Database=DbName;User Id=sa;Password=Pass@word}
+      - MainConnection_Provider=${ONKA_MAINCONNECTION_PROVIDER:-mssql}
       - GRPC_PORT=81
       - PORT=80
     ports:
       - "5251:80"
       - "6251:443"
     volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
-  moduleadmin.api:
+  coretemplate.moduleadmin.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
-      - ConnectionStrings_MainConnection=${ONKA_DB:-Server=mssql;Database=CoreTemplateDb;User Id=sa;Password=Pass@word}
-      - AppSettings_MainConnectionProvider=${ONKA_DB_TYPE:-mssql}
+      - MainConnection_ConnectionString=${ONKA_MAINCONNECTION_CS:-Server=mssql;Database=DbName;User Id=sa;Password=Pass@word}
+      - MainConnection_Provider=${ONKA_MAINCONNECTION_PROVIDER:-mssql}
+      - MongoConnection_ConnectionString=${ONKA_MONGOCONNECTION_CS:-mongodb://mongo:27017}
+      - MongoConnection_DatabaseName=${ONKA_MONGOCONNECTION_DATABASENAME:-DbName}
+      - ElasticConnection_Url=${ONKA_ELASTICCONNECTION_URL:-http://elasticsearch:9200}
       - GRPC_PORT=81
       - PORT=80
     ports:
       - "5252:80"
       - "6252:443"
     volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+  coretemplate.moduletest.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - MainConnection_ConnectionString=${ONKA_MAINCONNECTION_CS:-Server=mssql;Database=DbName;User Id=sa;Password=Pass@word}
+      - MainConnection_Provider=${ONKA_MAINCONNECTION_PROVIDER:-mssql}
+      - MongoConnection_ConnectionString=${ONKA_MONGOCONNECTION_CS:-mongodb://mongo:27017}
+      - MongoConnection_DatabaseName=${ONKA_MONGOCONNECTION_DATABASENAME:-DbName}
+      - ElasticConnection_Url=${ONKA_ELASTICCONNECTION_URL:-http://elasticsearch:9200}
+      - GRPC_PORT=81
+      - PORT=80
+    ports:
+      - "5253:80"
+      - "6253:443"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
 volumes:
   mssqlvolume:
   mongovolume:
+networks:
+  default:
+    external:
+        name: docker_default

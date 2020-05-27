@@ -19,7 +19,7 @@ namespace ModuleTest.Repositories
 {
     public partial class BookElasticRepository : ElasticSearchBaseRepository<BookElasticEntity, string>, IBookElasticRepository
     {
-		public override string ConnectionName => "ElasticConn";
+		public override string ConnectionName => "ElasticConnection";
 
         public List<BookElasticEntity> Search(string id,string name,decimal? price,string category,string author, string orderBy, bool asc, int skip, int take, out long _total)
         {

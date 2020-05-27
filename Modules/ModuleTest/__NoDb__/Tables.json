@@ -7,7 +7,7 @@
       "TitleColumn": "Name",
       "Schema": null,
       "ConnectionType": 1,
-      "ConnectionName": "EntityFrameworkConn",
+      "ConnectionName": "MainConnection",
       "BaseFullName": null
     },
     "Columns": [
@@ -201,7 +201,7 @@
       "TitleColumn": "Name",
       "Schema": null,
       "ConnectionType": 4,
-      "ConnectionName": "ElasticConn",
+      "ConnectionName": "ElasticConnection",
       "BaseFullName": null
     },
     "Columns": [
@@ -395,7 +395,7 @@
       "TitleColumn": "Name",
       "Schema": null,
       "ConnectionType": 5,
-      "ConnectionName": "MongoConn",
+      "ConnectionName": "MongoConnection",
       "BaseFullName": null
     },
     "Columns": [

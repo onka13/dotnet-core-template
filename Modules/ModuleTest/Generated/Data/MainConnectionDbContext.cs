@@ -8,9 +8,9 @@ using ModuleTest.Generated.Entities;
 
 namespace ModuleTest.Generated.Data
 {
-    public class EntityFrameworkConnDbContext : DbContextBase
+    public class MainConnectionDbContext : DbContextBase
     {
-        public override string Name { get => "EntityFrameworkConn"; }
+        public override string Name { get => "MainConnection"; }
 
         
         public virtual DbSet<BookEfEntity> BookEfs { get; set; }

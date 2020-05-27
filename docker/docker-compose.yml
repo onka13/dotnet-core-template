@@ -22,15 +22,23 @@ services:
       dockerfile: dotnet-core-template/Application/CoreTemplate.Application.API/Dockerfile
     depends_on:
       - mssql
-  moduleadmin.api:
-    image: ${DOCKER_REGISTRY-}moduleadminapi
+  coretemplate.moduletest.api:
+    image: ${DOCKER_REGISTRY-}coretemplatetestapi
+    build:
+      context: ../..
+      dockerfile: dotnet-core-template/Modules/ModuleTest.API/Dockerfile
+    depends_on:
+      - mssql
+      - mongo
+  coretemplate.moduleadmin.api:
+    image: ${DOCKER_REGISTRY-}coretemplatemoduleadminapi
     build:
       context: ../..
       dockerfile: dotnet-core-template/Modules/ModuleAdmin.API/Dockerfile
     depends_on:
       - mssql
-  moduleaccount.api:
-    image: ${DOCKER_REGISTRY-}moduleaccountapi
+  coretemplate.moduleaccount.api:
+    image: ${DOCKER_REGISTRY-}coretemplatemoduleaccountapi
     build:
       context: ../..
       dockerfile: dotnet-core-template/Modules/ModuleAccount.API/Dockerfile

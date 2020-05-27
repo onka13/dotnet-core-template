@@ -15,5 +15,11 @@
     </None>
     <None Include=".\docker\docker-compose.yml" />
     <None Include=".\docker\.dockerignore" />
+    <None Include=".\docker\docker-compose.extra.yml" />
+    <None Include=".\docker\DockerfileTemplate.txt" />
+    <None Include=".\docker\DockerIgnoreTemplate.txt" />
+    <None Include=".\docker\GenerateDockerFiles.ps1" />
+    <None Include=".\docker\Run.ps1" />
+    <None Include=".\docker\RunExtras.ps1" />
   </ItemGroup>
 </Project>

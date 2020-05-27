@@ -7,7 +7,7 @@ services:
     ports: 
       - 15672:15672
     volumes: 
-      - rabbitmqvolume:/var/lib/rabbitmq
+      - ${APPDATA}/rabbitmqvolume:/var/lib/rabbitmq
   mongo-express:
     image: mongo-express
     restart: always
@@ -27,7 +27,7 @@ services:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.7.0
     container_name: elasticsearch
     volumes:
-      - elasticsearchvolume:/usr/share/elasticsearch/data
+      - ${APPDATA}/elasticsearchvolume:/usr/share/elasticsearch/data
     ports:
       - 9200:9200
     environment: 

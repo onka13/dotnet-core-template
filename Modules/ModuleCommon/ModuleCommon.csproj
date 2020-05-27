@@ -15,4 +15,8 @@
     <ProjectReference Include="..\..\..\dotnet-core-common\CoreCommon.Data.Domain\CoreCommon.Data.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="__NoDb__\Revisions\**" />
+  </ItemGroup>
+
 </Project>

@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Custom\" />
+    <None Remove="__NoDb__\Revisions\**" />
   </ItemGroup>
 
 </Project>

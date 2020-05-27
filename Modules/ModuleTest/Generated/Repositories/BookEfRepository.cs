@@ -16,7 +16,7 @@ using CoreCommon.Data.EntityFrameworkBase.Base;
 
 namespace ModuleTest.Repositories
 {
-    public partial class BookEfRepository : EntityFrameworkBaseRepository<BookEfEntity, EntityFrameworkConnDbContext>, IBookEfRepository
+    public partial class BookEfRepository : EntityFrameworkBaseRepository<BookEfEntity, MainConnectionDbContext>, IBookEfRepository
     {
 
         public int DeleteById(int id)

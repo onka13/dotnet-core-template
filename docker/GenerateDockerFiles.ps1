@@ -1,15 +1,23 @@
-param (
-  [string]$solution = "../CoreTemplate.sln"
-)
- 
-$solutionDirName = (get-item "./GenerateDockerFiles.ps1").Directory.Parent.Name
+# use below command on console in order to run;
+# powershell -ExecutionPolicy Bypass -File GenerateDockerFiles.ps1
 
+param (
+  [string]$solution = "../dotnet-core-template.sln"
+)
+
+# DockerfileTemplate.txt    => DockerFile
+# DockerIgnoreTemplate.txt  => .dockerignore
+
+# Projects which DockerFile and .dockerignore will be created
 $projects = @(
   'Application/CoreTemplate.Application.OcelotApiGateway/CoreTemplate.Application.OcelotApiGateway.csproj',
   'Application/CoreTemplate.Application.API/CoreTemplate.Application.API.csproj',
   'Modules/ModuleAccount.API/ModuleAccount.API.csproj',
-  'Modules/ModuleAdmin.API/ModuleAdmin.API.csproj'
-  )
+  'Modules/ModuleAdmin.API/ModuleAdmin.API.csproj',
+  'Modules/ModuleTest.API/ModuleTest.API.csproj'
+)
+
+$solutionDirName = (get-item "./GenerateDockerFiles.ps1").Directory.Parent.Name
 
 $dockerTemplate = Get-Content -Path .\DockerfileTemplate.txt -Encoding UTF8 -Raw
 

@@ -40,16 +40,16 @@ WORKDIR /src
  COPY "dotnet-core-template/Modules/ModuleTest/ModuleTest.csproj" "dotnet-core-template/Modules/ModuleTest/ModuleTest.csproj"
 
 
-RUN dotnet restore "dotnet-core-template/Application/CoreTemplate.Application.OcelotApiGateway/CoreTemplate.Application.OcelotApiGateway.csproj"
+RUN dotnet restore "dotnet-core-template/Modules/ModuleTest.API/ModuleTest.API.csproj"
 COPY . /src/.
-WORKDIR "/src/dotnet-core-template/Application/CoreTemplate.Application.OcelotApiGateway/"
-RUN dotnet build "CoreTemplate.Application.OcelotApiGateway.csproj" -c Release -o /app/build
+WORKDIR "/src/dotnet-core-template/Modules/ModuleTest.API/"
+RUN dotnet build "ModuleTest.API.csproj" -c Release -o /app/build
 #RUN dotnet build -c $Configuration -o /app
-RUN dotnet publish "CoreTemplate.Application.OcelotApiGateway.csproj" --no-restore -c Release -o /app
+RUN dotnet publish "ModuleTest.API.csproj" --no-restore -c Release -o /app
 
 FROM build AS publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "CoreTemplate.Application.OcelotApiGateway.dll"]
+ENTRYPOINT ["dotnet", "ModuleTest.API.dll"]

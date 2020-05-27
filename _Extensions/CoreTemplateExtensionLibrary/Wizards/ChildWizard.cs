@@ -11,7 +11,7 @@ namespace CoreTemplateExtensionLibrary.Wizards
         {
             // Add custom parameters.
             replacementsDictionary.Add("$saferootprojectname$", RootWizard.GlobalDictionary["$saferootprojectname$"]);
-            replacementsDictionary.Add("$custommessage$", RootWizard.GlobalDictionary["$custommessage$"]);
+            replacementsDictionary.Add("$saferootprojectnamelower$", RootWizard.GlobalDictionary["$saferootprojectnamelower$"]);
 
             //foreach (var property in RootWizard.Settings.GetType().GetProperties())
             //{

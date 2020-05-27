@@ -38,12 +38,7 @@ namespace CoreTemplateExtensionLibrary.Wizards
         {
             _replacementsDictionary = replacementsDictionary;
             GlobalDictionary["$saferootprojectname$"] = replacementsDictionary["$safeprojectname$"];
-            GlobalDictionary["$custommessage$"] = "";
-
-            if (replacementsDictionary["$solutiondirectory$"] != replacementsDictionary["$destinationdirectory$"])
-            {
-
-            }
+            GlobalDictionary["$saferootprojectnamelower$"] = replacementsDictionary["$safeprojectname$"].ToLower().Replace(".", "").Replace("-", "");
 
             try
             {
@@ -110,14 +105,16 @@ namespace CoreTemplateExtensionLibrary.Wizards
 
                 try
                 {
-                    var solutionFolder = SolutionHelper.GetSolutionFolder(staticProject.SolutionFolder);
+                    var solutionFolder = !string.IsNullOrEmpty(staticProject.SolutionFolder) ? SolutionHelper.GetSolutionFolder(staticProject.SolutionFolder) : null;
 
                     Project project;
                     if (staticProject.IsTemplate)
                     {
                         staticProject.Name = Replace(staticProject.Name);
-                        var projectDestinationFolderPath = Path.Combine(_solutiondirectory, staticProject.Folder, staticProject.Name);
-                        
+                        var projectDestinationFolderPath = Path.Combine(_solutiondirectory);
+                        if(!string.IsNullOrEmpty(staticProject.Folder))
+                            projectDestinationFolderPath = Path.Combine(_solutiondirectory, staticProject.Folder, staticProject.Name);
+
                         if (solutionFolder != null)
                             project = solutionFolder.AddFromTemplate(projectFile, projectDestinationFolderPath, staticProject.Name);
                         else
