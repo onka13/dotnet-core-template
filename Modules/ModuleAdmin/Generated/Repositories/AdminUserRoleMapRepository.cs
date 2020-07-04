@@ -13,6 +13,7 @@ using ModuleAdmin.Generated.Enums;
 using ModuleAdmin.IRepositories;
 using ModuleAdmin.Generated.Data;
 using CoreCommon.Data.EntityFrameworkBase.Base;
+using Microsoft.EntityFrameworkCore;
 
 namespace ModuleAdmin.Repositories
 {
@@ -46,7 +47,7 @@ namespace ModuleAdmin.Repositories
 
         public List<object> Search(int? userId,int? roleId, string orderBy, bool asc, int skip, int take, out long _total)
         {
-            var result = GetDbSet().AsQueryable();
+            var result = GetDbSet().Include(x => x.Role).AsQueryable();
             if (userId.HasValue)
                 result = result.Where(x => x.UserId.Equals(userId));
             if (roleId.HasValue)
@@ -61,13 +62,32 @@ namespace ModuleAdmin.Repositories
 				x.UserId,
 				x.RoleId
             };
-            
             if (!string.IsNullOrEmpty(orderBy) && dic.ContainsKey(orderBy))
             {
                 var result2 = asc ? result.OrderBy(dic[orderBy]) : result.OrderByDescending(dic[orderBy]);
                 return SkipTake(result2.Select(selectFunc), skip, take, out _total);
             }
             return SkipTake(result.Select(selectFunc), skip, take, out _total);
+        }
+            
+
+        public AdminUserRoleMapEntity GetByWithRelations(Expression<Func<AdminUserRoleMapEntity, bool>> predicate)
+        {
+            return GetDbSet().Include(x => x.Role).Where(predicate)
+                .Select(x => new AdminUserRoleMapEntity{
+                    Id= x.Id,
+					UserId= x.UserId,
+					RoleId= x.RoleId,
+					Role = x.Role != null ? new AdminRoleEntity{ Id=x.Role.Id,Name=x.Role.Name  } : null
+                })
+                .FirstOrDefault();
+        }
+
+        public int EditWithRelations(AdminUserRoleMapEntity entity)
+        {
+            SetStateOnly(entity, Microsoft.EntityFrameworkCore.EntityState.Modified);
+            
+            return Save();
         }
     }
 }

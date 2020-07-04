@@ -23,5 +23,7 @@ namespace ModuleAdmin.IRepositories
         List<AdminUserRoleMapEntity> ListByUserId(int userId);
         List<AdminUserRoleMapEntity> ListByUserId(int userId, int skip, int take);
         List<object> Search(int? userId,int? roleId, string orderBy, bool asc, int skip, int take, out long _total);
+        AdminUserRoleMapEntity GetByWithRelations(Expression<Func<AdminUserRoleMapEntity, bool>> predicate);
+        int EditWithRelations(AdminUserRoleMapEntity entity);
 	}
 }    

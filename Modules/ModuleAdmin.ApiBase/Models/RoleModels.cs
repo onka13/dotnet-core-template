@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using CoreCommon.Data.Domain.Models;
+using System.Collections.Generic;
 
 namespace ModuleAdmin.ApiBase.Models
 {
@@ -14,6 +15,6 @@ namespace ModuleAdmin.ApiBase.Models
     public class UserRoleAssignRequest
     {
         public int UserId { get; set; }
-        public List<int> Roles { get; set; }
+        public List<OptionModel> Roles { get; set; }
     }
 }

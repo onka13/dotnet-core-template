@@ -3,6 +3,7 @@ Auto generated file. Do not edit!
 */
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using CoreCommon.Data.Domain.Entitites;
@@ -14,16 +15,17 @@ namespace ModuleAdmin.Generated.Entities
 {    
     public class AdminUserRoleMapEntityModel : IEntityBase
     {
+		[Key]
+		[Column(Order=0)]
+		public int Id { get; set; }
+
+		[Required]
+		public int UserId { get; set; }
+
+		[Required]
+		public int RoleId { get; set; }
+
         
-        [Key]
-        [Column(Order=0)]
-        public int Id { get; set; }
-
-        public int UserId { get; set; }
-
-        public int RoleId { get; set; }
-
-
         public AdminUserRoleMapEntity ToEntity()
         {
             return new AdminUserRoleMapEntity
@@ -38,6 +40,9 @@ namespace ModuleAdmin.Generated.Entities
     [Table("AdminUserRoleMap", Schema = "dbo")]
     public class AdminUserRoleMapEntity : AdminUserRoleMapEntityModel
     {
+        
+        [ForeignKey("RoleId")]
+        public virtual AdminRoleEntity Role { get; set; }
         
     }
 }

@@ -7,12 +7,14 @@ using ModuleAdmin.Services;
 using ModuleAdmin.ApiBase.Generated.RequestEntities;
 using ModuleAdmin.Generated.Entities;
 using ModuleAdmin.IServices;
-using CoreCommon.Data.Domain.Business;using CoreCommon.Data.Domain.Models;using CoreCommon.Data.Domain.Attributes;
+using CoreCommon.Data.Domain.Business;
+using CoreCommon.Data.Domain.Models;
+using CoreCommon.Data.Domain.Attributes;
 using ModuleAdmin.ApiBase.Models;
 
 namespace ModuleAdmin.ApiBase.Generated.Controllers
 {
-    [RoleAction("AdminApi","AdminUser", null)]
+    [RoleAction("AdminApi", "AdminUser", null)]
     [Route("AdminApi/AdminUserSearch")]
     [ApiController]
     public partial class AdminUserSearchController
@@ -30,7 +32,7 @@ namespace ModuleAdmin.ApiBase.Generated.Controllers
         public ActionResult Get(int id)
         {
             return Get0(id);
-        }        
+        }
         /*[RoleAction("get")]
         [HttpPost("gets")]
         public IActionResult Gets(List<int> ids)
@@ -55,18 +57,21 @@ namespace ModuleAdmin.ApiBase.Generated.Controllers
         }
 
         [RoleAction("get")]
-        [HttpPost("getRoles")]
-        public IActionResult GetRoles(UserRoleAssignRequest model)
+        [HttpGet("getRoles/{userId}")]
+        public IActionResult GetRoles(int userId)
         {
-            var response = UserRoleMapBusinessLogic.ListByUserId(model.UserId);
-            return Json(response);
+            var response = UserRoleMapBusinessLogic.ListUserRoles(userId);
+            return SuccessResponse(new
+            {
+                roles = response.Value
+            });
         }
 
         [RoleAction("assignRole")]
         [HttpPost("assignRole")]
         public IActionResult AssignRole(UserRoleAssignRequest model)
         {
-            var response = UserRoleMapBusinessLogic.SaveUserRoles(model.UserId, model.Roles ?? new List<int>());
+            var response = UserRoleMapBusinessLogic.SaveUserRoles(model.UserId, model.Roles?.Select(x => x.Key).ToList());
             return Json(response);
         }
     }

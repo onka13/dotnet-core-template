@@ -13,6 +13,8 @@ namespace ModuleAdmin.Services
         public ServiceResult<object> SaveUserRoles(int userId, List<int> roleIds)
         {
             var response = ServiceResult<object>.Instance.ErrorResult(ServiceResultCode.Error);
+            
+            if (roleIds == null) roleIds = new List<int>();
 
             var currentRoles = ListByUserId(userId).Value;
             var roles = RoleBusinessLogic.FindBy(x => roleIds.Contains(x.Id)).Value;
@@ -47,6 +49,19 @@ namespace ModuleAdmin.Services
             });
             response.Code = ServiceResultCode.Updated;
             return response;
+        }
+
+        public ServiceResult<object> ListUserRoles(int userId)
+        {
+            var response = ServiceResult<object>.Instance.ErrorResult(ServiceResultCode.Error);
+
+            var currentRoles = FindAndIncludeBy(x => x.UserId == userId, x => x.Role).Value.Select(x => (new
+            {
+                key = x.Id,
+                label =  x.Role.Name
+            }));
+
+            return response.SuccessResult(currentRoles);
         }
     }
 }

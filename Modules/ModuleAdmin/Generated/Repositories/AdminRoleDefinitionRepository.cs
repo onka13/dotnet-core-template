@@ -53,7 +53,6 @@ namespace ModuleAdmin.Repositories
 				x.ActionKey,
 				x.Action
             };
-            
             if (!string.IsNullOrEmpty(orderBy) && dic.ContainsKey(orderBy))
             {
                 var result2 = asc ? result.OrderBy(dic[orderBy]) : result.OrderByDescending(dic[orderBy]);
@@ -61,5 +60,6 @@ namespace ModuleAdmin.Repositories
             }
             return SkipTake(result.Select(selectFunc), skip, take, out _total);
         }
+            
     }
 }

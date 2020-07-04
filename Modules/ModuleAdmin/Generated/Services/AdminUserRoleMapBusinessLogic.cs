@@ -87,5 +87,27 @@ namespace ModuleAdmin.Services
             }
             return response;
         }
+
+        public ServiceResult<AdminUserRoleMapEntity> GetByWithRelations(Expression<Func<AdminUserRoleMapEntity, bool>> predicate)
+        {
+            var response = ServiceResult<AdminUserRoleMapEntity>.Instance.ErrorResult(ServiceResultCode.Error);
+            response.Value = Repository.GetByWithRelations(predicate);
+            if (response.Value != null)
+            {
+                response.SuccessResult(response.Value, 0);
+            }
+            return response;
+        }
+
+        public ServiceResult<int> EditWithRelations(AdminUserRoleMapEntity entity)
+        {
+            var response = ServiceResult<int>.Instance.ErrorResult(ServiceResultCode.Error);
+            response.Value = Repository.EditWithRelations(entity);
+            if (response.Value > 0)
+            {
+                response.SuccessResult(response.Value, 0);
+            }
+            return response;
+        }
     }
 }

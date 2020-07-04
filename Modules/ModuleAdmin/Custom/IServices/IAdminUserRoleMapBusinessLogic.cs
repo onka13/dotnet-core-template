@@ -6,5 +6,6 @@ namespace ModuleAdmin.IServices
     public partial interface IAdminUserRoleMapBusinessLogic
     {
         ServiceResult<object> SaveUserRoles(int userId, List<int> roleIds);
+        ServiceResult<object> ListUserRoles(int userId);
     }
 }     

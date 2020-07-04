@@ -22,6 +22,7 @@
         "Precision": 0,
         "Scale": 0,
         "Length": 50,
+        "ShortName": null,
         "Hash": "d55d12d7f6354a49bf90bec1be85577e"
       },
       {
@@ -35,6 +36,7 @@
         "Precision": 0,
         "Scale": 0,
         "Length": 200,
+        "ShortName": null,
         "Hash": "956e2c716b1b47f982d671cd6161c23e"
       }
     ],
@@ -63,7 +65,6 @@
         "IsDeleteable": false,
         "HasDetail": false,
         "RepositoryMethod": "Search",
-        "IsCustom": false,
         "HideMenu": false,
         "Columns": [
           {
@@ -80,13 +81,15 @@
             "ColumnName": "Id",
             "Title": null,
             "RelationColumnName": null,
-            "SkipForJs": true
+            "SkipForJs": true,
+            "Component": null
           },
           {
             "ColumnName": "Name",
             "Title": null,
             "RelationColumnName": null,
-            "SkipForJs": false
+            "SkipForJs": false,
+            "Component": null
           }
         ],
         "Menu": null,
@@ -118,6 +121,7 @@
         "Precision": 0,
         "Scale": 0,
         "Length": 50,
+        "ShortName": null,
         "Hash": "14e0bbc7720f47c4bac064bda090c466"
       },
       {
@@ -131,6 +135,7 @@
         "Precision": 0,
         "Scale": 0,
         "Length": 50,
+        "ShortName": null,
         "Hash": "f7131304ec1744adb487c46aa4e7f060"
       },
       {
@@ -144,6 +149,7 @@
         "Precision": 0,
         "Scale": 0,
         "Length": 200,
+        "ShortName": null,
         "Hash": "fb0549765fb7489299b52a23c38b172b"
       },
       {
@@ -157,6 +163,7 @@
         "Precision": 0,
         "Scale": 0,
         "Length": 200,
+        "ShortName": null,
         "Hash": "a6ee493c12214a63a9981cc7b3381d44"
       },
       {
@@ -170,6 +177,7 @@
         "Precision": 0,
         "Scale": 0,
         "Length": 200,
+        "ShortName": null,
         "Hash": "26747ce3133549448c0666078b9d8bed"
       }
     ],
@@ -228,6 +236,7 @@
         "Precision": 0,
         "Scale": 0,
         "Length": 50,
+        "ShortName": null,
         "Hash": "deb0e44564be40c9bd809371f94167da"
       },
       {
@@ -241,6 +250,7 @@
         "Precision": 0,
         "Scale": 0,
         "Length": 50,
+        "ShortName": null,
         "Hash": "7adbb2f21a9b4c35bcee2ed66c9fc56d"
       },
       {
@@ -254,6 +264,7 @@
         "Precision": 0,
         "Scale": 0,
         "Length": 50,
+        "ShortName": null,
         "Hash": "729fe0168585494d952ea65d12acdb98"
       },
       {
@@ -267,6 +278,7 @@
         "Precision": 0,
         "Scale": 0,
         "Length": 50,
+        "ShortName": null,
         "Hash": "bc00f2878cdc43e88915af53540570e4"
       },
       {
@@ -280,6 +292,7 @@
         "Precision": 0,
         "Scale": 0,
         "Length": 50,
+        "ShortName": null,
         "Hash": "4a5246368250402986b7c782177c0531"
       },
       {
@@ -293,6 +306,7 @@
         "Precision": 0,
         "Scale": 0,
         "Length": 50,
+        "ShortName": null,
         "Hash": "41ffdd40ebe2467fa978d2d75557b4d3"
       }
     ],
@@ -321,7 +335,6 @@
         "IsDeleteable": false,
         "HasDetail": false,
         "RepositoryMethod": "Search",
-        "IsCustom": false,
         "HideMenu": true,
         "Columns": [
           {
@@ -362,37 +375,43 @@
             "ColumnName": "Id",
             "Title": null,
             "RelationColumnName": null,
-            "SkipForJs": true
+            "SkipForJs": true,
+            "Component": null
           },
           {
             "ColumnName": "RoleId",
             "Title": null,
             "RelationColumnName": null,
-            "SkipForJs": false
+            "SkipForJs": false,
+            "Component": null
           },
           {
             "ColumnName": "ModuleKey",
             "Title": null,
             "RelationColumnName": null,
-            "SkipForJs": false
+            "SkipForJs": false,
+            "Component": null
           },
           {
             "ColumnName": "PageKey",
             "Title": null,
             "RelationColumnName": null,
-            "SkipForJs": false
+            "SkipForJs": false,
+            "Component": null
           },
           {
             "ColumnName": "ActionKey",
             "Title": null,
             "RelationColumnName": null,
-            "SkipForJs": false
+            "SkipForJs": false,
+            "Component": null
           },
           {
             "ColumnName": "Action",
             "Title": null,
             "RelationColumnName": null,
-            "SkipForJs": false
+            "SkipForJs": false,
+            "Component": null
           }
         ],
         "Menu": null,
@@ -424,6 +443,7 @@
         "Precision": 0,
         "Scale": 0,
         "Length": 50,
+        "ShortName": null,
         "Hash": "7964d4116de446a9b540ae88d485796a"
       },
       {
@@ -437,6 +457,7 @@
         "Precision": 0,
         "Scale": 0,
         "Length": 200,
+        "ShortName": null,
         "Hash": "60e4dd72bffd481ca3b03f94ef3ebf6b"
       },
       {
@@ -450,6 +471,7 @@
         "Precision": 0,
         "Scale": 0,
         "Length": 200,
+        "ShortName": null,
         "Hash": "2d9ed1dba0984350a5936cca42c65f74"
       },
       {
@@ -463,6 +485,7 @@
         "Precision": 0,
         "Scale": 0,
         "Length": 50,
+        "ShortName": null,
         "Hash": "d4b99aeec47e4d5293d52c5d787f3d43"
       },
       {
@@ -476,6 +499,7 @@
         "Precision": 0,
         "Scale": 0,
         "Length": 10,
+        "ShortName": null,
         "Hash": "bd9ecf9d7fc6473a9b2abd1ac17b35d3"
       },
       {
@@ -489,6 +513,7 @@
         "Precision": 0,
         "Scale": 0,
         "Length": 50,
+        "ShortName": null,
         "Hash": "df3a4c6394704aa1bd7f2bd90585bd2b"
       },
       {
@@ -502,6 +527,7 @@
         "Precision": 0,
         "Scale": 0,
         "Length": 50,
+        "ShortName": null,
         "Hash": "6065d63b18134ec884a72c84bc966125"
       },
       {
@@ -515,6 +541,7 @@
         "Precision": 10,
         "Scale": 2,
         "Length": 50,
+        "ShortName": null,
         "Hash": "a362b259b6c84717af3a6d6812c289af"
       },
       {
@@ -528,6 +555,7 @@
         "Precision": 10,
         "Scale": 2,
         "Length": 50,
+        "ShortName": null,
         "Hash": "07043fd4daba45008e5bf12354f601c3"
       },
       {
@@ -541,6 +569,7 @@
         "Precision": 10,
         "Scale": 2,
         "Length": 50,
+        "ShortName": null,
         "Hash": "f6b6e43acfea45e385c2c280107b00ac"
       }
     ],
@@ -569,7 +598,6 @@
         "IsDeleteable": false,
         "HasDetail": false,
         "RepositoryMethod": "Search",
-        "IsCustom": false,
         "HideMenu": false,
         "Columns": [
           {
@@ -610,37 +638,43 @@
             "ColumnName": "Id",
             "Title": null,
             "RelationColumnName": null,
-            "SkipForJs": true
+            "SkipForJs": true,
+            "Component": null
           },
           {
             "ColumnName": "No",
             "Title": null,
             "RelationColumnName": null,
-            "SkipForJs": false
+            "SkipForJs": false,
+            "Component": null
           },
           {
             "ColumnName": "Name",
             "Title": null,
             "RelationColumnName": null,
-            "SkipForJs": false
+            "SkipForJs": false,
+            "Component": null
           },
           {
             "ColumnName": "Email",
             "Title": null,
             "RelationColumnName": null,
-            "SkipForJs": false
+            "SkipForJs": false,
+            "Component": null
           },
           {
             "ColumnName": "Status",
             "Title": null,
             "RelationColumnName": null,
-            "SkipForJs": false
+            "SkipForJs": false,
+            "Component": null
           },
           {
             "ColumnName": "IsSuper",
             "Title": null,
             "RelationColumnName": null,
-            "SkipForJs": false
+            "SkipForJs": false,
+            "Component": null
           }
         ],
         "Menu": null,
@@ -672,6 +706,7 @@
         "Precision": 0,
         "Scale": 0,
         "Length": 50,
+        "ShortName": null,
         "Hash": "45a9c0e5516548aba22be5d89e700bec"
       },
       {
@@ -685,6 +720,7 @@
         "Precision": 0,
         "Scale": 0,
         "Length": 50,
+        "ShortName": null,
         "Hash": "6e2525a254504d998070962b9bdc1cb4"
       },
       {
@@ -698,6 +734,7 @@
         "Precision": 0,
         "Scale": 0,
         "Length": 50,
+        "ShortName": null,
         "Hash": "85d74ebfd7f24ac1a428665600fe7ccd"
       }
     ],
@@ -729,7 +766,22 @@
         "Hash": "425f9e3ee6e44fffae34cd9e8cc654fa"
       }
     ],
-    "Relations": [],
+    "Relations": [
+      {
+        "Name": "Relation_d7012bb094a949d5949fd4aae02d342d",
+        "DeleteRule": 0,
+        "UpdateRule": 0,
+        "ForeignTable": "AdminRole",
+        "Items": [
+          {
+            "ColumnName": "RoleId",
+            "ForeignColumn": "Id"
+          }
+        ],
+        "RelationType": 1,
+        "Hash": "d7012bb094a949d5949fd4aae02d342d"
+      }
+    ],
     "SearchItems": [
       {
         "Description": null,
@@ -739,7 +791,6 @@
         "IsDeleteable": true,
         "HasDetail": false,
         "RepositoryMethod": "Search",
-        "IsCustom": false,
         "HideMenu": true,
         "Columns": [
           {
@@ -764,19 +815,22 @@
             "ColumnName": "Id",
             "Title": null,
             "RelationColumnName": null,
-            "SkipForJs": true
+            "SkipForJs": true,
+            "Component": null
           },
           {
             "ColumnName": "UserId",
             "Title": null,
             "RelationColumnName": null,
-            "SkipForJs": false
+            "SkipForJs": false,
+            "Component": null
           },
           {
             "ColumnName": "RoleId",
             "Title": null,
             "RelationColumnName": null,
-            "SkipForJs": false
+            "SkipForJs": false,
+            "Component": null
           }
         ],
         "Menu": null,

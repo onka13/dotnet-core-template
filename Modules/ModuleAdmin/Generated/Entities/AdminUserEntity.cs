@@ -3,6 +3,7 @@ Auto generated file. Do not edit!
 */
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using CoreCommon.Data.Domain.Entitites;
@@ -14,39 +15,41 @@ namespace ModuleAdmin.Generated.Entities
 {    
     public class AdminUserEntityModel : IEntityBase
     {
+		[Key]
+		[Column(Order=0)]
+		public int Id { get; set; }
+
+		[Required]
+		[MaxLength(200)]
+		public string Name { get; set; }
+
+		[Required]
+		[MaxLength(200)]
+		public string Email { get; set; }
+
+		[Required]
+		[MaxLength(50)]
+		public string Pass { get; set; }
+
+		[MaxLength(10)]
+		public string Language { get; set; }
+
+		[MaxLength(50)]
+		public string AllowIpAddress { get; set; }
+
+		[Required]
+		public Status Status { get; set; }
+
+		[MaxLength(50)]
+		public string No { get; set; }
+
+		[Required]
+		public AdminUserTheme Theme { get; set; }
+
+		[Required]
+		public bool IsSuper { get; set; }
+
         
-        [Key]
-        [Column(Order=0)]
-        public int Id { get; set; }
-
-        [Required]
-        [MaxLength(200)]
-        public string Name { get; set; }
-
-        [Required]
-        [MaxLength(200)]
-        public string Email { get; set; }
-
-        [Required]
-        [MaxLength(50)]
-        public string Pass { get; set; }
-
-        [MaxLength(10)]
-        public string Language { get; set; }
-
-        [MaxLength(50)]
-        public string AllowIpAddress { get; set; }
-
-        public Status Status { get; set; }
-
-        [MaxLength(50)]
-        public string No { get; set; }
-
-        public AdminUserTheme Theme { get; set; }
-
-        public bool IsSuper { get; set; }
-
-
         public AdminUserEntity ToEntity()
         {
             return new AdminUserEntity
@@ -68,6 +71,6 @@ namespace ModuleAdmin.Generated.Entities
     [Table("AdminUser", Schema = "dbo")]
     public class AdminUserEntity : AdminUserEntityModel
     {
-        
+                
     }
 }

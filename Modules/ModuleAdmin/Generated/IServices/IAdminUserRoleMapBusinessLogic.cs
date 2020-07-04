@@ -23,5 +23,7 @@ namespace ModuleAdmin.IServices
         ServiceResult<List<AdminUserRoleMapEntity>> ListByUserId(int userId);
         ServiceResult<List<AdminUserRoleMapEntity>> ListByUserId(int userId, int skip, int take);
         ServiceResult<List<object>> Search(int? userId,int? roleId, string orderBy, bool asc, int skip, int take, out long _total);
+        ServiceResult<AdminUserRoleMapEntity> GetByWithRelations(Expression<Func<AdminUserRoleMapEntity, bool>> predicate);
+        ServiceResult<int> EditWithRelations(AdminUserRoleMapEntity entity);
 	}
 }    

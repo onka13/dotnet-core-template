@@ -1,0 +1,13 @@
+{
+  "Connections": [],
+  "SettingsKey": "devAngular",
+  "Schema": "dbo",
+  "ConnectionType": 1,
+  "ConnectionName": "MainConnection",
+  "DotNetCoreProject": {
+    "SearchRequestBase": ""
+  },
+  "JsPanelProjectPath": "C:\\projects\\git\\onka-angular-admin\\projects\\main",
+  "JsPanelProjectType": 1,
+  "ExcludeTablePrefixes": null
+}

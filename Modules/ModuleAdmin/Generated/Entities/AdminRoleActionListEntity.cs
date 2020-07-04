@@ -3,6 +3,7 @@ Auto generated file. Do not edit!
 */
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using CoreCommon.Data.Domain.Entitites;
@@ -14,26 +15,26 @@ namespace ModuleAdmin.Generated.Entities
 {    
     public class AdminRoleActionListEntityModel : IEntityBase
     {
+		[Key]
+		[Column(Order=0)]
+		public int Id { get; set; }
+
+		[Required]
+		public int ModuleId { get; set; }
+
+		[Required]
+		[MaxLength(200)]
+		public string ModuleKey { get; set; }
+
+		[Required]
+		[MaxLength(200)]
+		public string PageKey { get; set; }
+
+		[Required]
+		[MaxLength(200)]
+		public string ActionKey { get; set; }
+
         
-        [Key]
-        [Column(Order=0)]
-        public int Id { get; set; }
-
-        public int ModuleId { get; set; }
-
-        [Required]
-        [MaxLength(200)]
-        public string ModuleKey { get; set; }
-
-        [Required]
-        [MaxLength(200)]
-        public string PageKey { get; set; }
-
-        [Required]
-        [MaxLength(200)]
-        public string ActionKey { get; set; }
-
-
         public AdminRoleActionListEntity ToEntity()
         {
             return new AdminRoleActionListEntity
@@ -50,6 +51,6 @@ namespace ModuleAdmin.Generated.Entities
     [Table("AdminRoleActionList", Schema = "dbo")]
     public class AdminRoleActionListEntity : AdminRoleActionListEntityModel
     {
-        
+                
     }
 }
