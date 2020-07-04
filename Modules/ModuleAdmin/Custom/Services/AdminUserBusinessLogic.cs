@@ -24,7 +24,7 @@ namespace ModuleAdmin.Services
             {
                 var responseAdd = Add(model);
                 if (!responseAdd.Success) return response.ErrorResult(responseAdd.Code);
-                model = responseAdd.Value;
+                return response.SuccessResult(responseAdd.Value.Id, ServiceResultCode.Created);
             }
             else
             {

@@ -111,6 +111,7 @@ namespace ModuleCommon.API
             {
                 o.AddDefaultPolicy(builder =>
                 {
+                    //builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
                     builder.WithOrigins("http://localhost:3001")
                            .AllowAnyMethod()
                            .AllowAnyHeader();

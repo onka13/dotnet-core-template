@@ -30,7 +30,7 @@ namespace ModuleAdmin.ApiBase.Generated.Controllers
         public ActionResult Get(int id)
         {
             return Get0(id);
-        }
+        }        
         /*[RoleAction("get")]
         [HttpPost("gets")]
         public IActionResult Gets(List<int> ids)
@@ -43,13 +43,15 @@ namespace ModuleAdmin.ApiBase.Generated.Controllers
         [HttpPost("new")]
         public ActionResult Create(AdminUserEntityModel model)
         {
-            return Create0(model);
+            var response = AdminUserBusinessLogic.Upsert(model.ToEntity());
+            return Json(response);
         }
         [RoleAction("edit")]
         [HttpPost("update")]
         public ActionResult Update(AdminUserEntityModel model)
         {
-            return Update0(model);
+            var response = AdminUserBusinessLogic.Upsert(model.ToEntity());
+            return Json(response);
         }
 
         [RoleAction("get")]

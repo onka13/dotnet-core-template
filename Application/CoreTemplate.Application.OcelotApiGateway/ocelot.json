@@ -17,7 +17,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "moduleadmin.api",
+          "Host": "coretemplate.moduleadmin.api",
           "Port": 80
         }
       ],
@@ -29,7 +29,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "moduleaccount.api",
+          "Host": "coretemplate.moduleaccount.api",
           "Port": 80
         }
       ],
