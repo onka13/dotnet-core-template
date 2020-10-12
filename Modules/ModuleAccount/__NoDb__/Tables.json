@@ -8,7 +8,8 @@
       "Schema": null,
       "ConnectionType": 0,
       "ConnectionName": null,
-      "BaseFullName": null
+      "BaseProject": null,
+      "BaseTable": null
     },
     "Columns": [
       {
@@ -22,6 +23,7 @@
         "Precision": 10,
         "Scale": 2,
         "Length": 50,
+        "ShortName": null,
         "Hash": "4204f004bcd14297a6b0b7449098717f"
       },
       {
@@ -35,6 +37,7 @@
         "Precision": 10,
         "Scale": 2,
         "Length": 150,
+        "ShortName": null,
         "Hash": "dd9e4a3a087e42efab0f22f4929744b0"
       },
       {
@@ -48,6 +51,7 @@
         "Precision": 10,
         "Scale": 2,
         "Length": 200,
+        "ShortName": null,
         "Hash": "23ea9c0b743d4305be347dae93419d83"
       },
       {
@@ -61,6 +65,7 @@
         "Precision": 10,
         "Scale": 2,
         "Length": 200,
+        "ShortName": null,
         "Hash": "0da38199be8547c28e2457a469b15c7d"
       },
       {
@@ -74,6 +79,7 @@
         "Precision": 10,
         "Scale": 2,
         "Length": 50,
+        "ShortName": null,
         "Hash": "234a46929ff74cdeb5581ada45835810"
       },
       {
@@ -87,6 +93,7 @@
         "Precision": 10,
         "Scale": 2,
         "Length": 50,
+        "ShortName": null,
         "Hash": "a4639ee1da0d449eb0d8b980227fb68f"
       },
       {
@@ -100,6 +107,7 @@
         "Precision": 10,
         "Scale": 2,
         "Length": 50,
+        "ShortName": null,
         "Hash": "d387a2473973423a9536dffee271a005"
       },
       {
@@ -113,6 +121,7 @@
         "Precision": 10,
         "Scale": 2,
         "Length": 50,
+        "ShortName": null,
         "Hash": "4154a20f77664d51bbcb2368bf8a54b6"
       }
     ],
@@ -154,8 +163,137 @@
         "IsDeleteable": false,
         "HasDetail": true,
         "RepositoryMethod": "Search",
-        "IsCustom": false,
         "HideMenu": false,
+        "AllColumns": [
+          {
+            "Name": "Id",
+            "Label": null,
+            "EnumName": null,
+            "DisplayInDetail": true,
+            "DisplayInEdit": true,
+            "DisplayInCreate": true,
+            "EditComponent": null,
+            "CreateComponent": null,
+            "DetailComponent": null,
+            "Reference": {
+              "Route": null,
+              "FilterField": null,
+              "DataField": null
+            }
+          },
+          {
+            "Name": "Name",
+            "Label": null,
+            "EnumName": null,
+            "DisplayInDetail": true,
+            "DisplayInEdit": true,
+            "DisplayInCreate": true,
+            "EditComponent": null,
+            "CreateComponent": null,
+            "DetailComponent": null,
+            "Reference": {
+              "Route": null,
+              "FilterField": null,
+              "DataField": null
+            }
+          },
+          {
+            "Name": "Email",
+            "Label": null,
+            "EnumName": null,
+            "DisplayInDetail": true,
+            "DisplayInEdit": true,
+            "DisplayInCreate": true,
+            "EditComponent": null,
+            "CreateComponent": null,
+            "DetailComponent": null,
+            "Reference": {
+              "Route": null,
+              "FilterField": null,
+              "DataField": null
+            }
+          },
+          {
+            "Name": "PasswordHash",
+            "Label": null,
+            "EnumName": null,
+            "DisplayInDetail": true,
+            "DisplayInEdit": true,
+            "DisplayInCreate": true,
+            "EditComponent": null,
+            "CreateComponent": null,
+            "DetailComponent": null,
+            "Reference": {
+              "Route": null,
+              "FilterField": null,
+              "DataField": null
+            }
+          },
+          {
+            "Name": "EmailConfirmed",
+            "Label": null,
+            "EnumName": null,
+            "DisplayInDetail": true,
+            "DisplayInEdit": true,
+            "DisplayInCreate": true,
+            "EditComponent": null,
+            "CreateComponent": null,
+            "DetailComponent": null,
+            "Reference": {
+              "Route": null,
+              "FilterField": null,
+              "DataField": null
+            }
+          },
+          {
+            "Name": "LockoutEndDateUtc",
+            "Label": null,
+            "EnumName": null,
+            "DisplayInDetail": true,
+            "DisplayInEdit": true,
+            "DisplayInCreate": true,
+            "EditComponent": null,
+            "CreateComponent": null,
+            "DetailComponent": null,
+            "Reference": {
+              "Route": null,
+              "FilterField": null,
+              "DataField": null
+            }
+          },
+          {
+            "Name": "AccessFailedCount",
+            "Label": null,
+            "EnumName": null,
+            "DisplayInDetail": true,
+            "DisplayInEdit": true,
+            "DisplayInCreate": true,
+            "EditComponent": null,
+            "CreateComponent": null,
+            "DetailComponent": null,
+            "Reference": {
+              "Route": null,
+              "FilterField": null,
+              "DataField": null
+            }
+          },
+          {
+            "Name": "Status",
+            "Label": null,
+            "EnumName": null,
+            "DisplayInDetail": true,
+            "DisplayInEdit": true,
+            "DisplayInCreate": true,
+            "EditComponent": null,
+            "CreateComponent": null,
+            "DetailComponent": null,
+            "Reference": {
+              "Route": null,
+              "FilterField": null,
+              "DataField": null
+            }
+          }
+        ],
         "Columns": [
           {
             "ColumnName": "Id",
@@ -163,7 +301,8 @@
             "Title": null,
             "Display": 0,
             "SkipForJs": false,
-            "AlwaysOn": false
+            "AlwaysOn": false,
+            "Component": null
           },
           {
             "ColumnName": "Name",
@@ -171,7 +310,8 @@
             "Title": null,
             "Display": 0,
             "SkipForJs": false,
-            "AlwaysOn": false
+            "AlwaysOn": false,
+            "Component": null
           },
           {
             "ColumnName": "Email",
@@ -179,7 +319,8 @@
             "Title": null,
             "Display": 0,
             "SkipForJs": false,
-            "AlwaysOn": false
+            "AlwaysOn": false,
+            "Component": null
           },
           {
             "ColumnName": "EmailConfirmed",
@@ -187,7 +328,8 @@
             "Title": null,
             "Display": 0,
             "SkipForJs": false,
-            "AlwaysOn": false
+            "AlwaysOn": false,
+            "Component": null
           },
           {
             "ColumnName": "Status",
@@ -195,7 +337,8 @@
             "Title": null,
             "Display": 0,
             "SkipForJs": false,
-            "AlwaysOn": false
+            "AlwaysOn": false,
+            "Component": null
           }
         ],
         "DisplayedColumns": [
@@ -203,31 +346,36 @@
             "ColumnName": "Id",
             "Title": null,
             "RelationColumnName": null,
-            "SkipForJs": false
+            "SkipForJs": false,
+            "Component": null
           },
           {
             "ColumnName": "Name",
             "Title": null,
             "RelationColumnName": null,
-            "SkipForJs": false
+            "SkipForJs": false,
+            "Component": null
           },
           {
             "ColumnName": "Email",
             "Title": null,
             "RelationColumnName": null,
-            "SkipForJs": false
+            "SkipForJs": false,
+            "Component": null
           },
           {
             "ColumnName": "EmailConfirmed",
             "Title": null,
             "RelationColumnName": null,
-            "SkipForJs": false
+            "SkipForJs": false,
+            "Component": null
           },
           {
             "ColumnName": "Status",
             "Title": null,
             "RelationColumnName": null,
-            "SkipForJs": false
+            "SkipForJs": false,
+            "Component": null
           }
         ],
         "Menu": null,

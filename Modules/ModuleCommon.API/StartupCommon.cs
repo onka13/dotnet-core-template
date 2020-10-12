@@ -141,6 +141,7 @@ namespace ModuleCommon.API
             {
                 c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "My API", Version = "v1" });
                 c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
+                c.CustomSchemaIds(type => type.ToString());
             });
 
             services.AddMvc(options =>

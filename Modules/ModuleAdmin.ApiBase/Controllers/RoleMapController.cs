@@ -27,9 +27,7 @@ namespace ModuleAdmin.ApiBase.Controllers
             var currentRoles = RoleDefinitionBusinessLogic.GetAll().Value;
             var roles = RoleBusinessLogic.GetAll().Value;
             var roleActions = RoleActionListBusinessLogic.GetAll().Value.ToList();
-            return Json(ServiceListResult<object>.Instance.SuccessResult(new List<object> {
-                new { id = 123, roles, roleActions, currentRoles }
-            }, 1));
+            return SuccessResponse(new { roles, roleActions, currentRoles });
         }
 
         [RoleAction("save")]

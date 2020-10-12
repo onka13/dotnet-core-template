@@ -71,7 +71,7 @@ namespace ModuleAdmin.ApiBase.Generated.Controllers
         [HttpPost("assignRole")]
         public IActionResult AssignRole(UserRoleAssignRequest model)
         {
-            var response = UserRoleMapBusinessLogic.SaveUserRoles(model.UserId, model.Roles?.Select(x => x.Key).ToList());
+            var response = UserRoleMapBusinessLogic.SaveUserRoles(model.UserId, model.Roles ?? new List<int>());
             return Json(response);
         }
     }

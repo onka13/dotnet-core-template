@@ -15,6 +15,6 @@ namespace ModuleAdmin.ApiBase.Models
     public class UserRoleAssignRequest
     {
         public int UserId { get; set; }
-        public List<OptionModel> Roles { get; set; }
+        public List<int> Roles { get; set; }
     }
 }

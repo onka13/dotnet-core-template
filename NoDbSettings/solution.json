@@ -1,0 +1,174 @@
+{
+  "Projects": [
+    {
+      "Name": "CoreCommon.Data.EntityFrameworkBase",
+      "Path": "..\\dotnet-core-common\\CoreCommon.Data.EntityFrameworkBase",
+      "IsSelected": false
+    },
+    {
+      "Name": "CoreCommon.Data.Domain",
+      "Path": "..\\dotnet-core-common\\CoreCommon.Data.Domain",
+      "IsSelected": false
+    },
+    {
+      "Name": "CoreCommon.Data.ElasticSearch",
+      "Path": "..\\dotnet-core-common\\CoreCommon.Data.ElasticSearch",
+      "IsSelected": false
+    },
+    {
+      "Name": "CoreCommon.Data.RabbitMQ",
+      "Path": "..\\dotnet-core-common\\CoreCommon.Data.RabbitMQ",
+      "IsSelected": false
+    },
+    {
+      "Name": "CoreCommon.Data.ServiceBus",
+      "Path": "..\\dotnet-core-common\\CoreCommon.Data.ServiceBus",
+      "IsSelected": false
+    },
+    {
+      "Name": "CoreCommon.Data.MongoDBBase",
+      "Path": "..\\dotnet-core-common\\CoreCommon.Data.MongoDBBase",
+      "IsSelected": false
+    },
+    {
+      "Name": "CoreCommon.Business.Service",
+      "Path": "..\\dotnet-core-common\\CoreCommon.Business.Service",
+      "IsSelected": false
+    },
+    {
+      "Name": "ModuleCommon.ApiBase",
+      "Path": "Modules\\ModuleCommon.ApiBase",
+      "IsSelected": false
+    },
+    {
+      "Name": "ModuleCommon",
+      "Path": "Modules\\ModuleCommon",
+      "IsSelected": true
+    },
+    {
+      "Name": "ModuleCommon.API",
+      "Path": "Modules\\ModuleCommon.API",
+      "IsSelected": false
+    },
+    {
+      "Name": "ModuleAccount.ApiBase",
+      "Path": "Modules\\ModuleAccount.ApiBase",
+      "IsSelected": false
+    },
+    {
+      "Name": "ModuleAccount",
+      "Path": "Modules\\ModuleAccount",
+      "IsSelected": true
+    },
+    {
+      "Name": "ModuleAccount.API",
+      "Path": "Modules\\ModuleAccount.API",
+      "IsSelected": false
+    },
+    {
+      "Name": "ModuleTemplate.ApiBase",
+      "Path": "Modules\\ModuleTemplate.ApiBase",
+      "IsSelected": false
+    },
+    {
+      "Name": "ModuleTemplate",
+      "Path": "Modules\\ModuleTemplate",
+      "IsSelected": true
+    },
+    {
+      "Name": "ModuleTemplate.API",
+      "Path": "Modules\\ModuleTemplate.API",
+      "IsSelected": false
+    },
+    {
+      "Name": "ModuleAdmin",
+      "Path": "Modules\\ModuleAdmin",
+      "IsSelected": true
+    },
+    {
+      "Name": "ModuleAdmin.ApiBase",
+      "Path": "Modules\\ModuleAdmin.ApiBase",
+      "IsSelected": false
+    },
+    {
+      "Name": "ModuleAdmin.API",
+      "Path": "Modules\\ModuleAdmin.API",
+      "IsSelected": false
+    },
+    {
+      "Name": "CoreCommon.ModuleBase",
+      "Path": "..\\dotnet-core-common\\CoreCommon.ModuleBase",
+      "IsSelected": false
+    },
+    {
+      "Name": "ModuleGrpcService",
+      "Path": "Modules\\ModuleGrpcService",
+      "IsSelected": false
+    },
+    {
+      "Name": "ModuleGrpcClient",
+      "Path": "Modules\\ModuleGrpcClient",
+      "IsSelected": false
+    },
+    {
+      "Name": "ModuleRabbitMQ",
+      "Path": "Modules\\ModuleRabbitMQ",
+      "IsSelected": false
+    },
+    {
+      "Name": "ModuleServiceBus",
+      "Path": "Modules\\ModuleServiceBus",
+      "IsSelected": false
+    },
+    {
+      "Name": "ModuleTest",
+      "Path": "Modules\\ModuleTest",
+      "IsSelected": false
+    },
+    {
+      "Name": "ModuleTest.API",
+      "Path": "Modules\\ModuleTest.API",
+      "IsSelected": false
+    },
+    {
+      "Name": "ModuleTest.ApiBase",
+      "Path": "Modules\\ModuleTest.ApiBase",
+      "IsSelected": false
+    },
+    {
+      "Name": "CoreTemplate.Application.WorkerService",
+      "Path": "Application\\CoreTemplate.Application.WorkerService",
+      "IsSelected": false
+    },
+    {
+      "Name": "CoreTemplate.Application.API",
+      "Path": "Application\\CoreTemplate.Application.API",
+      "IsSelected": false
+    },
+    {
+      "Name": "CoreCommon.Application.API",
+      "Path": "..\\dotnet-core-common\\CoreCommon.Application.API",
+      "IsSelected": false
+    },
+    {
+      "Name": "CoreTemplate.Application.OcelotApiGateway",
+      "Path": "Application\\CoreTemplate.Application.OcelotApiGateway",
+      "IsSelected": false
+    },
+    {
+      "Name": "CoreTemplate.Tests.General",
+      "Path": "Tests\\CoreTemplate.Tests.General",
+      "IsSelected": false
+    },
+    {
+      "Name": "CoreCommon.Infra",
+      "Path": "..\\dotnet-core-common\\CoreCommon.Infra",
+      "IsSelected": false
+    },
+    {
+      "Name": "docker-compose",
+      "Path": "..\\dotnet-core-template",
+      "IsSelected": false
+    }
+  ]
+}

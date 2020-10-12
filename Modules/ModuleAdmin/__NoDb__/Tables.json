@@ -8,7 +8,8 @@
       "Schema": null,
       "ConnectionType": 0,
       "ConnectionName": null,
-      "BaseFullName": null
+      "BaseProject": null,
+      "BaseTable": null
     },
     "Columns": [
       {
@@ -66,6 +67,40 @@
         "HasDetail": false,
         "RepositoryMethod": "Search",
         "HideMenu": false,
+        "AllColumns": [
+          {
+            "Name": "Id",
+            "Label": null,
+            "EnumName": null,
+            "DisplayInDetail": true,
+            "DisplayInEdit": true,
+            "DisplayInCreate": true,
+            "EditComponent": null,
+            "CreateComponent": null,
+            "DetailComponent": null,
+            "Reference": {
+              "Route": null,
+              "FilterField": null,
+              "DataField": null
+            }
+          },
+          {
+            "Name": "Name",
+            "Label": null,
+            "EnumName": null,
+            "DisplayInDetail": true,
+            "DisplayInEdit": true,
+            "DisplayInCreate": true,
+            "EditComponent": null,
+            "CreateComponent": null,
+            "DetailComponent": null,
+            "Reference": {
+              "Route": null,
+              "FilterField": null,
+              "DataField": null
+            }
+          }
+        ],
         "Columns": [
           {
             "ColumnName": "Name",
@@ -73,7 +108,8 @@
             "Title": null,
             "Display": 0,
             "SkipForJs": false,
-            "AlwaysOn": true
+            "AlwaysOn": true,
+            "Component": null
           }
         ],
         "DisplayedColumns": [
@@ -107,7 +143,8 @@
       "Schema": null,
       "ConnectionType": 0,
       "ConnectionName": null,
-      "BaseFullName": null
+      "BaseProject": null,
+      "BaseTable": null
     },
     "Columns": [
       {
@@ -222,7 +259,8 @@
       "Schema": null,
       "ConnectionType": 0,
       "ConnectionName": null,
-      "BaseFullName": null
+      "BaseProject": null,
+      "BaseTable": null
     },
     "Columns": [
       {
@@ -336,6 +374,104 @@
         "HasDetail": false,
         "RepositoryMethod": "Search",
         "HideMenu": true,
+        "AllColumns": [
+          {
+            "Name": "Id",
+            "Label": null,
+            "EnumName": null,
+            "DisplayInDetail": true,
+            "DisplayInEdit": true,
+            "DisplayInCreate": true,
+            "EditComponent": null,
+            "CreateComponent": null,
+            "DetailComponent": null,
+            "Reference": {
+              "Route": null,
+              "FilterField": null,
+              "DataField": null
+            }
+          },
+          {
+            "Name": "RoleId",
+            "Label": null,
+            "EnumName": null,
+            "DisplayInDetail": true,
+            "DisplayInEdit": true,
+            "DisplayInCreate": true,
+            "EditComponent": null,
+            "CreateComponent": null,
+            "DetailComponent": null,
+            "Reference": {
+              "Route": null,
+              "FilterField": null,
+              "DataField": null
+            }
+          },
+          {
+            "Name": "ModuleKey",
+            "Label": null,
+            "EnumName": null,
+            "DisplayInDetail": true,
+            "DisplayInEdit": true,
+            "DisplayInCreate": true,
+            "EditComponent": null,
+            "CreateComponent": null,
+            "DetailComponent": null,
+            "Reference": {
+              "Route": null,
+              "FilterField": null,
+              "DataField": null
+            }
+          },
+          {
+            "Name": "PageKey",
+            "Label": null,
+            "EnumName": null,
+            "DisplayInDetail": true,
+            "DisplayInEdit": true,
+            "DisplayInCreate": true,
+            "EditComponent": null,
+            "CreateComponent": null,
+            "DetailComponent": null,
+            "Reference": {
+              "Route": null,
+              "FilterField": null,
+              "DataField": null
+            }
+          },
+          {
+            "Name": "ActionKey",
+            "Label": null,
+            "EnumName": null,
+            "DisplayInDetail": true,
+            "DisplayInEdit": true,
+            "DisplayInCreate": true,
+            "EditComponent": null,
+            "CreateComponent": null,
+            "DetailComponent": null,
+            "Reference": {
+              "Route": null,
+              "FilterField": null,
+              "DataField": null
+            }
+          },
+          {
+            "Name": "Action",
+            "Label": null,
+            "EnumName": null,
+            "DisplayInDetail": true,
+            "DisplayInEdit": true,
+            "DisplayInCreate": true,
+            "EditComponent": null,
+            "CreateComponent": null,
+            "DetailComponent": null,
+            "Reference": {
+              "Route": null,
+              "FilterField": null,
+              "DataField": null
+            }
+          }
+        ],
         "Columns": [
           {
             "ColumnName": "RoleId",
@@ -343,7 +479,8 @@
             "Title": null,
             "Display": 0,
             "SkipForJs": false,
-            "AlwaysOn": false
+            "AlwaysOn": false,
+            "Component": null
           },
           {
             "ColumnName": "ModuleKey",
@@ -351,7 +488,8 @@
             "Title": null,
             "Display": 0,
             "SkipForJs": false,
-            "AlwaysOn": false
+            "AlwaysOn": false,
+            "Component": null
           },
           {
             "ColumnName": "PageKey",
@@ -359,7 +497,8 @@
             "Title": null,
             "Display": 0,
             "SkipForJs": false,
-            "AlwaysOn": false
+            "AlwaysOn": false,
+            "Component": null
           },
           {
             "ColumnName": "ActionKey",
@@ -367,7 +506,8 @@
             "Title": null,
             "Display": 0,
             "SkipForJs": false,
-            "AlwaysOn": false
+            "AlwaysOn": false,
+            "Component": null
           }
         ],
         "DisplayedColumns": [
@@ -429,7 +569,8 @@
       "Schema": null,
       "ConnectionType": 0,
       "ConnectionName": null,
-      "BaseFullName": null
+      "BaseProject": null,
+      "BaseTable": null
     },
     "Columns": [
       {
@@ -599,6 +740,168 @@
         "HasDetail": false,
         "RepositoryMethod": "Search",
         "HideMenu": false,
+        "AllColumns": [
+          {
+            "Name": "Id",
+            "Label": null,
+            "EnumName": null,
+            "DisplayInDetail": true,
+            "DisplayInEdit": true,
+            "DisplayInCreate": true,
+            "EditComponent": null,
+            "CreateComponent": null,
+            "DetailComponent": null,
+            "Reference": {
+              "Route": null,
+              "FilterField": null,
+              "DataField": null
+            }
+          },
+          {
+            "Name": "Name",
+            "Label": null,
+            "EnumName": null,
+            "DisplayInDetail": true,
+            "DisplayInEdit": true,
+            "DisplayInCreate": true,
+            "EditComponent": null,
+            "CreateComponent": null,
+            "DetailComponent": null,
+            "Reference": {
+              "Route": null,
+              "FilterField": null,
+              "DataField": null
+            }
+          },
+          {
+            "Name": "Email",
+            "Label": null,
+            "EnumName": null,
+            "DisplayInDetail": true,
+            "DisplayInEdit": true,
+            "DisplayInCreate": true,
+            "EditComponent": null,
+            "CreateComponent": null,
+            "DetailComponent": null,
+            "Reference": {
+              "Route": null,
+              "FilterField": null,
+              "DataField": null
+            }
+          },
+          {
+            "Name": "Pass",
+            "Label": null,
+            "EnumName": null,
+            "DisplayInDetail": true,
+            "DisplayInEdit": true,
+            "DisplayInCreate": true,
+            "EditComponent": null,
+            "CreateComponent": null,
+            "DetailComponent": null,
+            "Reference": {
+              "Route": null,
+              "FilterField": null,
+              "DataField": null
+            }
+          },
+          {
+            "Name": "Language",
+            "Label": null,
+            "EnumName": null,
+            "DisplayInDetail": true,
+            "DisplayInEdit": true,
+            "DisplayInCreate": true,
+            "EditComponent": null,
+            "CreateComponent": null,
+            "DetailComponent": null,
+            "Reference": {
+              "Route": null,
+              "FilterField": null,
+              "DataField": null
+            }
+          },
+          {
+            "Name": "AllowIpAddress",
+            "Label": null,
+            "EnumName": null,
+            "DisplayInDetail": true,
+            "DisplayInEdit": true,
+            "DisplayInCreate": true,
+            "EditComponent": null,
+            "CreateComponent": null,
+            "DetailComponent": null,
+            "Reference": {
+              "Route": null,
+              "FilterField": null,
+              "DataField": null
+            }
+          },
+          {
+            "Name": "Status",
+            "Label": null,
+            "EnumName": null,
+            "DisplayInDetail": true,
+            "DisplayInEdit": true,
+            "DisplayInCreate": true,
+            "EditComponent": null,
+            "CreateComponent": null,
+            "DetailComponent": null,
+            "Reference": {
+              "Route": null,
+              "FilterField": null,
+              "DataField": null
+            }
+          },
+          {
+            "Name": "No",
+            "Label": null,
+            "EnumName": null,
+            "DisplayInDetail": true,
+            "DisplayInEdit": true,
+            "DisplayInCreate": true,
+            "EditComponent": null,
+            "CreateComponent": null,
+            "DetailComponent": null,
+            "Reference": {
+              "Route": null,
+              "FilterField": null,
+              "DataField": null
+            }
+          },
+          {
+            "Name": "Theme",
+            "Label": null,
+            "EnumName": null,
+            "DisplayInDetail": true,
+            "DisplayInEdit": true,
+            "DisplayInCreate": true,
+            "EditComponent": null,
+            "CreateComponent": null,
+            "DetailComponent": null,
+            "Reference": {
+              "Route": null,
+              "FilterField": null,
+              "DataField": null
+            }
+          },
+          {
+            "Name": "IsSuper",
+            "Label": null,
+            "EnumName": null,
+            "DisplayInDetail": true,
+            "DisplayInEdit": true,
+            "DisplayInCreate": true,
+            "EditComponent": null,
+            "CreateComponent": null,
+            "DetailComponent": null,
+            "Reference": {
+              "Route": null,
+              "FilterField": null,
+              "DataField": null
+            }
+          }
+        ],
         "Columns": [
           {
             "ColumnName": "Name",
@@ -606,7 +909,8 @@
             "Title": null,
             "Display": 0,
             "SkipForJs": false,
-            "AlwaysOn": true
+            "AlwaysOn": true,
+            "Component": null
           },
           {
             "ColumnName": "Email",
@@ -614,7 +918,8 @@
             "Title": null,
             "Display": 0,
             "SkipForJs": false,
-            "AlwaysOn": true
+            "AlwaysOn": true,
+            "Component": null
           },
           {
             "ColumnName": "Status",
@@ -622,7 +927,8 @@
             "Title": null,
             "Display": 0,
             "SkipForJs": false,
-            "AlwaysOn": true
+            "AlwaysOn": true,
+            "Component": null
           },
           {
             "ColumnName": "Id",
@@ -630,7 +936,8 @@
             "Title": null,
             "Display": 0,
             "SkipForJs": false,
-            "AlwaysOn": false
+            "AlwaysOn": false,
+            "Component": null
           }
         ],
         "DisplayedColumns": [
@@ -692,7 +999,8 @@
       "Schema": null,
       "ConnectionType": 0,
       "ConnectionName": null,
-      "BaseFullName": null
+      "BaseProject": null,
+      "BaseTable": null
     },
     "Columns": [
       {
@@ -792,6 +1100,56 @@
         "HasDetail": false,
         "RepositoryMethod": "Search",
         "HideMenu": true,
+        "AllColumns": [
+          {
+            "Name": "Id",
+            "Label": null,
+            "EnumName": null,
+            "DisplayInDetail": true,
+            "DisplayInEdit": true,
+            "DisplayInCreate": true,
+            "EditComponent": null,
+            "CreateComponent": null,
+            "DetailComponent": null,
+            "Reference": {
+              "Route": null,
+              "FilterField": null,
+              "DataField": null
+            }
+          },
+          {
+            "Name": "UserId",
+            "Label": null,
+            "EnumName": null,
+            "DisplayInDetail": true,
+            "DisplayInEdit": true,
+            "DisplayInCreate": true,
+            "EditComponent": null,
+            "CreateComponent": null,
+            "DetailComponent": null,
+            "Reference": {
+              "Route": null,
+              "FilterField": null,
+              "DataField": null
+            }
+          },
+          {
+            "Name": "RoleId",
+            "Label": null,
+            "EnumName": null,
+            "DisplayInDetail": true,
+            "DisplayInEdit": true,
+            "DisplayInCreate": true,
+            "EditComponent": null,
+            "CreateComponent": null,
+            "DetailComponent": null,
+            "Reference": {
+              "Route": null,
+              "FilterField": null,
+              "DataField": null
+            }
+          }
+        ],
         "Columns": [
           {
             "ColumnName": "UserId",
@@ -799,7 +1157,8 @@
             "Title": null,
             "Display": 0,
             "SkipForJs": false,
-            "AlwaysOn": false
+            "AlwaysOn": false,
+            "Component": null
           },
           {
             "ColumnName": "RoleId",
@@ -807,7 +1166,8 @@
             "Title": null,
             "Display": 0,
             "SkipForJs": false,
-            "AlwaysOn": false
+            "AlwaysOn": false,
+            "Component": null
           }
         ],
         "DisplayedColumns": [
