@@ -47,6 +47,11 @@ namespace ModuleTest.Generated.Entities
     [Table("BookEf", Schema = "dbo")]
     public class BookEfEntity : BookEfEntityModel
     {
-                
+        
+
+        public BookEfEntityModel ToModel()
+        {
+            return this;
+        }
     }
 }

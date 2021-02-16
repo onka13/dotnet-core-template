@@ -11,6 +11,7 @@ using CoreCommon.Data.Domain.Enums;
 using ModuleTest.Generated.Entities;
 using ModuleTest.Generated.Enums;
 using CoreCommon.Data.ElasticSearch.Base;
+using Nest;
 
 namespace ModuleTest.IServices
 {

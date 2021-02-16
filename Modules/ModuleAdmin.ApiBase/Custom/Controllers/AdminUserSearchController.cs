@@ -63,7 +63,7 @@ namespace ModuleAdmin.ApiBase.Generated.Controllers
             var response = UserRoleMapBusinessLogic.ListUserRoles(userId);
             return SuccessResponse(new
             {
-                roles = response.Value
+                role = response.Value
             });
         }
 

@@ -11,6 +11,7 @@ using CoreCommon.Data.Domain.Business;
 using ModuleTest.Generated.Entities;
 using ModuleTest.Generated.Enums;
 using CoreCommon.Data.MongoDBBase.Base;
+using MongoDB.Driver;
 
 namespace ModuleTest.IRepositories
 {
@@ -18,7 +19,7 @@ namespace ModuleTest.IRepositories
     {
         
         int DeleteById(string id);
-        BookMongoEntity GetById(string id);
+        BookMongoEntity GetById(string id, bool includeRelations = false);
         List<object> Search(string id,string name,decimal? price,string category,string author, string orderBy, bool asc, int skip, int take, out long _total);
 	}
 }    

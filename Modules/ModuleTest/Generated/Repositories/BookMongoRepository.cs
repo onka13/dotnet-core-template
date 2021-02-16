@@ -13,54 +13,51 @@ using ModuleTest.Generated.Enums;
 using ModuleTest.IRepositories;
 using ModuleTest.Generated.Data;
 using CoreCommon.Data.MongoDBBase.Base;
+using MongoDB.Driver;
 
 namespace ModuleTest.Repositories
 {
-    public partial class BookMongoRepository : MongoDBBaseRepository<BookMongoEntity>, IBookMongoRepository
+    public partial class BookMongoRepository : MongoDBBaseRepository<BookMongoEntity, MongoConnectionMongoContext>, IBookMongoRepository
     {
-		public override string ConnectionName => "MongoConnection";
 
         public int DeleteById(string id)
         {            
             return DeleteBy(x => x.Id == id);
         }
 
-        public BookMongoEntity GetById(string id)
+        public BookMongoEntity GetById(string id, bool includeRelations = false)
         {
-            return GetBy(x => x.Id == id);
+            return GetBy(x => x.Id == id, includeRelations);
         }
 
         public List<object> Search(string id,string name,decimal? price,string category,string author, string orderBy, bool asc, int skip, int take, out long _total)
         {
-            var result = GetQueryable();
+            var result = GetRelationAggregate();
             if (!string.IsNullOrEmpty(id))
-                result = result.Where(x => x.Id.ToLower().Contains(id.ToLower()));
+                result = result.Match(x => x.Id.Equals(id));
             if (!string.IsNullOrEmpty(name))
-                result = result.Where(x => x.Name.ToLower().Contains(name.ToLower()));
+                result = result.Match(x => x.Name.ToLower().Contains(name.ToLower()));
             if (price.HasValue)
-                result = result.Where(x => x.Price.Equals(price));
+                result = result.Match(x => x.Price.Equals(price));
             if (!string.IsNullOrEmpty(category))
-                result = result.Where(x => x.Category.ToLower().Contains(category.ToLower()));
+                result = result.Match(x => x.Category.ToLower().Contains(category.ToLower()));
             if (!string.IsNullOrEmpty(author))
-                result = result.Where(x => x.Author.ToLower().Contains(author.ToLower()));
-            var dic = new Dictionary<string, Expression<Func<BookMongoEntity, object>>>
-            {
-                {"id", x => x.Id}
-            };
+                result = result.Match(x => x.Author.ToLower().Contains(author.ToLower()));
+            var orderField = SortField(orderBy, x => x.Id);
 
-            Expression<Func<BookMongoEntity, object>> selectFunc = x => new {
+            var selectFunc = Projection(x => new {
                 x.Id,
 				x.Name,
 				x.Price,
 				x.Category,
 				x.Author
-            };
-            if (!string.IsNullOrEmpty(orderBy) && dic.ContainsKey(orderBy))
+            });
+            if (orderField != null)
             {
-                var result2 = asc ? result.OrderBy(dic[orderBy]) : result.OrderByDescending(dic[orderBy]);
-                return SkipTake(result2.Select(selectFunc), skip, take, out _total);
+                var result2 = asc ? result.SortBy(orderField) : result.SortByDescending(orderField);
+                return SkipTake(result2.Project(selectFunc), skip, take, out _total);
             }
-            return SkipTake(result.Select(selectFunc), skip, take, out _total);
+            return SkipTake(result.Project(selectFunc), skip, take, out _total);
         }
             
     }

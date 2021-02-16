@@ -20,22 +20,26 @@ namespace ModuleTest.Generated.Entities
 		[BsonId]
 		[BsonRepresentation(BsonType.ObjectId)]
 		[MaxLength(50)]
-		[BsonElement("Id")]
+		[BsonElement("id")]
 		public string Id { get; set; }
 
+		[BsonDefaultValue(null)]
 		[MaxLength(50)]
-		[BsonElement("Name")]
+		[BsonElement("name")]
 		public string Name { get; set; }
 
-		[BsonElement("Price")]
+		[BsonDefaultValue(null)]
+		[BsonElement("price")]
 		public decimal? Price { get; set; }
 
+		[BsonDefaultValue(null)]
 		[MaxLength(50)]
-		[BsonElement("Category")]
+		[BsonElement("category")]
 		public string Category { get; set; }
 
+		[BsonDefaultValue(null)]
 		[MaxLength(50)]
-		[BsonElement("Author")]
+		[BsonElement("author")]
 		public string Author { get; set; }
 
         public Expression<Func<BookMongoEntity, bool>> PrimaryPredicate() => x => x.Id == Id;
@@ -52,9 +56,15 @@ namespace ModuleTest.Generated.Entities
         }
     }
 
-    [Collection("BookMongo")]
+    [Collection("bookMongo")]
+    [BsonIgnoreExtraElements]
     public class BookMongoEntity : BookMongoEntityModel
     {
-                
+        
+
+        public BookMongoEntityModel ToModel()
+        {
+            return this;
+        }
     }
 }

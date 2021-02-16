@@ -3,6 +3,7 @@ Auto generated file. Do not edit!
 */
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using CoreCommon.Business.Service.Base;
 using CoreCommon.Data.Domain.Business;
@@ -14,6 +15,7 @@ using ModuleTest.Repositories;
 using ModuleTest.IServices;
 using ModuleTest.IRepositories;
 using CoreCommon.Data.ElasticSearch.Base;
+using Nest;
 
 namespace ModuleTest.Services
 {

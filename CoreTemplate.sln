@@ -95,6 +95,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuleTest.API", "Modules\M
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModuleTest.ApiBase", "Modules\ModuleTest.ApiBase\ModuleTest.ApiBase.csproj", "{F7B57A53-E01D-41EA-9C9C-972617A137FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreCommon.Data.RedisCache", "..\dotnet-core-common\CoreCommon.Data.RedisCache\CoreCommon.Data.RedisCache.csproj", "{61697322-794D-45A3-8C1E-43070277089C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -237,6 +239,10 @@ Global
 		{F7B57A53-E01D-41EA-9C9C-972617A137FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7B57A53-E01D-41EA-9C9C-972617A137FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7B57A53-E01D-41EA-9C9C-972617A137FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61697322-794D-45A3-8C1E-43070277089C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61697322-794D-45A3-8C1E-43070277089C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61697322-794D-45A3-8C1E-43070277089C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61697322-794D-45A3-8C1E-43070277089C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -281,6 +287,7 @@ Global
 		{72221DE3-6ADA-479D-8EE1-FDEAE509C0AB} = {98460F86-0970-4B92-8137-3986C73E8267}
 		{9D581F8B-03ED-468A-B31A-FF72A98749F7} = {98460F86-0970-4B92-8137-3986C73E8267}
 		{F7B57A53-E01D-41EA-9C9C-972617A137FA} = {98460F86-0970-4B92-8137-3986C73E8267}
+		{61697322-794D-45A3-8C1E-43070277089C} = {40D83391-DE5A-469E-B772-E9415D22FDDF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5BF0D71B-7A53-4334-BF4C-D948A07FD9E9}

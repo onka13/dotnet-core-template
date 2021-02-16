@@ -3,6 +3,7 @@ Auto generated file. Do not edit!
 */
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using CoreCommon.Business.Service.Base;
 using CoreCommon.Data.Domain.Business;
@@ -14,6 +15,7 @@ using ModuleTest.Repositories;
 using ModuleTest.IServices;
 using ModuleTest.IRepositories;
 using CoreCommon.Data.EntityFrameworkBase.Base;
+using Microsoft.EntityFrameworkCore;
 
 namespace ModuleTest.Services
 {
@@ -33,10 +35,10 @@ namespace ModuleTest.Services
             return response;
         }
 
-        public ServiceResult<BookEfEntity> GetById(int id)
+        public ServiceResult<BookEfEntity> GetById(int id, bool includeRelations = false)
         {
             var response = ServiceResult<BookEfEntity>.Instance.ErrorResult(ServiceResultCode.Error);
-            response.Value = Repository.GetById(id);
+            response.Value = Repository.GetById(id, includeRelations);
             if (response.Value != null)
             {
                 response.SuccessResult(response.Value);

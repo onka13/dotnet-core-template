@@ -48,6 +48,11 @@ namespace ModuleTest.Generated.Entities
     [IndexConfig("bookelastic")]
     public class BookElasticEntity : BookElasticEntityModel
     {
-                
+        
+
+        public BookElasticEntityModel ToModel()
+        {
+            return this;
+        }
     }
 }

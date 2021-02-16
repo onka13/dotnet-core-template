@@ -3,6 +3,7 @@ Auto generated file. Do not edit!
 */
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using CoreCommon.Business.Service.Base;
 using CoreCommon.Data.Domain.Business;
@@ -14,6 +15,7 @@ using ModuleTest.Repositories;
 using ModuleTest.IServices;
 using ModuleTest.IRepositories;
 using CoreCommon.Data.MongoDBBase.Base;
+using MongoDB.Driver;
 
 namespace ModuleTest.Services
 {
@@ -33,10 +35,10 @@ namespace ModuleTest.Services
             return response;
         }
 
-        public ServiceResult<BookMongoEntity> GetById(string id)
+        public ServiceResult<BookMongoEntity> GetById(string id, bool includeRelations = false)
         {
             var response = ServiceResult<BookMongoEntity>.Instance.ErrorResult(ServiceResultCode.Error);
-            response.Value = Repository.GetById(id);
+            response.Value = Repository.GetById(id, includeRelations);
             if (response.Value != null)
             {
                 response.SuccessResult(response.Value);

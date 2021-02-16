@@ -57,8 +57,8 @@ namespace ModuleAdmin.Services
 
             var currentRoles = FindAndIncludeBy(x => x.UserId == userId, x => x.Role).Value.Select(x => (new
             {
-                key = x.RoleId,
-                label =  x.Role.Name
+                id = x.RoleId,
+                name =  x.Role.Name
             }));
 
             return response.SuccessResult(currentRoles);
