@@ -40,7 +40,7 @@ namespace ModuleAdmin.ApiBase.Controllers
         }
 
         [Route("updateRoleActionList")]
-        [HttpGet]
+        [HttpPost]
         public IActionResult UpdateRoleActionList()
         {
             var response = RoleActionListBusinessLogic.UpdateRoleActionList(ModuleHelper.FindAllAssemblies(), typeof(Controller));
