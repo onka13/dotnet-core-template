@@ -43,6 +43,12 @@ namespace ModuleTest.ApiBase.Generated.Controllers
             var responseEdit = BookElasticBusinessLogic.Edit(model.ToEntity());
             return Json(responseEdit);
         }
+        protected ActionResult UpdateOnly0(BookElasticEntityModel model)
+        {
+            //var responseEdit = BookElasticBusinessLogic.EditOnly(model.ToEntity(), x => x.Name, x => x.Price, x => x.Category, x => x.Author);
+            var responseEdit = BookElasticBusinessLogic.Edit(model.ToEntity());
+            return Json(responseEdit);
+        }
         protected ActionResult Delete0(string id)
         {
             var response = BookElasticBusinessLogic.DeleteBy(id);

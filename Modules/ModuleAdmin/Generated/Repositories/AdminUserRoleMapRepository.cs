@@ -25,9 +25,9 @@ namespace ModuleAdmin.Repositories
             return DeleteBy(x => x.Id == id);
         }
 
-        public AdminUserRoleMapEntity GetById(int id)
+        public AdminUserRoleMapEntity GetById(int id, bool includeRelations = false)
         {
-            return GetBy(x => x.Id == id);
+            return GetBy(x => x.Id == id, includeRelations);
         }
 
         public int DeleteByUserId(int userId)
@@ -35,14 +35,14 @@ namespace ModuleAdmin.Repositories
             return DeleteBy(x => x.UserId == userId);
         }
 
-        public List<AdminUserRoleMapEntity> ListByUserId(int userId)
+        public List<AdminUserRoleMapEntity> ListByUserId(int userId, bool includeRelations = false)
         {
-            return FindBy(x => x.UserId == userId).ToList();
+            return FindBy(x => x.UserId == userId, includeRelations).ToList();
         }
 
-        public List<AdminUserRoleMapEntity> ListByUserId(int userId, int skip, int take)
+        public List<AdminUserRoleMapEntity> ListByUserId(int userId, int skip, int take, bool includeRelations = false)
         {
-            return FindBy(x => x.UserId == userId).Skip(skip).Take(take).ToList();
+            return FindBy(x => x.UserId == userId, skip, take, includeRelations).ToList();
         }
 
         public List<object> Search(int? userId,int? roleId, string orderBy, bool asc, int skip, int take, out long _total)
@@ -52,26 +52,23 @@ namespace ModuleAdmin.Repositories
                 result = result.Where(x => x.UserId.Equals(userId));
             if (roleId.HasValue)
                 result = result.Where(x => x.RoleId.Equals(roleId));
-            var dic = new Dictionary<string, Expression<Func<AdminUserRoleMapEntity, object>>>
-            {
-                {"id", x => x.Id},{"userId", x => x.UserId}
-            };
+            var orderField = SortField(orderBy, x => x.Id,x => x.UserId);
 
-            Expression<Func<AdminUserRoleMapEntity, object>> selectFunc = x => new {
+            var selectFunc = Projection(x => new {
                 x.Id,
 				x.UserId,
 				x.RoleId
-            };
-            if (!string.IsNullOrEmpty(orderBy) && dic.ContainsKey(orderBy))
+            });
+            if (orderField != null)
             {
-                var result2 = asc ? result.OrderBy(dic[orderBy]) : result.OrderByDescending(dic[orderBy]);
+                var result2 = asc ? result.OrderBy(orderField) : result.OrderByDescending(orderField);
                 return SkipTake(result2.Select(selectFunc), skip, take, out _total);
             }
             return SkipTake(result.Select(selectFunc), skip, take, out _total);
         }
             
 
-        public AdminUserRoleMapEntity GetByWithRelations(Expression<Func<AdminUserRoleMapEntity, bool>> predicate)
+        public IQueryable<AdminUserRoleMapEntity> WithRelations(Expression<Func<AdminUserRoleMapEntity, bool>> predicate)
         {
             return GetDbSet().Include(x => x.Role).Where(predicate)
                 .Select(x => new AdminUserRoleMapEntity{
@@ -79,13 +76,12 @@ namespace ModuleAdmin.Repositories
 					UserId= x.UserId,
 					RoleId= x.RoleId,
 					Role = x.Role != null ? new AdminRoleEntity{ Id=x.Role.Id,Name=x.Role.Name  } : null
-                })
-                .FirstOrDefault();
+                });
         }
 
         public int EditWithRelations(AdminUserRoleMapEntity entity)
         {
-            SetStateOnly(entity, Microsoft.EntityFrameworkCore.EntityState.Modified);
+            SetStateOnly(entity, EntityState.Modified);
             
             return Save();
         }

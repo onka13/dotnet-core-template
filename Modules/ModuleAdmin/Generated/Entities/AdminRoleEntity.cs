@@ -40,6 +40,11 @@ namespace ModuleAdmin.Generated.Entities
         
         [InverseProperty("Role")]
         public virtual ICollection<AdminUserRoleMapEntity> AdminUserRoleMapsRole { get; set; }
-        
+
+
+        public AdminRoleEntityModel ToModel()
+        {
+            return this;
+        }
     }
 }

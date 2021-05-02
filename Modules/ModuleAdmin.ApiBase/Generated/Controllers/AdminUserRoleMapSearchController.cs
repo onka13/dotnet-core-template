@@ -1,13 +1,17 @@
-﻿
+﻿/*
+Auto generated file. Do not edit!
+*/
 using System;
 using System.Linq;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using CoreCommon.Data.Domain.Business;
+using CoreCommon.Data.Domain.Models;
+using CoreCommon.Data.Domain.Attributes;
 using ModuleAdmin.Services;
 using ModuleAdmin.ApiBase.Generated.RequestEntities;
 using ModuleAdmin.Generated.Entities;
 using ModuleAdmin.IServices;
-using CoreCommon.Data.Domain.Business;using CoreCommon.Data.Domain.Models;using CoreCommon.Data.Domain.Attributes;
 
 namespace ModuleAdmin.ApiBase.Generated.Controllers
 {
@@ -24,7 +28,7 @@ namespace ModuleAdmin.ApiBase.Generated.Controllers
         }
         protected ActionResult Get0(int id)
         {
-            var response = AdminUserRoleMapBusinessLogic.GetBy(x => x.Id == id);
+            var response = AdminUserRoleMapBusinessLogic.GetByWithRelations(x => x.Id == id);
             return Json(response);
         }
         protected ActionResult Create0(AdminUserRoleMapEntityModel model)
@@ -37,6 +41,11 @@ namespace ModuleAdmin.ApiBase.Generated.Controllers
         {
             //entity.UpdatedAt = DateTime.Now;
             var responseEdit = AdminUserRoleMapBusinessLogic.Edit(model.ToEntity());
+            return Json(responseEdit);
+        }
+        protected ActionResult UpdateOnly0(AdminUserRoleMapEntityModel model)
+        {
+            var responseEdit = AdminUserRoleMapBusinessLogic.EditOnly(model.ToEntity(), x => x.UserId, x => x.RoleId);
             return Json(responseEdit);
         }
         protected ActionResult Delete0(int id)

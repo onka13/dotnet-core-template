@@ -1,5 +1,8 @@
-﻿
+﻿/*
+Auto generated file. Do not edit!
+*/
 using System;
+using System.Collections.Generic;
 using CoreCommon.Data.Domain.Entitites;
 using CoreCommon.Data.Domain.Enums;
 using ModuleAccount.Generated.Enums;

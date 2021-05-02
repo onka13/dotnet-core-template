@@ -1,9 +1,12 @@
 using Autofac;
 using CoreCommon.Application.API.Base;
 using CoreCommon.Business.Service.Helpers;
+using CoreCommon.Data.Domain.Business;
+using CoreCommon.Infra.Helpers;
 using CoreCommon.ModuleBase.Components;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
@@ -54,16 +57,12 @@ namespace ModuleCommon.API
                 HttpOnly = Microsoft.AspNetCore.CookiePolicy.HttpOnlyPolicy.Always
             });
 
-            /*
             app.UseExceptionHandler(errorApp =>
             {
                 errorApp.Run(async context =>
                 {
                     context.Response.StatusCode = 500;
-                    context.Response.ContentType = "text/html";
-
-                    await context.Response.WriteAsync("<html lang=\"en\"><body>\r\n");
-                    await context.Response.WriteAsync("ERROR!<br><br>\r\n");
+                    context.Response.ContentType = "application/json";
 
                     var exceptionHandlerPathFeature =
                         context.Features.Get<IExceptionHandlerPathFeature>();
@@ -71,17 +70,17 @@ namespace ModuleCommon.API
                     // Use exceptionHandlerPathFeature to process the exception (for example, 
                     // logging), but do NOT expose sensitive error information directly to 
                     // the client.
-
-                    if (exceptionHandlerPathFeature?.Error is FileNotFoundException)
+                    var msg = exceptionHandlerPathFeature?.Error?.Message;
+                    var response = ServiceResult<string>.Instance.ErrorResult(ServiceResultCode.ServerError, msg);
+                    response.Debug = exceptionHandlerPathFeature?.Error?.StackTrace;
+                    if (exceptionHandlerPathFeature?.Error?.InnerException != null)
                     {
-                        await context.Response.WriteAsync("File error thrown!<br><br>\r\n");
+                        response.Debug = exceptionHandlerPathFeature?.Error?.InnerException.Message + "\n\n" + response.Debug;
                     }
 
-                    await context.Response.WriteAsync("<a href=\"/\">Home</a><br>\r\n");
-                    await context.Response.WriteAsync("</body></html>\r\n");
-                    await context.Response.WriteAsync(new string(' ', 512)); // IE padding
+                    await context.Response.WriteAsync(ConversionHelper.Serialize(response, isCamelCase: true));
                 });
-            });*/
+            });
 
             app.UseMiddleware<HttpHeadersMiddleware>();
 
@@ -111,8 +110,8 @@ namespace ModuleCommon.API
             {
                 o.AddDefaultPolicy(builder =>
                 {
-                    //builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
                     builder.WithOrigins("http://localhost:3001")
+                           .AllowCredentials() 
                            .AllowAnyMethod()
                            .AllowAnyHeader();
                 });

@@ -1,13 +1,14 @@
-﻿
-using System;
+﻿using System;
 using System.Linq;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using CoreCommon.Data.Domain.Business;
+using CoreCommon.Data.Domain.Models;
+using CoreCommon.Data.Domain.Attributes;
 using ModuleAccount.Services;
 using ModuleAccount.ApiBase.Generated.RequestEntities;
 using ModuleAccount.Generated.Entities;
 using ModuleAccount.IServices;
-using CoreCommon.Data.Domain.Business;using CoreCommon.Data.Domain.Models;using CoreCommon.Data.Domain.Attributes;
 
 namespace ModuleAccount.ApiBase.Generated.Controllers
 {

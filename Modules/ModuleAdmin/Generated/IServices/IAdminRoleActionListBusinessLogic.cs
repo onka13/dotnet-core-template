@@ -11,6 +11,7 @@ using CoreCommon.Data.Domain.Enums;
 using ModuleAdmin.Generated.Entities;
 using ModuleAdmin.Generated.Enums;
 using CoreCommon.Data.EntityFrameworkBase.Base;
+using Microsoft.EntityFrameworkCore;
 
 namespace ModuleAdmin.IServices
 {
@@ -18,9 +19,9 @@ namespace ModuleAdmin.IServices
     {
         
         ServiceResult<int> DeleteById(int id);
-        ServiceResult<AdminRoleActionListEntity> GetById(int id);
+        ServiceResult<AdminRoleActionListEntity> GetById(int id, bool includeRelations = false);
         ServiceResult<int> DeleteByModuleId(int moduleId);
-        ServiceResult<List<AdminRoleActionListEntity>> ListByModuleId(int moduleId);
-        ServiceResult<List<AdminRoleActionListEntity>> ListByModuleId(int moduleId, int skip, int take);
+        ServiceResult<List<AdminRoleActionListEntity>> ListByModuleId(int moduleId, bool includeRelations = false);
+        ServiceResult<List<AdminRoleActionListEntity>> ListByModuleId(int moduleId, int skip, int take, bool includeRelations = false);
 	}
 }    

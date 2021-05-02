@@ -1,13 +1,17 @@
-﻿
+﻿/*
+Auto generated file. Do not edit!
+*/
 using System;
 using System.Linq;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using CoreCommon.Data.Domain.Business;
+using CoreCommon.Data.Domain.Models;
+using CoreCommon.Data.Domain.Attributes;
 using ModuleAccount.Services;
 using ModuleAccount.ApiBase.Generated.RequestEntities;
 using ModuleAccount.Generated.Entities;
 using ModuleAccount.IServices;
-using CoreCommon.Data.Domain.Business;using CoreCommon.Data.Domain.Models;using CoreCommon.Data.Domain.Attributes;
 
 namespace ModuleAccount.ApiBase.Generated.Controllers
 {
@@ -37,6 +41,11 @@ namespace ModuleAccount.ApiBase.Generated.Controllers
         {
             //entity.UpdatedAt = DateTime.Now;
             var responseEdit = UserBusinessLogic.Edit(model.ToEntity());
+            return Json(responseEdit);
+        }
+        protected ActionResult UpdateOnly0(UserEntityModel model)
+        {
+            var responseEdit = UserBusinessLogic.EditOnly(model.ToEntity(), x => x.Name, x => x.Email, x => x.EmailConfirmed, x => x.Status);
             return Json(responseEdit);
         }
         protected ActionResult Delete0(int id)

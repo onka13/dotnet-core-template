@@ -13,6 +13,7 @@ using ModuleAdmin.Generated.Enums;
 using ModuleAdmin.IRepositories;
 using ModuleAdmin.Generated.Data;
 using CoreCommon.Data.EntityFrameworkBase.Base;
+using Microsoft.EntityFrameworkCore;
 
 namespace ModuleAdmin.Repositories
 {
@@ -24,9 +25,9 @@ namespace ModuleAdmin.Repositories
             return DeleteBy(x => x.Id == id);
         }
 
-        public AdminRoleDefinitionEntity GetById(int id)
+        public AdminRoleDefinitionEntity GetById(int id, bool includeRelations = false)
         {
-            return GetBy(x => x.Id == id);
+            return GetBy(x => x.Id == id, includeRelations);
         }
 
         public List<object> Search(int? roleId,string moduleKey,string pageKey,string actionKey, string orderBy, bool asc, int skip, int take, out long _total)
@@ -40,22 +41,19 @@ namespace ModuleAdmin.Repositories
                 result = result.Where(x => x.PageKey.ToLower().Contains(pageKey.ToLower()));
             if (!string.IsNullOrEmpty(actionKey))
                 result = result.Where(x => x.ActionKey.ToLower().Contains(actionKey.ToLower()));
-            var dic = new Dictionary<string, Expression<Func<AdminRoleDefinitionEntity, object>>>
-            {
-                {"id", x => x.Id}
-            };
+            var orderField = SortField(orderBy, x => x.Id);
 
-            Expression<Func<AdminRoleDefinitionEntity, object>> selectFunc = x => new {
+            var selectFunc = Projection(x => new {
                 x.Id,
 				x.RoleId,
 				x.ModuleKey,
 				x.PageKey,
 				x.ActionKey,
 				x.Action
-            };
-            if (!string.IsNullOrEmpty(orderBy) && dic.ContainsKey(orderBy))
+            });
+            if (orderField != null)
             {
-                var result2 = asc ? result.OrderBy(dic[orderBy]) : result.OrderByDescending(dic[orderBy]);
+                var result2 = asc ? result.OrderBy(orderField) : result.OrderByDescending(orderField);
                 return SkipTake(result2.Select(selectFunc), skip, take, out _total);
             }
             return SkipTake(result.Select(selectFunc), skip, take, out _total);

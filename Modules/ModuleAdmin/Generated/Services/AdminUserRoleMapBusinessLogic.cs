@@ -3,6 +3,7 @@ Auto generated file. Do not edit!
 */
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using CoreCommon.Business.Service.Base;
 using CoreCommon.Data.Domain.Business;
@@ -14,6 +15,7 @@ using ModuleAdmin.Repositories;
 using ModuleAdmin.IServices;
 using ModuleAdmin.IRepositories;
 using CoreCommon.Data.EntityFrameworkBase.Base;
+using Microsoft.EntityFrameworkCore;
 
 namespace ModuleAdmin.Services
 {
@@ -33,10 +35,10 @@ namespace ModuleAdmin.Services
             return response;
         }
 
-        public ServiceResult<AdminUserRoleMapEntity> GetById(int id)
+        public ServiceResult<AdminUserRoleMapEntity> GetById(int id, bool includeRelations = false)
         {
             var response = ServiceResult<AdminUserRoleMapEntity>.Instance.ErrorResult(ServiceResultCode.Error);
-            response.Value = Repository.GetById(id);
+            response.Value = Repository.GetById(id, includeRelations);
             if (response.Value != null)
             {
                 response.SuccessResult(response.Value);
@@ -55,10 +57,10 @@ namespace ModuleAdmin.Services
             return response;
         }
 
-        public ServiceResult<List<AdminUserRoleMapEntity>> ListByUserId(int userId)
+        public ServiceResult<List<AdminUserRoleMapEntity>> ListByUserId(int userId, bool includeRelations = false)
         {
             var response = ServiceResult<List<AdminUserRoleMapEntity>>.Instance.ErrorResult(ServiceResultCode.Error); 
-            response.Value = Repository.ListByUserId(userId);
+            response.Value = Repository.ListByUserId(userId, includeRelations);
             if (response.Value != null)
             {
                 response.SuccessResult(response.Value);
@@ -66,10 +68,10 @@ namespace ModuleAdmin.Services
             return response;
         }
 
-        public ServiceResult<List<AdminUserRoleMapEntity>> ListByUserId(int userId, int skip, int take)
+        public ServiceResult<List<AdminUserRoleMapEntity>> ListByUserId(int userId, int skip, int take, bool includeRelations = false)
         {
             var response = ServiceResult<List<AdminUserRoleMapEntity>>.Instance.ErrorResult(ServiceResultCode.Error); 
-            response.Value = Repository.ListByUserId(userId, skip, take);
+            response.Value = Repository.ListByUserId(userId, skip, take, includeRelations);
             if (response.Value != null)
             {
                 response.SuccessResult(response.Value);
@@ -91,10 +93,21 @@ namespace ModuleAdmin.Services
         public ServiceResult<AdminUserRoleMapEntity> GetByWithRelations(Expression<Func<AdminUserRoleMapEntity, bool>> predicate)
         {
             var response = ServiceResult<AdminUserRoleMapEntity>.Instance.ErrorResult(ServiceResultCode.Error);
-            response.Value = Repository.GetByWithRelations(predicate);
+            response.Value = Repository.WithRelations(predicate).FirstOrDefault();
             if (response.Value != null)
             {
-                response.SuccessResult(response.Value, 0);
+                response.SuccessResult(response.Value);
+            }
+            return response;
+        }
+
+        public ServiceResult<List<AdminUserRoleMapEntity>> ListWithRelations(Expression<Func<AdminUserRoleMapEntity, bool>> predicate, int skip, int take)
+        {
+            var response = ServiceResult<List<AdminUserRoleMapEntity>>.Instance.ErrorResult(ServiceResultCode.Error);
+            response.Value = Repository.WithRelations(predicate).Skip(skip).Take(take).ToList();
+            if (response.Value != null)
+            {
+                response.SuccessResult(response.Value);
             }
             return response;
         }

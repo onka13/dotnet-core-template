@@ -1,13 +1,17 @@
-﻿
+﻿/*
+Auto generated file. Do not edit!
+*/
 using System;
 using System.Linq;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using CoreCommon.Data.Domain.Business;
+using CoreCommon.Data.Domain.Models;
+using CoreCommon.Data.Domain.Attributes;
 using ModuleAdmin.Services;
 using ModuleAdmin.ApiBase.Generated.RequestEntities;
 using ModuleAdmin.Generated.Entities;
 using ModuleAdmin.IServices;
-using CoreCommon.Data.Domain.Business;using CoreCommon.Data.Domain.Models;using CoreCommon.Data.Domain.Attributes;
 
 namespace ModuleAdmin.ApiBase.Generated.Controllers
 {
@@ -37,6 +41,11 @@ namespace ModuleAdmin.ApiBase.Generated.Controllers
         {
             //entity.UpdatedAt = DateTime.Now;
             var responseEdit = AdminUserBusinessLogic.Edit(model.ToEntity());
+            return Json(responseEdit);
+        }
+        protected ActionResult UpdateOnly0(AdminUserEntityModel model)
+        {
+            var responseEdit = AdminUserBusinessLogic.EditOnly(model.ToEntity(), x => x.No, x => x.Name, x => x.Email, x => x.Status, x => x.IsSuper);
             return Json(responseEdit);
         }
         protected ActionResult Delete0(int id)

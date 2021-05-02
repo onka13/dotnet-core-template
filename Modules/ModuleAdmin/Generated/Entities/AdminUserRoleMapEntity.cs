@@ -43,6 +43,11 @@ namespace ModuleAdmin.Generated.Entities
         
         [ForeignKey("RoleId")]
         public virtual AdminRoleEntity Role { get; set; }
-        
+
+
+        public AdminUserRoleMapEntityModel ToModel()
+        {
+            return this;
+        }
     }
 }

@@ -13,6 +13,7 @@ using ModuleAdmin.Generated.Enums;
 using ModuleAdmin.IRepositories;
 using ModuleAdmin.Generated.Data;
 using CoreCommon.Data.EntityFrameworkBase.Base;
+using Microsoft.EntityFrameworkCore;
 
 namespace ModuleAdmin.Repositories
 {
@@ -24,9 +25,9 @@ namespace ModuleAdmin.Repositories
             return DeleteBy(x => x.Id == id);
         }
 
-        public AdminRoleActionListEntity GetById(int id)
+        public AdminRoleActionListEntity GetById(int id, bool includeRelations = false)
         {
-            return GetBy(x => x.Id == id);
+            return GetBy(x => x.Id == id, includeRelations);
         }
 
         public int DeleteByModuleId(int moduleId)
@@ -34,14 +35,14 @@ namespace ModuleAdmin.Repositories
             return DeleteBy(x => x.ModuleId == moduleId);
         }
 
-        public List<AdminRoleActionListEntity> ListByModuleId(int moduleId)
+        public List<AdminRoleActionListEntity> ListByModuleId(int moduleId, bool includeRelations = false)
         {
-            return FindBy(x => x.ModuleId == moduleId).ToList();
+            return FindBy(x => x.ModuleId == moduleId, includeRelations).ToList();
         }
 
-        public List<AdminRoleActionListEntity> ListByModuleId(int moduleId, int skip, int take)
+        public List<AdminRoleActionListEntity> ListByModuleId(int moduleId, int skip, int take, bool includeRelations = false)
         {
-            return FindBy(x => x.ModuleId == moduleId).Skip(skip).Take(take).ToList();
+            return FindBy(x => x.ModuleId == moduleId, skip, take, includeRelations).ToList();
         }
     }
 }

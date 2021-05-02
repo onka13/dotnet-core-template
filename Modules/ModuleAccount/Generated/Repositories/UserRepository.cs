@@ -13,6 +13,7 @@ using ModuleAccount.Generated.Enums;
 using ModuleAccount.IRepositories;
 using ModuleAccount.Generated.Data;
 using CoreCommon.Data.EntityFrameworkBase.Base;
+using Microsoft.EntityFrameworkCore;
 
 namespace ModuleAccount.Repositories
 {
@@ -24,9 +25,9 @@ namespace ModuleAccount.Repositories
             return DeleteBy(x => x.Id == id);
         }
 
-        public UserEntity GetById(int id)
+        public UserEntity GetById(int id, bool includeRelations = false)
         {
-            return GetBy(x => x.Id == id);
+            return GetBy(x => x.Id == id, includeRelations);
         }
 
         public int DeleteByEmail(string email)
@@ -34,9 +35,9 @@ namespace ModuleAccount.Repositories
             return DeleteBy(x => x.Email == email);
         }
 
-        public UserEntity GetByEmail(string email)
+        public UserEntity GetByEmail(string email, bool includeRelations = false)
         {
-            return GetBy(x => x.Email == email);
+            return GetBy(x => x.Email == email, includeRelations);
         }
 
         public List<object> Search(int? id,string name,string email,bool? emailConfirmed,Status? status, string orderBy, bool asc, int skip, int take, out long _total)
@@ -52,25 +53,22 @@ namespace ModuleAccount.Repositories
                 result = result.Where(x => x.EmailConfirmed.Equals(emailConfirmed));
             if (status.HasValue)
                 result = result.Where(x => x.Status.Equals(status));
-            var dic = new Dictionary<string, Expression<Func<UserEntity, object>>>
-            {
-                {"id", x => x.Id},{"email", x => x.Email}
-            };
+            var orderField = SortField(orderBy, x => x.Id,x => x.Email);
 
-            Expression<Func<UserEntity, object>> selectFunc = x => new {
+            var selectFunc = Projection(x => new {
                 x.Id,
 				x.Name,
 				x.Email,
 				x.EmailConfirmed,
 				x.Status
-            };
-            
-            if (!string.IsNullOrEmpty(orderBy) && dic.ContainsKey(orderBy))
+            });
+            if (orderField != null)
             {
-                var result2 = asc ? result.OrderBy(dic[orderBy]) : result.OrderByDescending(dic[orderBy]);
+                var result2 = asc ? result.OrderBy(orderField) : result.OrderByDescending(orderField);
                 return SkipTake(result2.Select(selectFunc), skip, take, out _total);
             }
             return SkipTake(result.Select(selectFunc), skip, take, out _total);
         }
+            
     }
 }

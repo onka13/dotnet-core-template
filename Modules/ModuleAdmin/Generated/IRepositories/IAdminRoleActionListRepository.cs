@@ -11,6 +11,7 @@ using CoreCommon.Data.Domain.Business;
 using ModuleAdmin.Generated.Entities;
 using ModuleAdmin.Generated.Enums;
 using CoreCommon.Data.EntityFrameworkBase.Base;
+using Microsoft.EntityFrameworkCore;
 
 namespace ModuleAdmin.IRepositories
 {
@@ -18,9 +19,9 @@ namespace ModuleAdmin.IRepositories
     {
         
         int DeleteById(int id);
-        AdminRoleActionListEntity GetById(int id);
+        AdminRoleActionListEntity GetById(int id, bool includeRelations = false);
         int DeleteByModuleId(int moduleId);
-        List<AdminRoleActionListEntity> ListByModuleId(int moduleId);
-        List<AdminRoleActionListEntity> ListByModuleId(int moduleId, int skip, int take);
+        List<AdminRoleActionListEntity> ListByModuleId(int moduleId, bool includeRelations = false);
+        List<AdminRoleActionListEntity> ListByModuleId(int moduleId, int skip, int take, bool includeRelations = false);
 	}
 }    

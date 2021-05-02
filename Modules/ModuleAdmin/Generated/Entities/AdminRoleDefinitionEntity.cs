@@ -52,6 +52,11 @@ namespace ModuleAdmin.Generated.Entities
     [Table("AdminRoleDefinition", Schema = "dbo")]
     public class AdminRoleDefinitionEntity : AdminRoleDefinitionEntityModel
     {
-                
+        
+
+        public AdminRoleDefinitionEntityModel ToModel()
+        {
+            return this;
+        }
     }
 }

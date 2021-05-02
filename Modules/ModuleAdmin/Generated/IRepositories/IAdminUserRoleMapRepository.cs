@@ -11,6 +11,7 @@ using CoreCommon.Data.Domain.Business;
 using ModuleAdmin.Generated.Entities;
 using ModuleAdmin.Generated.Enums;
 using CoreCommon.Data.EntityFrameworkBase.Base;
+using Microsoft.EntityFrameworkCore;
 
 namespace ModuleAdmin.IRepositories
 {
@@ -18,12 +19,12 @@ namespace ModuleAdmin.IRepositories
     {
         
         int DeleteById(int id);
-        AdminUserRoleMapEntity GetById(int id);
+        AdminUserRoleMapEntity GetById(int id, bool includeRelations = false);
         int DeleteByUserId(int userId);
-        List<AdminUserRoleMapEntity> ListByUserId(int userId);
-        List<AdminUserRoleMapEntity> ListByUserId(int userId, int skip, int take);
+        List<AdminUserRoleMapEntity> ListByUserId(int userId, bool includeRelations = false);
+        List<AdminUserRoleMapEntity> ListByUserId(int userId, int skip, int take, bool includeRelations = false);
         List<object> Search(int? userId,int? roleId, string orderBy, bool asc, int skip, int take, out long _total);
-        AdminUserRoleMapEntity GetByWithRelations(Expression<Func<AdminUserRoleMapEntity, bool>> predicate);
+        IQueryable<AdminUserRoleMapEntity> WithRelations(Expression<Func<AdminUserRoleMapEntity, bool>> predicate);
         int EditWithRelations(AdminUserRoleMapEntity entity);
 	}
 }    

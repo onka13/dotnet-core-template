@@ -3,6 +3,7 @@ Auto generated file. Do not edit!
 */
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using CoreCommon.Business.Service.Base;
 using CoreCommon.Data.Domain.Business;
@@ -14,6 +15,7 @@ using ModuleAdmin.Repositories;
 using ModuleAdmin.IServices;
 using ModuleAdmin.IRepositories;
 using CoreCommon.Data.EntityFrameworkBase.Base;
+using Microsoft.EntityFrameworkCore;
 
 namespace ModuleAdmin.Services
 {
@@ -33,10 +35,10 @@ namespace ModuleAdmin.Services
             return response;
         }
 
-        public ServiceResult<AdminRoleActionListEntity> GetById(int id)
+        public ServiceResult<AdminRoleActionListEntity> GetById(int id, bool includeRelations = false)
         {
             var response = ServiceResult<AdminRoleActionListEntity>.Instance.ErrorResult(ServiceResultCode.Error);
-            response.Value = Repository.GetById(id);
+            response.Value = Repository.GetById(id, includeRelations);
             if (response.Value != null)
             {
                 response.SuccessResult(response.Value);
@@ -55,10 +57,10 @@ namespace ModuleAdmin.Services
             return response;
         }
 
-        public ServiceResult<List<AdminRoleActionListEntity>> ListByModuleId(int moduleId)
+        public ServiceResult<List<AdminRoleActionListEntity>> ListByModuleId(int moduleId, bool includeRelations = false)
         {
             var response = ServiceResult<List<AdminRoleActionListEntity>>.Instance.ErrorResult(ServiceResultCode.Error); 
-            response.Value = Repository.ListByModuleId(moduleId);
+            response.Value = Repository.ListByModuleId(moduleId, includeRelations);
             if (response.Value != null)
             {
                 response.SuccessResult(response.Value);
@@ -66,10 +68,10 @@ namespace ModuleAdmin.Services
             return response;
         }
 
-        public ServiceResult<List<AdminRoleActionListEntity>> ListByModuleId(int moduleId, int skip, int take)
+        public ServiceResult<List<AdminRoleActionListEntity>> ListByModuleId(int moduleId, int skip, int take, bool includeRelations = false)
         {
             var response = ServiceResult<List<AdminRoleActionListEntity>>.Instance.ErrorResult(ServiceResultCode.Error); 
-            response.Value = Repository.ListByModuleId(moduleId, skip, take);
+            response.Value = Repository.ListByModuleId(moduleId, skip, take, includeRelations);
             if (response.Value != null)
             {
                 response.SuccessResult(response.Value);

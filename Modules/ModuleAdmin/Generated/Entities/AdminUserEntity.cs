@@ -71,6 +71,11 @@ namespace ModuleAdmin.Generated.Entities
     [Table("AdminUser", Schema = "dbo")]
     public class AdminUserEntity : AdminUserEntityModel
     {
-                
+        
+
+        public AdminUserEntityModel ToModel()
+        {
+            return this;
+        }
     }
 }

@@ -13,6 +13,7 @@ using ModuleAdmin.Generated.Enums;
 using ModuleAdmin.IRepositories;
 using ModuleAdmin.Generated.Data;
 using CoreCommon.Data.EntityFrameworkBase.Base;
+using Microsoft.EntityFrameworkCore;
 
 namespace ModuleAdmin.Repositories
 {
@@ -24,9 +25,9 @@ namespace ModuleAdmin.Repositories
             return DeleteBy(x => x.Id == id);
         }
 
-        public AdminRoleEntity GetById(int id)
+        public AdminRoleEntity GetById(int id, bool includeRelations = false)
         {
-            return GetBy(x => x.Id == id);
+            return GetBy(x => x.Id == id, includeRelations);
         }
 
         public List<object> Search(string name, string orderBy, bool asc, int skip, int take, out long _total)
@@ -34,18 +35,15 @@ namespace ModuleAdmin.Repositories
             var result = GetDbSet().AsQueryable();
             if (!string.IsNullOrEmpty(name))
                 result = result.Where(x => x.Name.ToLower().Contains(name.ToLower()));
-            var dic = new Dictionary<string, Expression<Func<AdminRoleEntity, object>>>
-            {
-                {"id", x => x.Id}
-            };
+            var orderField = SortField(orderBy, x => x.Id);
 
-            Expression<Func<AdminRoleEntity, object>> selectFunc = x => new {
+            var selectFunc = Projection(x => new {
                 x.Id,
 				x.Name
-            };
-            if (!string.IsNullOrEmpty(orderBy) && dic.ContainsKey(orderBy))
+            });
+            if (orderField != null)
             {
-                var result2 = asc ? result.OrderBy(dic[orderBy]) : result.OrderByDescending(dic[orderBy]);
+                var result2 = asc ? result.OrderBy(orderField) : result.OrderByDescending(orderField);
                 return SkipTake(result2.Select(selectFunc), skip, take, out _total);
             }
             return SkipTake(result.Select(selectFunc), skip, take, out _total);

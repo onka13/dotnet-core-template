@@ -3,6 +3,7 @@ Auto generated file. Do not edit!
 */
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using CoreCommon.Business.Service.Base;
 using CoreCommon.Data.Domain.Business;
@@ -14,6 +15,7 @@ using ModuleAccount.Repositories;
 using ModuleAccount.IServices;
 using ModuleAccount.IRepositories;
 using CoreCommon.Data.EntityFrameworkBase.Base;
+using Microsoft.EntityFrameworkCore;
 
 namespace ModuleAccount.Services
 {
@@ -33,10 +35,10 @@ namespace ModuleAccount.Services
             return response;
         }
 
-        public ServiceResult<UserEntity> GetById(int id)
+        public ServiceResult<UserEntity> GetById(int id, bool includeRelations = false)
         {
             var response = ServiceResult<UserEntity>.Instance.ErrorResult(ServiceResultCode.Error);
-            response.Value = Repository.GetById(id);
+            response.Value = Repository.GetById(id, includeRelations);
             if (response.Value != null)
             {
                 response.SuccessResult(response.Value);
@@ -55,10 +57,10 @@ namespace ModuleAccount.Services
             return response;
         }
 
-        public ServiceResult<UserEntity> GetByEmail(string email)
+        public ServiceResult<UserEntity> GetByEmail(string email, bool includeRelations = false)
         {
             var response = ServiceResult<UserEntity>.Instance.ErrorResult(ServiceResultCode.Error);
-            response.Value = Repository.GetByEmail(email);
+            response.Value = Repository.GetByEmail(email, includeRelations);
             if (response.Value != null)
             {
                 response.SuccessResult(response.Value);

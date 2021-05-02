@@ -5,6 +5,7 @@ using System.Linq;
 using ModuleAdmin.Models;
 using CoreCommon.Infra.Helpers;
 using ModuleAdmin.Components;
+using System;
 
 namespace ModuleAdmin.Services
 {
@@ -61,7 +62,7 @@ namespace ModuleAdmin.Services
                 IsSuper = userResult.Value.IsSuper
             };
 
-            string token = AuthHelper.EncryptTicket(userResult.Value.Email, AdminHelper.SecretKey, 60 * 24 * 30, tokenData);
+            string token = AuthHelper.EncryptTicket(userResult.Value.Email, AdminHelper.SecretKey, TimeSpan.FromDays(1), tokenData);
 
             return response.SuccessResult(new AdminLoginResponseModel
             {

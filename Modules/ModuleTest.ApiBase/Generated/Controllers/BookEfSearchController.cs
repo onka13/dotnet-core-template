@@ -43,6 +43,11 @@ namespace ModuleTest.ApiBase.Generated.Controllers
             var responseEdit = BookEfBusinessLogic.Edit(model.ToEntity());
             return Json(responseEdit);
         }
+        protected ActionResult UpdateOnly0(BookEfEntityModel model)
+        {
+            var responseEdit = BookEfBusinessLogic.EditOnly(model.ToEntity(), x => x.Name, x => x.Price, x => x.Category, x => x.Author);
+            return Json(responseEdit);
+        }
         protected ActionResult Delete0(int id)
         {
             var response = BookEfBusinessLogic.DeleteBy(x => x.Id == id);

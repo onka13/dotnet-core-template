@@ -51,6 +51,11 @@ namespace ModuleAdmin.Generated.Entities
     [Table("AdminRoleActionList", Schema = "dbo")]
     public class AdminRoleActionListEntity : AdminRoleActionListEntityModel
     {
-                
+        
+
+        public AdminRoleActionListEntityModel ToModel()
+        {
+            return this;
+        }
     }
 }

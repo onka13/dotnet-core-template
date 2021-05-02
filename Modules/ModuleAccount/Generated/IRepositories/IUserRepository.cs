@@ -11,6 +11,7 @@ using CoreCommon.Data.Domain.Business;
 using ModuleAccount.Generated.Entities;
 using ModuleAccount.Generated.Enums;
 using CoreCommon.Data.EntityFrameworkBase.Base;
+using Microsoft.EntityFrameworkCore;
 
 namespace ModuleAccount.IRepositories
 {
@@ -18,9 +19,9 @@ namespace ModuleAccount.IRepositories
     {
         
         int DeleteById(int id);
-        UserEntity GetById(int id);
+        UserEntity GetById(int id, bool includeRelations = false);
         int DeleteByEmail(string email);
-        UserEntity GetByEmail(string email);
+        UserEntity GetByEmail(string email, bool includeRelations = false);
         List<object> Search(int? id,string name,string email,bool? emailConfirmed,Status? status, string orderBy, bool asc, int skip, int take, out long _total);
 	}
 }    
