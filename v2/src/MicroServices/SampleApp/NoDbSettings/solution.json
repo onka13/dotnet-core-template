@@ -1,0 +1,19 @@
+{
+  "Projects": [
+    {
+      "Name": "SampleApp.Business.Service",
+      "Path": "Business\\SampleApp.Business.Service",
+      "IsSelected": false
+    },
+    {
+      "Name": "SampleApp.Data.Repository",
+      "Path": "Data\\SampleApp.Data.Repository",
+      "IsSelected": false
+    },
+    {
+      "Name": "SampleApp.Domain",
+      "Path": "Domain\\SampleApp.Domain",
+      "IsSelected": false
+    }
+  ]
+}
