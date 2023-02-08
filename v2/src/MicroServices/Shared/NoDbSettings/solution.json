@@ -1,0 +1,24 @@
+{
+  "Projects": [
+    {
+      "Name": "DotNetTemplateShared.Domain",
+      "Path": "DotNetTemplateShared.Domain",
+      "IsSelected": false
+    },
+    {
+      "Name": "DotNetTemplateShared.Infrastructure",
+      "Path": "DotNetTemplateShared.Infrastructure",
+      "IsSelected": false
+    },
+    {
+      "Name": "DotNetTemplateShared.Application.APIWebBase",
+      "Path": "DotNetTemplateShared.Application.APIWebBase",
+      "IsSelected": false
+    },
+    {
+      "Name": "DotNetTemplateShared.Application.APIBase",
+      "Path": "DotNetTemplateShared.Application.APIBase",
+      "IsSelected": false
+    }
+  ]
+}

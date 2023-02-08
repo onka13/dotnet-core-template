@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="Analyzer Rules" Description="Analyzer rules" ToolsVersion="17.0">
+  <IncludeAll Action="Warning" />
+  <Rules AnalyzerId="Microsoft.AspNetCore.Mvc.Analyzers" RuleNamespace="Microsoft.AspNetCore.Mvc.Analyzers">
+    <Rule Id="MVC1004" Action="None" />
+  </Rules>
+  <Rules AnalyzerId="Microsoft.CodeAnalysis.CSharp" RuleNamespace="Microsoft.CodeAnalysis.CSharp">
+    <Rule Id="CS8034" Action="Info" />
+  </Rules>
+  <Rules AnalyzerId="Microsoft.CodeAnalysis.CSharp.Features" RuleNamespace="Microsoft.CodeAnalysis.CSharp.Features">
+    <Rule Id="IDE0005" Action="Warning" />
+  </Rules>
+  <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
+    <Rule Id="SA0001" Action="Info" />
+    <Rule Id="SA1101" Action="None" />
+    <Rule Id="SA1123" Action="Info" />
+    <Rule Id="SA1200" Action="None" />
+    <Rule Id="SA1402" Action="None" />
+    <Rule Id="SA1600" Action="Info" />
+    <Rule Id="SA1601" Action="Info" />
+    <Rule Id="SA1602" Action="Info" />
+    <Rule Id="SA1606" Action="Info" />
+    <Rule Id="SA1611" Action="Info" />
+    <Rule Id="SA1614" Action="Info" />
+    <Rule Id="SA1615" Action="Info" />
+    <Rule Id="SA1616" Action="Info" />
+    <Rule Id="SA1618" Action="Info" />
+    <Rule Id="SA1622" Action="Info" />
+    <Rule Id="SA1623" Action="Info" />
+    <Rule Id="SA1629" Action="Info" />
+    <Rule Id="SA1633" Action="None" />
+    <Rule Id="SA1649" Action="Info" />
+  </Rules>
+</RuleSet>

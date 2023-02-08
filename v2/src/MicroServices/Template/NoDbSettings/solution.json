@@ -1,0 +1,19 @@
+{
+  "Projects": [
+    {
+      "Name": "DotNetTemplate.Business.Service",
+      "Path": "Business\\DotNetTemplate.Business.Service",
+      "IsSelected": false
+    },
+    {
+      "Name": "DotNetTemplate.Data.Repository",
+      "Path": "Data\\DotNetTemplate.Data.Repository",
+      "IsSelected": false
+    },
+    {
+      "Name": "DotNetTemplate.Domain",
+      "Path": "Domain\\DotNetTemplate.Domain",
+      "IsSelected": false
+    }
+  ]
+}

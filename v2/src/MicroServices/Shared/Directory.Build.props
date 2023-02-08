@@ -1,0 +1,32 @@
+<Project>
+	<PropertyGroup>
+		<DotNetCommonVersion>1.0.0.2-alpha</DotNetCommonVersion>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="DotNetCommon.Data.Domain" Version="$(DotNetCommonVersion)" />
+		<PackageReference Include="DotNetCommon.Infrastructure" Version="$(DotNetCommonVersion)" />
+	</ItemGroup>	
+	<PropertyGroup>
+		<CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)Analyzers.ruleset</CodeAnalysisRuleSet>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	</PropertyGroup>
+	<ItemGroup>
+		<AdditionalFiles Include="$(MSBuildThisFileDirectory)stylecop.json" />
+	</ItemGroup>
+	<ItemGroup Condition=" '$(MSBuildProjectExtension)' != '.vcxproj' ">
+		<PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="7.0.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.435">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+</Project>
